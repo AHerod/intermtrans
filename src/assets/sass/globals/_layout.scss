@@ -1,0 +1,49 @@
+body {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+.max-container {
+  @extend %content;
+  @extend %content-padding;
+  width: 100%;
+}
+
+.max-container-no-padding {
+  @extend %content;
+}
+
+%content {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 100%;
+
+  @media screen and (min-width: 769px) {
+    max-width: 750px;
+  }
+
+  @media screen and (min-width: 992px) {
+    max-width: 850px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1050px;
+  }
+}
+
+%content-padding {
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @media screen and (min-width: 769px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

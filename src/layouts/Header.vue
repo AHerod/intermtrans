@@ -13,6 +13,11 @@
             <g-link class="nav__link" to="/about/">Wycena</g-link>
             <g-link class="nav__link" to="/about/">Kontakt</g-link>
           </nav>
+          <div class="header__nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </div>
     </header>
@@ -29,19 +34,6 @@
 </static-query>
 
 <style lang="scss">
-  body {
-    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.5;
-  }
-
-  .max-container {
-    max-width: 1000px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
 
   .header {
     display: flex;
@@ -50,18 +42,101 @@
     margin-bottom: 20px;
     height: 80px;
     box-shadow: 0px 3px 6px #00000029;
+    position: relative;
 
-    &__content {
+    &__content,
+    &__menu {
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
-  }
 
-  .nav {
-    &__link {
-      margin-left: 45px;
+    &__nav-toggle {
+      display: flex;
+      flex-direction: column;
+      height: 20px;
+      justify-content: space-between;
+
+      span {
+        display: block;
+        background: $cRed;
+        width: 30px;
+        height: 4px;
+
+        @media screen and (min-width: 769px) {
+          display: none;
+        }
+      }
     }
   }
 
+  .nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background: $cWhite;
+    margin-top: 20px;
+
+    @media screen and (min-width: 769px) {
+      flex-direction: row;
+      position: relative;
+      min-height: initial;
+      margin-top: 0;
+      top: 0;
+    }
+
+    &__link {
+      margin-left: 40px;
+      position: relative;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 22px;
+      padding: 20px 0;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+
+      @media screen and (min-width: 769px) {
+        text-transform: initial;
+        font-size: initial;
+        padding: initial;
+        display: block;
+      }
+
+      @media screen and (min-width: 992px) {
+        margin-left: 45px;
+      }
+
+      &::after {
+        content: '';
+        width: 10px;
+        height: 28px;
+        background: $cRed;
+        display: block;
+        top: 0;
+        right: 100%;
+        transform: skew(-25deg);
+        margin-right: 20px;
+
+        @media screen and (min-width: 769px) {
+          width: 10px;
+          height: 28px;
+          background: $cRed;
+          position: absolute;
+          top: 0;
+          right: 0;
+          transform: translate(270%, -15%) skew(-25deg);
+          margin-right: initial;
+        }
+
+        @media screen and (min-width: 992px) {
+          height: 32px;
+        }
+      }
+    }
+  }
 </style>
