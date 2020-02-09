@@ -42,19 +42,23 @@
         <h1 class="hero-section__content--title">Logistyka</h1>
       </div>
     </section>
-    <section class="section offer-section max-container">
-      <h1 class="offer-section__title section__title">Oferta</h1>
-      <p class="offer-section__text">Głównym obszarem działalności naszej firmy jest transport drogowy na terenie Unii
-        Europejskiej oraz Szwajcarii.
-      </p>
-      <p class="offer-section__text">Dysponując flotą własnych pojazdów ora doświadczonych przewoźników kontraktowych
-        oferujemy szeroki wachlarz
-        rozwiązań, od serwisów drobnicowych po dedykowane rozwiązania logistyczne</p>
-      <div id="offer" class="offer-section__cards">
-        <OfferCard message="ładunki całopojazdowe" icon="first"/>
-        <OfferCard message="ładunki cześciowe" icon="second"/>
-        <OfferCard message="dostawy ekspresowe" icon="third"/>
-        <OfferCard message="transport drobnicowy" icon="fourth"/>
+    <section class="section offer-section">
+      <div class="max-container">
+        <h1 class="offer-section__title section__title">Oferta</h1>
+        <p class="offer-section__text">Głównym obszarem działalności naszej firmy jest transport drogowy na terenie Unii
+          Europejskiej oraz Szwajcarii.
+        </p>
+        <p class="offer-section__text">Dysponując flotą własnych pojazdów ora doświadczonych przewoźników kontraktowych
+          oferujemy szeroki wachlarz
+          rozwiązań, od serwisów drobnicowych po dedykowane rozwiązania logistyczne</p>
+        <div class="offer-section__cards">
+          <OfferCard message="ładunki całopojazdowe" icon="first"/>
+          <OfferCard message="ładunki cześciowe" icon="second"/>
+          <OfferCard message="dostawy ekspresowe" icon="third"/>
+          <OfferCard message="transport drobnicowy" icon="fourth"/>
+        </div>
+        <g-image class="offer-section__cube" alt="Intermtrans cube logo" src="~/assets/img/logo_cube.svg" width="150"/>
+        <g-image class="offer-section__cube" alt="Intermtrans cube logo" src="~/assets/img/logo_cube.svg" width="150"/>
       </div>
     </section>
   </div>
@@ -132,6 +136,7 @@
       min-height: initial;
       margin-top: 0;
       top: 0;
+      display: flex;
     }
 
     &__link {
@@ -290,6 +295,8 @@
   }
 
   .offer-section {
+    position: relative;
+
     &__title {
       text-align: center;
       color: $cRed;
@@ -309,7 +316,7 @@
 
     &__cards {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-evenly;
       flex-wrap: wrap;
       width: 100%;
       padding: 0 10px;
@@ -319,9 +326,38 @@
         margin: 0 auto;
       }
 
-      @media screen and (min-width: 769px) {
+      @media screen and (min-width: 992px) {
         max-width: initial;
         padding: 0;
+      }
+
+
+      @media screen and (min-width: 1200px) {
+        justify-content: space-between;
+      }
+    }
+
+    &__cube {
+      width: 90px;
+      position: absolute;
+      right: 0;
+      transform: translateX(50%);
+      top: 0;
+      z-index: -10;
+
+      @media screen and (min-width: 420px) {
+        width: 150px;
+      }
+      @media screen and (min-width: 992px) {
+        width: 180px;
+      }
+      @media screen and (min-width: 1200px) {
+        width: 250px;
+      }
+
+      &:first-of-type {
+        top: 80%;
+        right: 100%;
       }
     }
   }
