@@ -22,12 +22,26 @@
       </div>
     </header>
     <div class="contact-bar">
-      <a href="https://www.facebook.com/Intermtrans-104479624389862/" target="_blank" rel="noopener" class="contact-bar__icon"><g-image alt="Facebook icon" src="~/assets/img/icon_facebook.svg" width="35"/></a>
-      <a href="https://www.linkedin.com/company/intermtrans-damian-talar/about/" class="contact-bar__icon" target="_blank" rel="noopener"><g-image alt="Linkedin icon" src="~/assets/img/icon_linkedin.svg" width="35"/></a>
-      <a href="" class="contact-bar__icon"><g-image alt="Phone icon" src="~/assets/img/icon_phone.svg" width="35"/></a>
+      <a href="https://www.facebook.com/Intermtrans-104479624389862/" target="_blank" rel="noopener"
+         class="contact-bar__icon">
+        <g-image alt="Facebook icon" src="~/assets/img/icon_facebook.svg" width="35"/>
+      </a>
+      <a href="https://www.linkedin.com/company/intermtrans-damian-talar/about/" class="contact-bar__icon"
+         target="_blank" rel="noopener">
+        <g-image alt="Linkedin icon" src="~/assets/img/icon_linkedin.svg" width="35"/>
+      </a>
+      <a href="" class="contact-bar__icon">
+        <g-image alt="Phone icon" src="~/assets/img/icon_phone.svg" width="35"/>
+      </a>
       <a href="" class="contact-bar__icon"><span>+ 48 507 473 964</span></a>
     </div>
-    <slot/>
+    <section class="hero-section">
+      <div class="hero-section__content">
+        <h1 class="hero-section__content--title">Transport</h1>
+        <h1 class="hero-section__content--title">Spedycja</h1>
+        <h1 class="hero-section__content--title">Logistyka</h1>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -74,6 +88,7 @@
       }
     }
   }
+
   .nav {
     display: flex;
     flex-direction: column;
@@ -143,6 +158,7 @@
       }
     }
   }
+
   .contact-bar {
     display: flex;
     align-items: center;
@@ -153,10 +169,26 @@
     width: 100%;
     float: right;
     position: relative;
+    z-index: 10;
     @include clearfix;
 
     @media screen and (min-width: 769px) {
       max-width: 400px;
+
+      &::before {
+        content: " ";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        background: $cRed;
+        transform-origin: bottom left;
+        transform: skew(45deg, 0deg);
+        box-shadow: 0px 3px 6px #00000029;
+      }
     }
 
     span {
@@ -169,22 +201,65 @@
         display: block;
       }
     }
+  }
 
-    &::before {
-      content: " ";
-      position: absolute;
-      display: block;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      right: 0;
-      z-index: -1;
-      background: $cRed;
-      transform-origin: bottom left;
-      -ms-transform: skew(45deg, 0deg);
-      -webkit-transform: skew(45deg, 0deg);
-      transform: skew(45deg, 0deg);
-      box-shadow: 0px 3px 6px #00000029;
+  .hero-section {
+    width: 100%;
+    height: 80vh;
+    margin-top: -20px;
+    background: url("../assets/img/hero_image.jpg");
+    background-position: right;
+    background-size: cover;
+
+    @media screen and (min-width: 1200px) {
+      height: 100vh;
+      background-position: center;
+    }
+
+    &__content {
+      transform: translateY(20%);
+
+      @media screen and (min-width: 769px) {
+        transform: translateY(50%);
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin: 0 auto;
+      }
+
+      @media screen and (min-width: 992px) {
+        height: 100%;
+        transform: translateY(10%);
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+      }
+
+      &--title {
+        color: $cWhite;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 800;
+
+        @media screen and (min-width: 992px) {
+          margin-top: 5px;
+          margin-bottom: 5px;
+          font-size: 45px;
+
+          &:nth-child(2) {
+            margin-left: 85px;
+          }
+
+          &:nth-child(3) {
+            margin-left: 170px;
+          }
+        }
+
+        &:nth-child(2) {
+          color: $cRed;
+        }
+      }
     }
   }
 </style>
