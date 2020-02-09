@@ -36,14 +36,39 @@
       <a href="" class="contact-bar__icon"><span>+ 48 507 473 964</span></a>
     </div>
     <section class="hero-section">
-      <div class="hero-section__content">
+      <div class="hero-section__content max-container">
         <h1 class="hero-section__content--title">Transport</h1>
         <h1 class="hero-section__content--title">Spedycja</h1>
         <h1 class="hero-section__content--title">Logistyka</h1>
       </div>
     </section>
+    <section class="section offer-section max-container">
+      <h1 class="offer-section__title section__title">Oferta</h1>
+      <p class="offer-section__text">Głównym obszarem działalności naszej firmy jest transport drogowy na terenie Unii
+        Europejskiej oraz Szwajcarii.
+      </p>
+      <p class="offer-section__text">Dysponując flotą własnych pojazdów ora doświadczonych przewoźników kontraktowych
+        oferujemy szeroki wachlarz
+        rozwiązań, od serwisów drobnicowych po dedykowane rozwiązania logistyczne</p>
+      <div class="offer-section__cards">
+        <OfferCard message="ładunki całopojazdowe" icon="first"/>
+        <OfferCard message="ładunki cześciowe" icon="second"/>
+        <OfferCard message="dostawy ekspresowe" icon="third"/>
+        <OfferCard message="transport drobnicowy" icon="fourth"/>
+      </div>
+    </section>
   </div>
 </template>
+
+<script>
+    import OfferCard from '~/components/OfferCard.vue'
+
+    export default {
+        components: {
+            OfferCard
+        }
+    }
+</script>
 
 <static-query>
   query {
@@ -260,6 +285,25 @@
           color: $cRed;
         }
       }
+    }
+  }
+
+  .offer-section {
+    &__title {
+      text-align: center;
+      color: $cRed;
+    }
+
+    &__text {
+      margin-bottom: 50px;
+      font-size: 28px;
+      text-align: center;
+    }
+
+    &__cards {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
     }
   }
 </style>
