@@ -50,7 +50,7 @@
       <p class="offer-section__text">Dysponując flotą własnych pojazdów ora doświadczonych przewoźników kontraktowych
         oferujemy szeroki wachlarz
         rozwiązań, od serwisów drobnicowych po dedykowane rozwiązania logistyczne</p>
-      <div class="offer-section__cards">
+      <div id="offer" class="offer-section__cards">
         <OfferCard message="ładunki całopojazdowe" icon="first"/>
         <OfferCard message="ładunki cześciowe" icon="second"/>
         <OfferCard message="dostawy ekspresowe" icon="third"/>
@@ -124,6 +124,7 @@
     min-height: 100vh;
     background: $cWhite;
     margin-top: 20px;
+    display: none;
 
     @media screen and (min-width: 769px) {
       flex-direction: row;
@@ -295,15 +296,33 @@
     }
 
     &__text {
-      margin-bottom: 50px;
-      font-size: 28px;
+      margin-bottom: 30px;
+      font-size: 16px;
       text-align: center;
+      padding: 0 10px;
+
+      @media screen and (min-width: 992px) {
+        margin-bottom: 50px;
+        font-size: 26px;
+      }
     }
 
     &__cards {
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
       width: 100%;
+      padding: 0 10px;
+
+      @media screen and (min-width: 420px) {
+        max-width: 390px;
+        margin: 0 auto;
+      }
+
+      @media screen and (min-width: 769px) {
+        max-width: initial;
+        padding: 0;
+      }
     }
   }
 </style>
