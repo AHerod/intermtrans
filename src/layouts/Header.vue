@@ -61,14 +61,36 @@
         <g-image class="offer-section__cube" alt="Intermtrans cube logo" src="~/assets/img/logo_cube.svg" width="150"/>
       </div>
     </section>
+    <section class="section monitoring-section max-container">
+      <h2 class="monitoring-section__title max-container">Monitoring Dostaw 24h</h2>
+      <div class="monitoring-section__content max-container">
+        <div class="monitoring-section__cards">
+          <MonitoringCard text="Transport każdego ładunku jest monitorowany 24
+godziny na dobę przez zespół doświadczonych
+spedytorów.
+"/>
+          <MonitoringCard text="Nasi klienci mają możliwość sprawdzić o każdej porze
+dnia i nocy status swojego zlecenia.
+"/>
+          <MonitoringCard text="
+Wszystkie nasze samochody posiadają nadajniki GPS
+dzięki czemu klienci na bieżąco informowani są o
+lokalizacji danego pojazdu."/>
+        </div>
+        <g-image class="monitoring-section__hero-image" alt="Phone icon" src="~/assets/img/monitoring_hero_image.png"
+                 width="435"/>
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
     import OfferCard from '~/components/OfferCard.vue'
+    import MonitoringCard from "../components/MonitoringCard";
 
     export default {
         components: {
+            MonitoringCard,
             OfferCard
         }
     }
@@ -210,10 +232,10 @@
         content: " ";
         position: absolute;
         display: block;
-        width: 100%;
+        width: 120%;
         height: 100%;
         top: 0;
-        right: 0;
+        right: -20%;
         z-index: -1;
         background: $cRed;
         transform-origin: bottom left;
@@ -358,6 +380,45 @@
       &:first-of-type {
         top: 80%;
         right: 100%;
+      }
+    }
+  }
+
+  .monitoring-section {
+    &__title {
+      color: $cRed;
+      font-size: 20px;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 10px;
+
+      @media screen and (min-width: 480px) {
+        font-size: 36px;
+        margin-bottom: 30px;
+
+      }
+    }
+
+    &__cards {
+      max-width: 550px;
+
+      > div {
+        margin-bottom: 20px;
+        @media screen and (min-width: 769px) {
+          margin-bottom: 35px;
+        }
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @media screen and (min-width: 992px) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: end;
       }
     }
   }
