@@ -77,8 +77,24 @@ Wszystkie nasze samochody posiadają nadajniki GPS
 dzięki czemu klienci na bieżąco informowani są o
 lokalizacji danego pojazdu."/>
         </div>
-        <g-image class="monitoring-section__hero-image" alt="Phone icon" src="~/assets/img/monitoring_hero_image.png"
+        <g-image class="monitoring-section__hero-image" alt="Phone icon" src="~/assets/img/monitoring_hero.png"
                  width="435"/>
+      </div>
+    </section>
+    <section class="section docs-section">
+      <div class="docs-section__hero-img">
+        <g-image alt="Documents section hero image" src="~/assets/img/docs_hero.jpg" width="485"/>
+      </div>
+      <div class="docs-section__content">
+        <div class="docs-section__content-wrapper max-container">
+          <h2 class="heading">Dokumenty</h2>
+          <p>Lorem ipsum ipsum ipsum lorem lorem ipsum ipsum lorem</p>
+          <div class="docs-section__docs-wrapper">
+            <DocumentCard title="Polisa Ubezpieczeniowa"/>
+            <DocumentCard title="Licencja"/>
+            <DocumentCard title="Certyfikat Kompetencji Zawodowych"/>
+          </div>
+        </div>
       </div>
     </section>
   </div>
@@ -87,9 +103,11 @@ lokalizacji danego pojazdu."/>
 <script>
     import OfferCard from '~/components/OfferCard.vue'
     import MonitoringCard from "../components/MonitoringCard";
+    import DocumentCard from "../components/DocumentCard";
 
     export default {
         components: {
+            DocumentCard,
             MonitoringCard,
             OfferCard
         }
@@ -419,6 +437,57 @@ lokalizacji danego pojazdu."/>
         flex-direction: row;
         justify-content: space-between;
         align-items: end;
+      }
+    }
+  }
+
+  .docs-section {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+
+    @media screen and (min-width: 992px) {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+
+    &__content {
+      flex: 100%;
+      @media screen and (min-width: 992px) {
+        flex: 50%;
+      }
+
+      h2 {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 45px;
+      }
+
+      p {
+        text-align: center;
+        padding: 20px 0;
+      }
+    }
+
+    &__hero-img {
+      flex: 100%;
+      @media screen and (min-width: 992px) {
+        flex: 50%;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &__docs-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      padding-bottom: 35px;
+      @media screen and (min-width: 992px) {
+        padding-bottom: 0;
       }
     }
   }
