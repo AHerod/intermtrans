@@ -97,6 +97,15 @@ lokalizacji danego pojazdu."/>
         </div>
       </div>
     </section>
+    <section class="section contact-section max-container">
+      <div class="contact-form">
+        <ContactForm/>
+      </div>
+      <div class="contact-info">
+        Aby otrzymać zupełnie darmową wycenę transportu wypełnij podany formularz lub skontaktuj się z nami telefonicznie
+        pod numerem <span>+48 5-7 473 964</span> od poniedziałku do piątku w godzinach <span>8:00-16:00</span>.
+      </div>
+    </section>
   </div>
 </template>
 
@@ -104,9 +113,11 @@ lokalizacji danego pojazdu."/>
     import OfferCard from '~/components/OfferCard.vue'
     import MonitoringCard from "../components/MonitoringCard";
     import DocumentCard from "../components/DocumentCard";
+    import ContactForm from "../templates/ContactForm";
 
     export default {
         components: {
+            ContactForm,
             DocumentCard,
             MonitoringCard,
             OfferCard
