@@ -6,16 +6,16 @@
     <div class="document-card__img">
       <g-image class="document-card__cube" alt="cube icon" src="~/assets/img/logo_cube.svg" width="35"/>
     </div>
-    <button class="document-card__open-btn">
+    <a v-bind:href="filePath" class="document-card__open-btn" target="_blank">
       Otwórz
-    </button>
+    </a>
   </div>
 </template>
 
 <script>
     export default {
         name: 'documentCard',
-        props: ['title'],
+        props: ['title', 'filePath'],
     }
 
 </script>

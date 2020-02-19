@@ -90,9 +90,9 @@ lokalizacji danego pojazdu."/>
           <h2 class="heading">Dokumenty</h2>
           <p>Lorem ipsum ipsum ipsum lorem lorem ipsum ipsum lorem</p>
           <div class="docs-section__docs-wrapper">
-            <DocumentCard title="Polisa Ubezpieczeniowa"/>
-            <DocumentCard title="Licencja"/>
-            <DocumentCard title="Certyfikat Kompetencji Zawodowych"/>
+            <DocumentCard title="Polisa Ubezpieczeniowa" file-path="https://drive.google.com/file/d/1j5_GlBq_oSnlvYLEg94L2dMykOo-2bBA/preview"/>
+            <DocumentCard title="Licencja" file-path="https://drive.google.com/file/d/1RkeJshEg4ufWbpGJ9-wOyKpbtXa7e-1b/preview"/>
+            <DocumentCard title="Certyfikat Kompetencji Zawodowych" file-path="https://drive.google.com/file/d/1pQgbBNxYakkdCDUhNu_olO_yDMLqeWYh/preview"/>
           </div>
         </div>
       </div>
