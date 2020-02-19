@@ -502,4 +502,20 @@ lokalizacji danego pojazdu."/>
       }
     }
   }
+
+  .contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .contact-info {
+      font-family: $fRaleway;
+      text-align: center;
+      font-size: 20px;
+    }
+
+    .contact-info, .contact-form {
+      width: 50%;
+    }
+  }
 </style>
