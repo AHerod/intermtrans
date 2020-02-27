@@ -1,111 +1,122 @@
 <template>
   <div>
-    <header class="header">
-      <div class="header__content max-container">
-        <div class="header__logo">
-          <g-image alt="Intermtrans logo" src="~/assets/img/logo.svg" width="135"/>
-        </div>
-        <div class="header__menu">
-          <nav class="nav">
-            <g-link class="nav__link" to="/">Oferta</g-link>
-            <g-link class="nav__link" to="/about/">Flota</g-link>
-            <g-link class="nav__link" to="/about/">Dokumenty</g-link>
-            <g-link class="nav__link" to="/about/">Wycena</g-link>
-            <g-link class="nav__link" to="/about/">Kontakt</g-link>
-          </nav>
-          <div class="header__nav-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
+    <div class="page-content">
+      <header class="header">
+        <div class="header__content max-container">
+          <div class="header__logo">
+            <g-image alt="Intermtrans logo" src="~/assets/logo.svg" width="135"/>
+          </div>
+          <div class="header__menu">
+            <nav class="nav">
+              <g-link class="nav__link" to="/">Oferta</g-link>
+              <g-link class="nav__link" to="/about/">Flota</g-link>
+              <g-link class="nav__link" to="/about/">Dokumenty</g-link>
+              <g-link class="nav__link" to="/about/">Wycena</g-link>
+              <g-link class="nav__link" to="/about/">Kontakt</g-link>
+            </nav>
+            <div class="header__nav-toggle">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </div>
         </div>
+      </header>
+      <div class="contact-bar">
+        <a href="https://www.facebook.com/Intermtrans-104479624389862/" target="_blank" rel="noopener"
+           class="contact-bar__icon">
+          <g-image alt="Facebook icon" src="~/assets/icon_facebook.svg" width="35"/>
+        </a>
+        <a href="https://www.linkedin.com/company/intermtrans-damian-talar/about/" class="contact-bar__icon"
+           target="_blank" rel="noopener">
+          <g-image alt="Linkedin icon" src="~/assets/icon_linkedin.svg" width="35"/>
+        </a>
+        <a href="" class="contact-bar__icon">
+          <g-image alt="Phone icon" src="~/assets/icon_phone.svg" width="35"/>
+        </a>
+        <a href="" class="contact-bar__icon"><span>+ 48 507 473 964</span></a>
       </div>
-    </header>
-    <div class="contact-bar">
-      <a href="https://www.facebook.com/Intermtrans-104479624389862/" target="_blank" rel="noopener"
-         class="contact-bar__icon">
-        <g-image alt="Facebook icon" src="~/assets/img/icon_facebook.svg" width="35"/>
-      </a>
-      <a href="https://www.linkedin.com/company/intermtrans-damian-talar/about/" class="contact-bar__icon"
-         target="_blank" rel="noopener">
-        <g-image alt="Linkedin icon" src="~/assets/img/icon_linkedin.svg" width="35"/>
-      </a>
-      <a href="" class="contact-bar__icon">
-        <g-image alt="Phone icon" src="~/assets/img/icon_phone.svg" width="35"/>
-      </a>
-      <a href="" class="contact-bar__icon"><span>+ 48 507 473 964</span></a>
-    </div>
-    <section class="hero-section">
-      <div class="hero-section__content max-container">
-        <h1 class="hero-section__content--title">Transport</h1>
-        <h1 class="hero-section__content--title">Spedycja</h1>
-        <h1 class="hero-section__content--title">Logistyka</h1>
-      </div>
-    </section>
-    <section class="section offer-section">
-      <div class="max-container">
-        <h1 class="offer-section__title section__title">Oferta</h1>
-        <p class="offer-section__text">Głównym obszarem działalności naszej firmy jest transport drogowy na terenie Unii
-          Europejskiej oraz Szwajcarii.
-        </p>
-        <p class="offer-section__text">Dysponując flotą własnych pojazdów ora doświadczonych przewoźników kontraktowych
-          oferujemy szeroki wachlarz
-          rozwiązań, od serwisów drobnicowych po dedykowane rozwiązania logistyczne</p>
-        <div class="offer-section__cards">
-          <OfferCard message="ładunki całopojazdowe" icon="first"/>
-          <OfferCard message="ładunki cześciowe" icon="second"/>
-          <OfferCard message="dostawy ekspresowe" icon="third"/>
-          <OfferCard message="transport drobnicowy" icon="fourth"/>
+      <section class="hero-section">
+        <div class="hero-section__content max-container">
+          <h1 class="hero-section__content--title">Transport</h1>
+          <h1 class="hero-section__content--title">Spedycja</h1>
+          <h1 class="hero-section__content--title">Logistyka</h1>
         </div>
-        <g-image class="offer-section__cube" alt="Intermtrans cube logo" src="~/assets/img/logo_cube.svg" width="150"/>
-        <g-image class="offer-section__cube" alt="Intermtrans cube logo" src="~/assets/img/logo_cube.svg" width="150"/>
-      </div>
-    </section>
-    <section class="section monitoring-section max-container">
-      <h2 class="monitoring-section__title max-container">Monitoring Dostaw 24h</h2>
-      <div class="monitoring-section__content max-container">
-        <div class="monitoring-section__cards">
-          <MonitoringCard text="Transport każdego ładunku jest monitorowany 24
+      </section>
+      <section class="section offer-section">
+        <div class="max-container">
+          <h1 class="offer-section__title section__title">Oferta</h1>
+          <p class="offer-section__text">Głównym obszarem działalności naszej firmy jest transport drogowy na terenie
+            Unii
+            Europejskiej oraz Szwajcarii.
+          </p>
+          <p class="offer-section__text">Dysponując flotą własnych pojazdów ora doświadczonych przewoźników
+            kontraktowych
+            oferujemy szeroki wachlarz
+            rozwiązań, od serwisów drobnicowych po dedykowane rozwiązania logistyczne</p>
+          <div class="offer-section__cards">
+            <OfferCard message="ładunki całopojazdowe" icon="first"/>
+            <OfferCard message="ładunki cześciowe" icon="second"/>
+            <OfferCard message="dostawy ekspresowe" icon="third"/>
+            <OfferCard message="transport drobnicowy" icon="fourth"/>
+          </div>
+          <g-image class="offer-section__cube" alt="Intermtrans cube logo" src="~/assets/logo_cube.svg"
+                   width="150"/>
+          <g-image class="offer-section__cube" alt="Intermtrans cube logo" src="~/assets/logo_cube.svg"
+                   width="150"/>
+        </div>
+      </section>
+      <section class="section monitoring-section max-container">
+        <h2 class="monitoring-section__title max-container">Monitoring Dostaw 24h</h2>
+        <div class="monitoring-section__content max-container">
+          <div class="monitoring-section__cards">
+            <MonitoringCard text="Transport każdego ładunku jest monitorowany 24
 godziny na dobę przez zespół doświadczonych
 spedytorów.
 "/>
-          <MonitoringCard text="Nasi klienci mają możliwość sprawdzić o każdej porze
+            <MonitoringCard text="Nasi klienci mają możliwość sprawdzić o każdej porze
 dnia i nocy status swojego zlecenia.
 "/>
-          <MonitoringCard text="
+            <MonitoringCard text="
 Wszystkie nasze samochody posiadają nadajniki GPS
 dzięki czemu klienci na bieżąco informowani są o
 lokalizacji danego pojazdu."/>
+          </div>
+          <g-image class="monitoring-section__hero-image" alt="Phone icon" src="~/assets/monitoring_hero.png"
+                   width="435"/>
         </div>
-        <g-image class="monitoring-section__hero-image" alt="Phone icon" src="~/assets/img/monitoring_hero.png"
-                 width="435"/>
-      </div>
-    </section>
-    <section class="section docs-section">
-      <div class="docs-section__hero-img">
-        <g-image alt="Documents section hero image" src="~/assets/img/docs_hero.jpg" width="485"/>
-      </div>
-      <div class="docs-section__content">
-        <div class="docs-section__content-wrapper max-container">
-          <h2 class="heading">Dokumenty</h2>
-          <p>Lorem ipsum ipsum ipsum lorem lorem ipsum ipsum lorem</p>
-          <div class="docs-section__docs-wrapper">
-            <DocumentCard title="Polisa Ubezpieczeniowa" file-path="https://drive.google.com/file/d/1j5_GlBq_oSnlvYLEg94L2dMykOo-2bBA/preview"/>
-            <DocumentCard title="Licencja" file-path="https://drive.google.com/file/d/1RkeJshEg4ufWbpGJ9-wOyKpbtXa7e-1b/preview"/>
-            <DocumentCard title="Certyfikat Kompetencji Zawodowych" file-path="https://drive.google.com/file/d/1pQgbBNxYakkdCDUhNu_olO_yDMLqeWYh/preview"/>
+      </section>
+      <section class="section docs-section">
+        <div class="docs-section__hero-img">
+          <g-image alt="Documents section hero image" src="~/assets/docs_hero.jpg" width="485"/>
+        </div>
+        <div class="docs-section__content">
+          <div class="docs-section__content-wrapper max-container">
+            <h2 class="heading">Dokumenty</h2>
+            <p>Lorem ipsum ipsum ipsum lorem lorem ipsum ipsum lorem</p>
+            <div class="docs-section__docs-wrapper">
+              <DocumentCard title="Polisa Ubezpieczeniowa"
+                            file-path="https://drive.google.com/file/d/1j5_GlBq_oSnlvYLEg94L2dMykOo-2bBA/preview"/>
+              <DocumentCard title="Licencja"
+                            file-path="https://drive.google.com/file/d/1RkeJshEg4ufWbpGJ9-wOyKpbtXa7e-1b/preview"/>
+              <DocumentCard title="Certyfikat Kompetencji Zawodowych"
+                            file-path="https://drive.google.com/file/d/1pQgbBNxYakkdCDUhNu_olO_yDMLqeWYh/preview"/>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="section contact-section max-container">
-      <div class="contact-form">
-        <ContactForm/>
-      </div>
-      <div class="contact-info">
-        Aby otrzymać zupełnie darmową wycenę transportu wypełnij podany formularz lub skontaktuj się z nami telefonicznie
-        pod numerem <span>+48 5-7 473 964</span> od poniedziałku do piątku w godzinach <span>8:00-16:00</span>.
-      </div>
-    </section>
+      </section>
+      <section class="section contact-section max-container">
+        <div class="contact-form">
+          <ContactForm/>
+        </div>
+        <div class="contact-info">
+          Aby otrzymać zupełnie darmową wycenę transportu wypełnij podany formularz lub skontaktuj się z nami
+          telefonicznie
+          pod numerem <span>+48 5-7 473 964</span> od poniedziałku do piątku w godzinach <span>8:00-16:00</span>.
+        </div>
+      </section>
+    </div>
+    <under-construction/>
   </div>
 </template>
 
@@ -114,9 +125,11 @@ lokalizacji danego pojazdu."/>
     import MonitoringCard from "../components/MonitoringCard";
     import DocumentCard from "../components/DocumentCard";
     import ContactForm from "../templates/ContactForm";
+    import UnderConstruction from "../components/UnderConstruction";
 
     export default {
         components: {
+            UnderConstruction,
             ContactForm,
             DocumentCard,
             MonitoringCard,
@@ -134,6 +147,10 @@ lokalizacji danego pojazdu."/>
 </static-query>
 
 <style lang="scss">
+  .page-content {
+    display: none
+  }
+
   .header {
     display: flex;
     justify-content: space-between;
@@ -289,7 +306,7 @@ lokalizacji danego pojazdu."/>
     width: 100%;
     height: 80vh;
     margin-top: -20px;
-    background: url("../assets/img/hero_image.jpg");
+    background: url("../assets/hero_image.jpg");
     background-position: right;
     background-size: cover;
 

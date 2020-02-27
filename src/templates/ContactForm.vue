@@ -1,7 +1,7 @@
 <template>
   <div class="contact-form-wrapper">
     <div class="heading">
-      <g-image alt="Intermtrans cube logo" src="~/assets/img/logo_cube.svg" width="40"/>
+      <g-image alt="Intermtrans cube logo" src="~/assets/logo_cube.svg" width="40"/>
       <h2>Wycena transportu</h2>
     </div>
     <form
