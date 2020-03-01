@@ -13,4 +13,9 @@ module.exports = function (api) {
   api.createPages(({ createPage }) => {
     // Use the Pages API here: https://gridsome.org/docs/pages-api/
   })
+
+  api.chainWebpack(config => {
+    // modify config here
+    config.mode('development')
+  })
 }
