@@ -5,11 +5,11 @@
       <h2>Wycena transportu</h2>
     </div>
     <form
-            name="contact"
-            method="post"
-            v-on:submit.prevent="handleSubmit"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
+      name="contact"
+      method="post"
+      v-on:submit.prevent="handleSubmit"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
     >
       <input type="hidden" name="contact-form" value="contact"/>
       <p hidden>
@@ -19,40 +19,41 @@
       </p>
       <div class="form__fields-wrapper">
         <div class="form__field">
+          <input type="text" name="placeOfLoading" v-model="formData.placeOfLoading" placeholder="Miejsce załadunku"/>
           <label for="placeOfLoading">Miejsce załadunku</label>
-          <input type="text" name="placeOfLoading" v-model="formData.placeOfLoading"/>
         </div>
         <div class="form__field">
+
+          <input type="text" name="placeOfUnloading" v-model="formData.placeOfUnloading" placeholder="Miejsce rozładunku"/>
           <label for="placeOfUnloading">Miejsce rozładunku</label>
-          <input type="text" name="placeOfUnloading" v-model="formData.placeOfUnloading"/>
         </div>
         <div class="form__field">
+          <input type="text" name="dateOfLoading" v-model="formData.dateOfLoading" placeholder="Data rozładunku"/>
           <label for="dateOfLoading">Data rozładunku</label>
-          <input type="text" name="dateOfLoading" v-model="formData.dateOfLoading"/>
         </div>
         <div class="form__field">
+          <input type="text" name="dateOfUnloading" v-model="formData.dateOfUnloading" placeholder="Data rozładunku"/>
           <label for="dateOfUnloading">Data rozładunku</label>
-          <input type="text" name="dateOfUnloading" v-model="formData.dateOfUnloading"/>
         </div>
         <div class="form__field">
+          <input type="text" name="name" v-model="formData.name" placeholder="Imię"/>
           <label for="name" class="label">Imię</label>
-          <input type="text" name="name" v-model="formData.name"/>
         </div>
         <div class="form__field">
+          <input type="text" name="lastName" v-model="formData.lastName" placeholder="Nazwisko"/>
           <label for="lastName" class="label">Nazwisko</label>
-          <input type="text" name="lastName" v-model="formData.lastName"/>
         </div>
         <div class="form__field">
+          <input type="text" name="phoneNumber" v-model="formData.phoneNumber" placeholder="Telefon"/>
           <label for="phoneNumber">Telefon</label>
-          <input type="text" name="phoneNumber" v-model="formData.phoneNumber"/>
         </div>
         <div class="form__field">
-          <label for="email">Your email</label>
-          <input type="email" name="email" v-model="formData.email"/>
+          <input type="email" name="email" v-model="formData.email" placeholder="Email"/>
+          <label for="email">Email</label>
         </div>
         <div class="form__field">
+          <textarea type="text" name="notes" v-model="formData.notes" placeholder="Uwagi"></textarea>
           <label for="notes">Uwagi</label>
-          <textarea type="text" name="notes" v-model="formData.notes"></textarea>
         </div>
       </div>
       <div class="submit-btn-wrapper">
@@ -112,7 +113,7 @@
 
     .form__field {
       width: 46%;
-      margin: 0 15px 15px 0;
+      margin: 0 15px 25px 0;
       position: relative;
 
       &:last-of-type {
@@ -129,14 +130,39 @@
         height: 40px;
         border: none;
         padding: 8px;
+
+        &:focus + label {
+          transform: translateY(-130%);
+          opacity: 1;
+          transition: .4s ease-in all;
+          font-size: smaller;
+          color: $cBlack;
+          left: -8px;
+        }
+
+        &:focus::placeholder {
+          color: transparent;
+          font-size: smaller;
+          transition: .4s ease-in all;
+        }
+
+        &::placeholder {
+          transition: .4s ease-in all;
+        }
       }
 
       textarea {
         resize: none;
         height: 120px;
+
+        &:focus + label {
+          transform: translateY(-260%);
+        }
       }
 
       label {
+        width: 100%;
+        left: 0;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -144,6 +170,9 @@
         font-family: $fRaleway;
         font-size: 14px;
         padding: 8px;
+        opacity: 0;
+        transition: .4s ease-in all;
+        pointer-events: none;
       }
     }
 
@@ -157,10 +186,11 @@
     .submit-btn-wrapper {
       display: flex;
     }
+
     button {
       background: $cRed;
       color: $cWhite;
-      padding: 10px 80px;
+      padding: 10px 55px;
       text-transform: uppercase;
       width: 46%;
       margin-left: auto;

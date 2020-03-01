@@ -1,5 +1,5 @@
 <template>
-  <section class="section contact-section max-container">
+  <section class="contact-section max-container-no-padding">
     <div class="contact-form">
       <ContactForm/>
     </div>
@@ -26,16 +26,25 @@
   .contact-section {
     display: flex;
     justify-content: space-between;
+    flex-direction: column-reverse;
     align-items: center;
+
+    @media screen and (min-width: 769px) {
+      flex-direction: row;
+    }
 
     .contact-info {
       font-family: $fRaleway;
       text-align: center;
       font-size: 20px;
+      width: 70%;
+      margin-bottom: 50px;
     }
 
     .contact-info, .contact-form {
-      width: 50%;
+      @media screen and (min-width: 769px) {
+        width: 50%;
+      }
     }
   }
 </style>

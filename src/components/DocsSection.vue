@@ -63,6 +63,8 @@
 
     &__hero-img {
       flex: 100%;
+      width: 100%;
+
       @media screen and (min-width: 992px) {
         flex: 50%;
       }
@@ -78,6 +80,7 @@
       flex-wrap: wrap;
       justify-content: space-evenly;
       padding-bottom: 35px;
+
       @media screen and (min-width: 992px) {
         padding-bottom: 0;
       }
