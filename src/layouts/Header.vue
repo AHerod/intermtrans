@@ -4,7 +4,7 @@
       <header class="header">
         <div class="header__content max-container">
           <div class="header__logo">
-            <g-image alt="Intermtrans logo" src="~/assets/logo.svg" width="135"/>
+            <g-image alt="Intermtrans logo" src="~/assets/img/logo.svg" width="135" immediate="true"/>
           </div>
           <div class="header__menu">
             <nav class="nav">
@@ -25,14 +25,14 @@
       <div class="contact-bar">
         <a href="https://www.facebook.com/Intermtrans-104479624389862/" target="_blank" rel="noopener"
            class="contact-bar__icon">
-          <g-image alt="Facebook icon" src="~/assets/icon_facebook.svg" width="35"/>
+          <g-image alt="Facebook icon" src="~/assets/img/icon_facebook.svg" width="35" immediate="true"/>
         </a>
         <a href="https://www.linkedin.com/company/intermtrans-damian-talar/about/" class="contact-bar__icon"
            target="_blank" rel="noopener">
-          <g-image alt="Linkedin icon" src="~/assets/icon_linkedin.svg" width="35"/>
+          <g-image alt="Linkedin icon" src="~/assets/img/icon_linkedin.svg" width="35" immediate="true"/>
         </a>
         <a href="" class="contact-bar__icon">
-          <g-image alt="Phone icon" src="~/assets/icon_phone.svg" width="35"/>
+          <g-image alt="Phone icon" src="~/assets/img/icon_phone.svg" width="35" immediate="true"/>
         </a>
         <a href="" class="contact-bar__icon"><span>+ 48 507 473 964</span></a>
       </div>
@@ -60,10 +60,10 @@
             <OfferCard message="dostawy ekspresowe" icon="third"/>
             <OfferCard message="transport drobnicowy" icon="fourth"/>
           </div>
-          <g-image class="offer-section__cube" alt="Intermtrans cube logo" src="~/assets/logo_cube.svg"
-                   width="150"/>
-          <g-image class="offer-section__cube" alt="Intermtrans cube logo" src="~/assets/logo_cube.svg"
-                   width="150"/>
+          <g-image class="offer-section__cube" alt="Intermtrans cube logo" src="~/assets/img/logo_cube.svg"
+                   width="150" immediate="true"/>
+          <g-image class="offer-section__cube" alt="Intermtrans cube logo" src="~/assets/img/logo_cube.svg"
+                   width="150" immediate="true"/>
         </div>
       </section>
       <section class="section monitoring-section max-container">
@@ -82,13 +82,13 @@ Wszystkie nasze samochody posiadają nadajniki GPS
 dzięki czemu klienci na bieżąco informowani są o
 lokalizacji danego pojazdu."/>
           </div>
-          <g-image class="monitoring-section__hero-image" alt="Phone icon" src="~/assets/monitoring_hero.png"
-                   width="435"/>
+          <g-image class="monitoring-section__hero-image" alt="Phone icon" src="~/assets/img/monitoring_hero.png"
+                   width="435" immediate="true"/>
         </div>
       </section>
       <section class="section docs-section">
         <div class="docs-section__hero-img">
-          <g-image alt="Documents section hero image" src="~/assets/docs_hero.jpg" width="485"/>
+          <g-image alt="Documents section hero image" src="~/assets/img/docs_hero.jpg" width="485" immediate="true"/>
         </div>
         <div class="docs-section__content">
           <div class="docs-section__content-wrapper max-container">
@@ -116,7 +116,7 @@ lokalizacji danego pojazdu."/>
         </div>
       </section>
     </div>
-    <under-construction/>
+<!--    <under-construction/>-->
   </div>
 </template>
 
@@ -148,7 +148,7 @@ lokalizacji danego pojazdu."/>
 
 <style lang="scss">
   .page-content {
-    display: none
+    /*display: none;*/
   }
 
   .header {
@@ -306,7 +306,7 @@ lokalizacji danego pojazdu."/>
     width: 100%;
     height: 80vh;
     margin-top: -20px;
-    background: url("../assets/hero_image.jpg");
+    background: url("../assets/img/hero_image.jpg");
     background-position: right;
     background-size: cover;
 
