@@ -11,9 +11,7 @@
     export default {
         name: 'OfferCard',
         data() {
-            return {
-                imageDir: '../assets/img/'
-            }
+
         },
 
         props: ['message', 'icon'],
@@ -21,7 +19,7 @@
         computed: {
             iconPath() {
 
-                return require(`@/assets/img/offer_${this.icon}.svg`)
+                return require(`@/assets/offer_${this.icon}.svg`)
             }
         }
     }
