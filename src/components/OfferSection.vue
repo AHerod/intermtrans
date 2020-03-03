@@ -1,5 +1,5 @@
 <template>
-  <section class="section offer-section">
+  <section class="section offer-section" id="offer-section">
     <div class="max-container">
       <h1 class="offer-section__title section__title">Oferta</h1>
       <p class="offer-section__text">Głównym obszarem działalności naszej firmy jest transport drogowy na terenie

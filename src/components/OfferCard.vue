@@ -10,16 +10,13 @@
 <script>
     export default {
         name: 'OfferCard',
-        data() {
-
-        },
 
         props: ['message', 'icon'],
 
         computed: {
             iconPath() {
 
-                return require(`@/assets/offer_${this.icon}.svg`)
+                return require(`@/assets/img/offer_${this.icon}.svg`)
             }
         }
     }

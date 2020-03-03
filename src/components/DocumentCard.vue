@@ -25,9 +25,9 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 185px;
+    width: 170px;
     height: 245px;
-    box-shadow: 2px 10px 18px #00000040;
+    box-shadow: 2px 10px 18px #2c2c2c66;
     position: relative;
     transition: .4s ease-in all;
 

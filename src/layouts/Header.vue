@@ -6,6 +6,7 @@
       <HeroSection/>
       <OfferSection/>
       <MonitoringSection/>
+      <TrucksSection/>
       <DocsSection/>
       <ContactSection/>
     </div>
@@ -24,10 +25,12 @@
     import MonitoringSection from "../components/MonitoringSection";
     import DocsSection from "../components/DocsSection";
     import ContactSection from "../components/ContactSection";
+    import TrucksSection from "../components/TrucksSection";
 
     export default {
         components: {
             ContactSection,
+            TrucksSection,
             DocsSection,
             MonitoringSection,
             OfferSection,
@@ -50,5 +53,6 @@
 <style lang="scss">
   .page-content {
     /*display: none;*/
+    overflow: hidden;
   }
 </style>

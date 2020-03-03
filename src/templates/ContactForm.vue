@@ -5,11 +5,11 @@
       <h2>Wycena transportu</h2>
     </div>
     <form
-      name="contact"
-      method="post"
-      v-on:submit.prevent="handleSubmit"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
+            name="contact"
+            method="post"
+            v-on:submit.prevent="handleSubmit"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
     >
       <input type="hidden" name="contact-form" value="contact"/>
       <p hidden>
@@ -19,40 +19,46 @@
       </p>
       <div class="form__fields-wrapper">
         <div class="form__field">
-          <input type="text" name="placeOfLoading" v-model="formData.placeOfLoading" placeholder="Miejsce załadunku"/>
+          <input type="text" name="placeOfLoading" v-model="formData.placeOfLoading" placeholder="Miejsce załadunku"
+                 @blur="positionLabel"/>
           <label for="placeOfLoading">Miejsce załadunku</label>
         </div>
         <div class="form__field">
 
-          <input type="text" name="placeOfUnloading" v-model="formData.placeOfUnloading" placeholder="Miejsce rozładunku"/>
+          <input type="text" name="placeOfUnloading" v-model="formData.placeOfUnloading"
+                 placeholder="Miejsce rozładunku" @blur="positionLabel"/>
           <label for="placeOfUnloading">Miejsce rozładunku</label>
         </div>
         <div class="form__field">
-          <input type="text" name="dateOfLoading" v-model="formData.dateOfLoading" placeholder="Data rozładunku"/>
+          <input type="text" name="dateOfLoading" v-model="formData.dateOfLoading" placeholder="Data rozładunku"
+                 @blur="positionLabel" :type="this.isDate ? 'date' : 'text'" @click="isTypeADate">
           <label for="dateOfLoading">Data rozładunku</label>
         </div>
         <div class="form__field">
-          <input type="text" name="dateOfUnloading" v-model="formData.dateOfUnloading" placeholder="Data rozładunku"/>
+          <input type="date" name="dateOfUnloading" v-model="formData.dateOfUnloading" placeholder="Data rozładunku"
+                 @blur="positionLabel" :type="this.isDate ? 'date' : 'text'" @click="isTypeADate"/>
           <label for="dateOfUnloading">Data rozładunku</label>
         </div>
         <div class="form__field">
-          <input type="text" name="name" v-model="formData.name" placeholder="Imię"/>
+          <input type="text" name="name" v-model="formData.name" placeholder="Imię" @blur="positionLabel"/>
           <label for="name" class="label">Imię</label>
         </div>
         <div class="form__field">
-          <input type="text" name="lastName" v-model="formData.lastName" placeholder="Nazwisko"/>
+          <input type="text" name="lastName" v-model="formData.lastName" placeholder="Nazwisko" @blur="positionLabel"/>
           <label for="lastName" class="label">Nazwisko</label>
         </div>
         <div class="form__field">
-          <input type="text" name="phoneNumber" v-model="formData.phoneNumber" placeholder="Telefon"/>
+          <input type="text" name="phoneNumber" v-model="formData.phoneNumber" placeholder="Telefon"
+                 @blur="positionLabel"/>
           <label for="phoneNumber">Telefon</label>
         </div>
         <div class="form__field">
-          <input type="email" name="email" v-model="formData.email" placeholder="Email"/>
+          <input type="email" name="email" v-model="formData.email" placeholder="Email" @blur="positionLabel"/>
           <label for="email">Email</label>
         </div>
         <div class="form__field">
-          <textarea type="text" name="notes" v-model="formData.notes" placeholder="Uwagi"></textarea>
+          <textarea type="text" name="notes" v-model="formData.notes" placeholder="Uwagi"
+                    @blur="positionLabel"></textarea>
           <label for="notes">Uwagi</label>
         </div>
       </div>
@@ -69,6 +75,7 @@
         data() {
             return {
                 formData: {},
+                isDate: false,
             }
         },
 
@@ -89,6 +96,17 @@
                 })
                     .then(() => console.log('LOOOL sukces'))
                     .catch(error => alert(error))
+            },
+            positionLabel(e) {
+                let inputHasValue = e.target.value.length !== 0,
+                    inputLabel = e.target.nextElementSibling;
+
+                e.target.tagName === 'TEXTAREA'
+                    ? inputHasValue ? inputLabel.classList.add('textareaLabel') : inputLabel.classList.remove('textareaLabel')
+                    : inputHasValue ? inputLabel.classList.add('show') : inputLabel.classList.remove('show');
+            },
+            isTypeADate(e) {
+                return this.isDate = true;
             }
         }
     }
@@ -112,9 +130,14 @@
     }
 
     .form__field {
-      width: 46%;
+      width: 100%;
+      flex-basis: 45%;
       margin: 0 15px 25px 0;
       position: relative;
+
+      @media screen and (max-width: 480px) {
+        flex-basis: 100%;
+      }
 
       &:last-of-type {
         flex-basis: 100%;
@@ -124,17 +147,19 @@
         }
       }
 
-      input, textarea {
+      input,
+      textarea {
         width: 100%;
         background: #E7E7E7;
         height: 40px;
         border: none;
         padding: 8px;
+        color: #666;
 
         &:focus + label {
           transform: translateY(-130%);
           opacity: 1;
-          transition: .4s ease-in all;
+          transition: .2s ease-in all;
           font-size: smaller;
           color: $cBlack;
           left: -8px;
@@ -143,11 +168,12 @@
         &:focus::placeholder {
           color: transparent;
           font-size: smaller;
-          transition: .4s ease-in all;
+          transition: .2s ease-in all;
         }
 
         &::placeholder {
-          transition: .4s ease-in all;
+          transition: .2s ease-in all;
+          color: #666;
         }
       }
 
@@ -171,8 +197,26 @@
         font-size: 14px;
         padding: 8px;
         opacity: 0;
-        transition: .4s ease-in all;
+        transition: .2s ease-in all;
         pointer-events: none;
+
+        &.show {
+          transform: translateY(-130%);
+          opacity: 1;
+          transition: .2s ease-in all;
+          font-size: smaller;
+          color: $cBlack;
+          left: -8px;
+        }
+
+        &.textareaLabel {
+          transform: translateY(-260%);
+          opacity: 1;
+          transition: .2s ease-in all;
+          font-size: smaller;
+          color: $cBlack;
+          left: -8px;
+        }
       }
     }
 
@@ -192,7 +236,6 @@
       color: $cWhite;
       padding: 10px 55px;
       text-transform: uppercase;
-      width: 46%;
       margin-left: auto;
     }
   }

@@ -6,11 +6,11 @@
         </div>
         <div class="header__menu">
           <nav class="nav">
-            <g-link class="nav__link" to="/">Oferta</g-link>
-            <g-link class="nav__link" to="/about/">Flota</g-link>
-            <g-link class="nav__link" to="/about/">Dokumenty</g-link>
-            <g-link class="nav__link" to="/about/">Wycena</g-link>
-            <g-link class="nav__link" to="/about/">Kontakt</g-link>
+            <g-link class="nav__link" to="/#offer-section">Oferta</g-link>
+            <g-link class="nav__link" to="/">Flota</g-link>
+            <g-link class="nav__link" to="/#docs-section">Dokumenty</g-link>
+            <g-link class="nav__link" to="/#quotation-form">Wycena</g-link>
+            <g-link class="nav__link" to="/#contact-section">Kontakt</g-link>
           </nav>
           <div class="header__nav-toggle">
             <span></span>

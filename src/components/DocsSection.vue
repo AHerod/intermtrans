@@ -1,5 +1,5 @@
 <template>
-  <section class="section docs-section">
+  <section id="docs-section" class="section docs-section">
     <div class="docs-section__hero-img">
       <g-image alt="Documents section hero image" src="~/assets/img/docs_hero.jpg" width="485" immediate="true"/>
     </div>

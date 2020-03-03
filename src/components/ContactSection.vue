@@ -1,6 +1,6 @@
 <template>
   <section class="contact-section max-container-no-padding">
-    <div class="contact-form">
+    <div class="contact-form" id="quotation-form">
       <ContactForm/>
     </div>
     <div class="contact-info">
@@ -28,6 +28,7 @@
     justify-content: space-between;
     flex-direction: column-reverse;
     align-items: center;
+    margin-bottom: 100px;
 
     @media screen and (min-width: 769px) {
       flex-direction: row;
@@ -39,6 +40,16 @@
       font-size: 20px;
       width: 70%;
       margin-bottom: 50px;
+      margin-left: 30px;
+
+      @media screen and (max-width: 992px) {
+        margin-left: 0;
+      }
+
+      span {
+        font-weight: 700;
+        white-space: nowrap;
+      }
     }
 
     .contact-info, .contact-form {
