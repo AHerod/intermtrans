@@ -11,7 +11,8 @@
     <a href="" class="contact-bar__icon">
       <g-image alt="Phone icon" src="~/assets/img/icon_phone.svg" width="35" immediate="true"/>
     </a>
-    <a href="" class="contact-bar__icon"><span>+ 48 507 473 964</span></a>
+    <a href="" class="contact-bar__icon-phone"><span>+ 48 507 473 964</span></a>
+    <button class="lang-switcher">ENG</button>
   </section>
 </template>
 
@@ -30,14 +31,17 @@
     background: $cRed;
     margin-top: -20px;
     padding: 10px 12px;
-    width: 100%;
     float: right;
     position: relative;
     z-index: 10;
+    width: 100%;
+    min-width: 245px;
     @include clearfix;
-
-    @media screen and (min-width: 769px) {
       max-width: 400px;
+
+    @media screen and (max-width: 768px) {
+      width: auto;
+    }
 
       &::before {
         content: " ";
@@ -53,16 +57,49 @@
         transform: skew(45deg, 0deg);
         box-shadow: 0px 3px 6px #00000029;
       }
-    }
+
 
     span {
       color: $cWhite;
       font-weight: bolder;
       font-size: large;
-      display: none;
+      display: block;
+    }
 
+    &__icon-phone {
+      display: none;
       @media screen and (min-width: 769px) {
         display: block;
+      }
+    }
+    .lang-switcher {
+      position: relative;
+      font-weight: 600;
+      color: $cRed;
+
+      @media screen and (min-width: 769px) {
+        position: absolute;
+        top: -80%;
+        right: 8px;
+      }
+
+      &::before {
+        background: $cBlack;
+        content: '';
+        display: block;
+        border-radius: 50%;
+        border: 3px solid black;
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        z-index: -1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        @media screen and (min-width: 769px) {
+          display: none;
+        }
+
       }
     }
   }

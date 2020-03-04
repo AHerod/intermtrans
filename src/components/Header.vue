@@ -1,30 +1,41 @@
 <template>
-    <header class="header">
-      <div class="header__content max-container">
-        <div class="header__logo">
-          <g-image alt="Intermtrans logo" src="~/assets/img/logo.svg" width="135" immediate="true"/>
-        </div>
-        <div class="header__menu">
-          <nav class="nav">
-            <g-link class="nav__link" to="/#offer-section">Oferta</g-link>
-            <g-link class="nav__link" to="/">Flota</g-link>
-            <g-link class="nav__link" to="/#docs-section">Dokumenty</g-link>
-            <g-link class="nav__link" to="/#quotation-form">Wycena</g-link>
-            <g-link class="nav__link" to="/#contact-section">Kontakt</g-link>
-          </nav>
-          <div class="header__nav-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+  <header class="header">
+    <div class="header__content max-container">
+      <div class="header__logo">
+        <g-image alt="Intermtrans logo" src="~/assets/img/logo.svg" width="135" immediate="true"/>
+      </div>
+      <div class="header__menu">
+        <nav class="nav" :class="{isMobile: isMobileActive}">
+          <g-link class="nav__link" to="/#offer-section" @click="toggleMobileHeader666">Oferta</g-link>
+          <g-link class="nav__link" to="/">Flota</g-link>
+          <g-link class="nav__link" to="/#docs-section">Dokumenty</g-link>
+          <g-link class="nav__link" to="/#quotation-form">Wycena</g-link>
+          <g-link class="nav__link" to="/#contact-section">Kontakt</g-link>
+        </nav>
+        <div class="header__nav-toggle" @click="toggleMobileHeader">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 </template>
 
 <script>
     export default {
         name: 'Header',
+        data: function () {
+            return {
+                isMobileActive: false,
+            }
+        },
+
+        methods: {
+            toggleMobileHeader: function () {
+                this.isMobileActive = !this.isMobileActive;
+            },
+        }
     }
 
 </script>
@@ -75,7 +86,10 @@
     min-height: 100vh;
     background: $cWhite;
     margin-top: 20px;
-    display: none;
+    opacity: 0;
+    transition: all .2s ease-in;
+    z-index: 20;
+
 
     @media screen and (min-width: 769px) {
       flex-direction: row;
@@ -84,6 +98,14 @@
       margin-top: 0;
       top: 0;
       display: flex;
+      opacity: 1;
+    }
+
+    &.isMobile {
+      opacity: 1;
+      transition: all .2s ease-in;
+
+      margin: 0;
     }
 
     &__link {
