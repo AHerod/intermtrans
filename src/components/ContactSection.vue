@@ -4,9 +4,9 @@
       <ContactForm/>
     </div>
     <div class="contact-info">
-      Aby otrzymać zupełnie darmową wycenę transportu wypełnij podany formularz lub skontaktuj się z nami
-      telefonicznie
-      pod numerem <span>+48 5-7 473 964</span> od poniedziałku do piątku w godzinach <span>8:00-16:00</span>.
+     <p>Aby otrzymać zupełnie darmową wycenę transportu wypełnij podany formularz lub skontaktuj się z nami
+       telefonicznie
+       pod numerem <span>+48 5-7 473 964</span> od poniedziałku do piątku w godzinach <span>8:00-16:00</span>.</p>
     </div>
   </section>
 </template>

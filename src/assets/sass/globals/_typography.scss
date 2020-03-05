@@ -8,4 +8,18 @@ a {
 
 p {
   font-family: $fRaleway;
+  font-size: 14px;
+
+  @media screen and (min-width: 769px) {
+    font-size: 16px;
+  }
+}
+
+.center-text-block {
+  margin: 0 auto;
+  max-width: 300px;
+
+  @media screen and (min-width: 769px) {
+    max-width: 600px;
+  }
 }

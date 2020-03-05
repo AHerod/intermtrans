@@ -6,7 +6,7 @@
     <div class="docs-section__content">
       <div class="docs-section__content-wrapper max-container">
         <h2 class="heading">Dokumenty</h2>
-        <p>Lorem ipsum ipsum ipsum lorem lorem ipsum ipsum lorem</p>
+        <p class="center-text-block">Lorem ipsum ipsum ipsum lorem lorem ipsum ipsum lorem</p>
         <div class="docs-section__docs-wrapper">
           <DocumentCard title="Polisa Ubezpieczeniowa"
                         file-path="https://drive.google.com/file/d/1j5_GlBq_oSnlvYLEg94L2dMykOo-2bBA/preview"/>

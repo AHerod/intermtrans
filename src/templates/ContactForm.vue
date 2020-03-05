@@ -30,9 +30,9 @@
           <label for="placeOfUnloading">Miejsce rozładunku</label>
         </div>
         <div class="form__field">
-          <input type="text" name="dateOfLoading" v-model="formData.dateOfLoading" placeholder="Data rozładunku"
+          <input type="text" name="dateOfLoading" v-model="formData.dateOfLoading" placeholder="Data załadunku"
                  @blur="positionLabel" :type="this.isDate ? 'date' : 'text'" @click="isTypeADate">
-          <label for="dateOfLoading">Data rozładunku</label>
+          <label for="dateOfLoading">Data załadunku</label>
         </div>
         <div class="form__field">
           <input type="date" name="dateOfUnloading" v-model="formData.dateOfUnloading" placeholder="Data rozładunku"
@@ -122,7 +122,11 @@
     .heading {
       display: flex;
       align-items: center;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
+
+      @media screen and (min-width: 768px) {
+        margin-bottom: 40px;
+      }
 
       img {
         margin-right: 10px;
@@ -132,11 +136,15 @@
     .form__field {
       width: 100%;
       flex-basis: 45%;
-      margin: 0 15px 25px 0;
+      margin: 0 15px 15px 0;
       position: relative;
 
       @media screen and (max-width: 480px) {
         flex-basis: 100%;
+      }
+
+      @media screen and (min-width: 768px) {
+        margin: 0 15px 25px 0;
       }
 
       &:last-of-type {
@@ -151,10 +159,14 @@
       textarea {
         width: 100%;
         background: #E7E7E7;
-        height: 40px;
+        height: 30px;
         border: none;
         padding: 8px;
         color: #666;
+
+        @media screen and (min-width: 768px) {
+          height: 40px;
+        }
 
         &:focus + label {
           transform: translateY(-130%);
