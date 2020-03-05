@@ -1,5 +1,5 @@
 <template>
-  <section class="hero-section">
+  <section class="hero-section" id="hero-section">
     <div class="hero-section__content max-container">
       <h1 class="hero-section__content--title">Transport</h1>
       <h1 class="hero-section__content--title">Spedycja</h1>

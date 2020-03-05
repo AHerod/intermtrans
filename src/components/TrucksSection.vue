@@ -2,7 +2,7 @@
   <section class="trucks-section">
     <div class="max-container">
       <h1>Flota</h1>
-      <p>Do dyspozycji naszych klientów mamy następujące środki transportu:</p>
+      <p class="center-text-block">Do dyspozycji naszych klientów mamy następujące środki transportu:</p>
     </div>
     <div class="max-container-no-padding">
       <TruckCard message="pojazdy 8 i 10 paletowe o ładowności do 1,5 tony" icon="small"/>

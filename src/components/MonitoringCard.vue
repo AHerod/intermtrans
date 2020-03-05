@@ -22,14 +22,7 @@
 
     &__text {
       text-align: left;
-      font-size: 14px;
-
-      @media screen and (min-width: 769px) {
-        font-size: 16px;
-      }
-      @media screen and (min-width: 1200px) {
-        font-size: 18px;
-      }
+      max-width: 350px;
     }
 
     &__arrow {

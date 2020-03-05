@@ -9,12 +9,16 @@
       <TrucksSection/>
       <DocsSection/>
       <ContactSection/>
+      <div class="back-to-top" @click="scrollToTop" id="scrollToTop">
+        <g-image class="arrow" alt="arrow icon" src="~/assets/img/arrow_right.svg" width="20" immediate="true"/>
+      </div>
     </div>
-<!--    <under-construction/>-->
+    <!--    <under-construction/>-->
   </div>
 </template>
 
 <script>
+
     import UnderConstruction from "../components/UnderConstruction";
 
     // import Page parts
@@ -38,8 +42,26 @@
             ContactBar,
             HeroSection,
             UnderConstruction,
+        },
+
+        methods: {
+            scrollToTop() {
+                window.scrollTo(0, 0);
+            }
         }
     }
+
+    window.onscroll = function () {
+
+        let topSection = document.getElementById('hero-section'),
+            scrollToTop = document.getElementById('scrollToTop');
+        if (topSection.getBoundingClientRect().top <= window.innerHeight * 0.95 && topSection.getBoundingClientRect().top > 0) {
+            scrollToTop.classList.remove('visible');
+        } else {
+            scrollToTop.classList.add('visible');
+        }
+
+    };
 </script>
 
 <static-query>
@@ -54,5 +76,31 @@
   .page-content {
     /*display: none;*/
     overflow: hidden;
+
+    .back-to-top {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      box-shadow: 0px 1px 3px $cRed;
+      position: fixed;
+      bottom: 20px;
+      right: 15px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      transition: .6s ease-in-out;
+      opacity: 0;
+      z-index: 100;
+      background: $cWhite;
+      cursor: pointer;
+
+      &.visible {
+        opacity: 1;
+      }
+
+      img {
+        transform: rotate(-90deg);
+      }
+    }
   }
 </style>

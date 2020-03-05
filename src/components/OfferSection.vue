@@ -2,11 +2,13 @@
   <section class="section offer-section" id="offer-section">
     <div class="max-container">
       <h1 class="offer-section__title section__title">Oferta</h1>
-      <p class="offer-section__text">Głównym obszarem działalności naszej firmy jest transport drogowy na terenie
+      <p class="offer-section__text center-text-block">Głównym obszarem działalności naszej firmy jest transport drogowy
+        na terenie
         Unii
         Europejskiej oraz Szwajcarii.
       </p>
-      <p class="offer-section__text">Dysponując flotą własnych pojazdów ora doświadczonych przewoźników
+      <p class="offer-section__text center-text-block">Dysponując flotą własnych pojazdów ora doświadczonych
+        przewoźników
         kontraktowych
         oferujemy szeroki wachlarz
         rozwiązań, od serwisów drobnicowych po dedykowane rozwiązania logistyczne</p>
@@ -46,14 +48,11 @@
     }
 
     &__text {
-      margin-bottom: 30px;
-      font-size: 16px;
       text-align: center;
-      padding: 0 10px;
+      padding: 0 10px 30px;
 
       @media screen and (min-width: 992px) {
-        margin-bottom: 50px;
-        font-size: 26px;
+        padding-bottom: 50px;
       }
     }
 

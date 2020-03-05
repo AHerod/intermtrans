@@ -1,5 +1,5 @@
 <template>
-  <section class="contact-section max-container-no-padding">
+  <section class="contact-section max-container-no-padding fly-in">
     <div class="contact-form" id="quotation-form">
       <ContactForm/>
     </div>
