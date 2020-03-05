@@ -5,17 +5,17 @@
         <g-image alt="Intermtrans logo" src="~/assets/img/logo.svg" width="135" immediate="true"/>
       </div>
       <div class="header__menu">
-        <nav class="nav" :class="{isMobile: isMobileActive}">
-          <g-link class="nav__link" to="/#offer-section" @click="toggleMobileHeader666">Oferta</g-link>
-          <g-link class="nav__link" to="/">Flota</g-link>
-          <g-link class="nav__link" to="/#docs-section">Dokumenty</g-link>
-          <g-link class="nav__link" to="/#quotation-form">Wycena</g-link>
-          <g-link class="nav__link" to="/#contact-section">Kontakt</g-link>
+        <nav class="nav" :class="{isMobile: navToggles}">
+          <g-link class="nav__link" to="/#offer-section" @click.native="clickNavLink">Oferta</g-link>
+          <g-link class="nav__link" to="/#trucks-section" @click.native="clickNavLink">Flota</g-link>
+          <g-link class="nav__link" to="/#docs-section" @click.native="clickNavLink">Dokumenty</g-link>
+          <g-link class="nav__link" to="/#quotation-form" @click.native="clickNavLink">Wycena</g-link>
+          <g-link class="nav__link" to="/#contact-section" @click.native="clickNavLink">Kontakt</g-link>
         </nav>
         <div class="header__nav-toggle" @click="toggleMobileHeader">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span :class="{active: navToggles}"></span>
+          <span :class="{active: navToggles}"></span>
+          <span :class="{active: navToggles}"></span>
         </div>
       </div>
     </div>
@@ -28,13 +28,19 @@
         data: function () {
             return {
                 isMobileActive: false,
+                navToggles: false,
             }
         },
 
         methods: {
             toggleMobileHeader: function () {
-                this.isMobileActive = !this.isMobileActive;
+                this.navToggles = !this.navToggles;
             },
+
+            clickNavLink: function () {
+                this.isMobileActive = !this.isMobileActive;
+                console.log('clicked nav')
+            }
         }
     }
 
@@ -47,8 +53,28 @@
     align-items: center;
     margin-bottom: 20px;
     height: 80px;
-    box-shadow: 0px 3px 6px #00000029;
+    box-shadow: 0 7px 8px 0 #00000029;
     position: relative;
+    background: $cWhite;
+    z-index: 999;
+
+    &::before {
+      @media screen and (max-width: 769px) {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: transparent;
+        box-shadow: 0 7px 8px 0 #00000029;
+        z-index: 999;
+      }
+    }
+
+    &__logo {
+      z-index: 999;
+    }
 
     &__content,
     &__menu {
@@ -62,12 +88,38 @@
       flex-direction: column;
       height: 20px;
       justify-content: space-between;
+      z-index: 999;
+      cursor: pointer;
 
       span {
         display: block;
         background: $cRed;
         width: 30px;
         height: 4px;
+
+        &:first-of-type {
+          transition: all .4s ease-in-out;
+
+          &.active {
+            transform: rotate(45deg) translateX(25%) translateY(100%);
+          }
+        }
+
+        &:last-of-type {
+          transition: all .4s ease-in-out;
+
+          &.active {
+            transform: rotate(-45deg) translateX(25%) translateY(-100%);
+          }
+        }
+
+        &:nth-of-type(2) {
+          transition: all .4s ease-in-out;
+
+          &.active {
+            opacity: 0;
+          }
+        }
 
         @media screen and (min-width: 769px) {
           display: none;
@@ -87,9 +139,9 @@
     background: $cWhite;
     margin-top: 20px;
     opacity: 0;
-    transition: all .2s ease-in;
     z-index: 20;
-
+    transform: translateY(100%);
+    transition: all .6s ease-in-out;
 
     @media screen and (min-width: 769px) {
       flex-direction: row;
@@ -99,14 +151,18 @@
       top: 0;
       display: flex;
       opacity: 1;
+      transform: none;
     }
 
-    &.isMobile {
-      opacity: 1;
-      transition: all .2s ease-in;
-
-      margin: 0;
+    @media screen and (max-width: 769px) {
+      &.isMobile {
+        opacity: 1;
+        transform: translateY(0);
+        margin: 0;
+        padding-top: 60px;
+      }
     }
+
 
     &__link {
       margin-left: 40px;

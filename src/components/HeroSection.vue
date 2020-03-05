@@ -19,7 +19,7 @@
   .hero-section {
     width: 100%;
     height: 80vh;
-    margin-top: -20px;
+    margin-top: -25px;
     background: url("../assets/img/hero_image.jpg");
     background-position: right;
     background-size: cover;

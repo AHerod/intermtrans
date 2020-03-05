@@ -33,14 +33,15 @@
     padding: 10px 12px;
     float: right;
     position: relative;
-    z-index: 10;
     width: 100%;
     min-width: 245px;
+    max-width: 400px;
+    box-shadow: 2px 3px 9px 0 #00000085;
+    z-index: 1;
     @include clearfix;
-      max-width: 400px;
 
     @media screen and (max-width: 768px) {
-      width: auto;
+      z-index: 1000;
     }
 
       &::before {

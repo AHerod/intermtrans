@@ -1,5 +1,5 @@
 <template>
-  <section class="trucks-section">
+  <section class="trucks-section" id="trucks-section">
     <div class="max-container">
       <h1>Flota</h1>
       <p class="center-text-block">Do dyspozycji naszych klientów mamy następujące środki transportu:</p>
@@ -27,6 +27,7 @@
 
 <style lang="scss">
   .trucks-section {
+    padding-top: 30px;
     .max-container {
       text-align: center;
       margin-bottom: 50px;

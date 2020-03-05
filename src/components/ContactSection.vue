@@ -1,5 +1,5 @@
 <template>
-  <section class="contact-section max-container-no-padding fly-in">
+  <section class="contact-section max-container-no-padding fly-in" id="contact-section">
     <div class="contact-form" id="quotation-form">
       <ContactForm/>
     </div>
@@ -32,6 +32,10 @@
 
     @media screen and (min-width: 769px) {
       flex-direction: row;
+    }
+
+    .contact-form {
+      padding-top: 60px;
     }
 
     .contact-info {
