@@ -46,12 +46,14 @@
         methods: {
             //@TODO  fix bug with window on build on production
             scrollToTop() {
+                if (typeof window !== 'undefined') {
                     window.scrollTo(0, 0);
+                }
             }
         }
     }
 
-    if (process.isClient) {
+    if (typeof window !== 'undefined') {
         window.onscroll = function () {
 
             let topSection = document.getElementById('hero-section'),
