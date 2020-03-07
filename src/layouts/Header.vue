@@ -46,10 +46,7 @@
         methods: {
             //@TODO  fix bug with window on build on production
             scrollToTop() {
-                if(process.isClient) {
                     window.scrollTo(0, 0);
-
-                }
             }
         }
     }
