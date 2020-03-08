@@ -4,7 +4,8 @@
       {{ title }}
     </p>
     <div class="document-card__img">
-      <g-image class="document-card__cube" alt="cube icon" src="~/assets/img/logo_cube.svg" width="35" immediate="true"/>
+      <g-image class="document-card__cube" alt="cube icon" src="~/assets/img/logo_cube.svg" width="35"
+               immediate="true"/>
     </div>
     <a v-bind:href="filePath" class="document-card__open-btn" target="_blank">
       Otwórz
@@ -26,10 +27,10 @@
     align-items: center;
     flex-direction: column;
     width: 170px;
-    height: 245px;
+    height: 240px;
     box-shadow: 2px 10px 18px #2c2c2c66;
     position: relative;
-    transition: .4s ease-in all;
+    transition: .4s ease-in-out all;
 
     &::before,
     &::after {
@@ -55,6 +56,9 @@
 
     &__title {
       font-size: 18px;
+      padding: 20px 0;
+      transform: translateY(45px);
+      transition: .4s ease-in-out all;
 
       @media screen and (min-width: 1200px) {
         font-size: 18px;
@@ -72,7 +76,7 @@
       margin: 0 auto;
       display: block;
       padding-top: 90%;
-      transition: .4s ease-in all;
+      transition: .4s ease-in-out all;
     }
 
     &__open-btn {
@@ -85,25 +89,34 @@
       bottom: 40%;
       visibility: hidden;
       opacity: 0;
-      transition: .4s ease-in all;
+      transition: .4s ease-in-out all;
       transform: translateY(100px);
     }
 
     &:hover {
-        box-shadow: 2px 20px 18px 3px #00000040;
-        transition: .4s ease-in all;
-        cursor: pointer;
+      box-shadow: 2px 20px 18px 3px #00000040;
+      transition: .4s ease-in-out all;
+      cursor: pointer;
+
+      &:before {
+        height: 10%;
+      }
+
+      .document-card__title {
+        transform: translateY(15px);
+        transition: .4s ease-in-out all;
+      }
 
       .document-card__open-btn {
         visibility: initial;
         opacity: 1;
-        transform: translateY(0px);
-        transition: .4s ease-in all;
+        transform: translateY(15px);
+        transition: .4s ease-in-out all;
       }
 
       .document-card__cube {
         padding-top: 100%;
-        transition: .4s ease-in all;
+        transition: .4s ease-in-out all;
       }
     }
   }

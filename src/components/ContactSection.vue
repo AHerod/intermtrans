@@ -43,11 +43,10 @@
       text-align: center;
       font-size: 20px;
       width: 70%;
-      margin-bottom: 50px;
-      margin-left: 30px;
 
-      @media screen and (max-width: 992px) {
-        margin-left: 0;
+      @media screen and (min-width: 992px) {
+        margin-left: 30px;
+        margin-bottom: 50px;
       }
 
       span {

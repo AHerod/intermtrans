@@ -5,15 +5,15 @@
     </div>
     <div class="docs-section__content">
       <div class="docs-section__content-wrapper max-container">
-        <h2 class="heading">Dokumenty</h2>
-        <p class="center-text-block">Lorem ipsum ipsum ipsum lorem lorem ipsum ipsum lorem</p>
+        <h1 class="section__title">{{section.title}}</h1>
+        <p class="center-text-block">{{section.subtitle}}</p>
         <div class="docs-section__docs-wrapper">
-          <DocumentCard title="Polisa Ubezpieczeniowa"
-                        file-path="https://drive.google.com/file/d/1j5_GlBq_oSnlvYLEg94L2dMykOo-2bBA/preview"/>
-          <DocumentCard title="Licencja"
-                        file-path="https://drive.google.com/file/d/1RkeJshEg4ufWbpGJ9-wOyKpbtXa7e-1b/preview"/>
-          <DocumentCard title="Certyfikat Kompetencji Zawodowych"
-                        file-path="https://drive.google.com/file/d/1pQgbBNxYakkdCDUhNu_olO_yDMLqeWYh/preview"/>
+          <DocumentCard :title="section.docCardFirst.title"
+                        :file-path="section.docCardFirst.filePath"/>
+          <DocumentCard :title="section.docCardSecond.title"
+                        :file-path="section.docCardSecond.filePath"/>
+          <DocumentCard :title="section.docCardThird.title"
+                        :file-path="section.docCardThird.filePath"/>
         </div>
       </div>
     </div>
@@ -21,12 +21,18 @@
 </template>
 
 <script>
-    import DocumentCard from "../components/DocumentCard";
+    import DocumentCard from "../components/DocumentCard"
+    import section from "~/data/docsSection.json"
 
     export default {
         name: 'DocsSection',
         components: {
             DocumentCard
+        },
+        data() {
+            return {
+                section
+            }
         }
     }
 
@@ -44,29 +50,26 @@
     }
 
     &__content {
-      flex: 100%;
+      width: 100%;
       @media screen and (min-width: 992px) {
-        flex: 50%;
+        width: 50%;
       }
 
-      h2 {
-        text-transform: uppercase;
-        text-align: center;
-        font-size: 45px;
+      h1 {
+        margin-top: 0;
       }
 
       p {
         text-align: center;
-        padding: 20px 0;
+        padding: 0 0 20px;
       }
     }
 
     &__hero-img {
-      flex: 100%;
       width: 100%;
 
       @media screen and (min-width: 992px) {
-        flex: 50%;
+        width: 50%;
       }
 
       img {
@@ -77,12 +80,19 @@
 
     &__docs-wrapper {
       display: flex;
-      flex-wrap: wrap;
       justify-content: space-evenly;
       padding-bottom: 35px;
 
+      @media screen and (max-width: 768px) {
+        flex-wrap: wrap;
+      }
+
       @media screen and (min-width: 992px) {
         padding-bottom: 0;
+      }
+
+      .document-card {
+        margin: 0 5px;
       }
     }
   }

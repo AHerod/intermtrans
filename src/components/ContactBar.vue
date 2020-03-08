@@ -1,18 +1,20 @@
 <template>
   <section class="contact-bar">
-    <a href="https://www.facebook.com/Intermtrans-104479624389862/" target="_blank" rel="noopener"
-       class="contact-bar__icon">
-      <g-image alt="Facebook icon" src="~/assets/img/icon_facebook.svg" width="35" immediate="true"/>
-    </a>
-    <a href="https://www.linkedin.com/company/intermtrans-damian-talar/about/" class="contact-bar__icon"
-       target="_blank" rel="noopener">
-      <g-image alt="Linkedin icon" src="~/assets/img/icon_linkedin.svg" width="35" immediate="true"/>
-    </a>
-    <a href="" class="contact-bar__icon">
-      <g-image alt="Phone icon" src="~/assets/img/icon_phone.svg" width="35" immediate="true"/>
-    </a>
-    <a href="" class="contact-bar__icon-phone"><span>+ 48 507 473 964</span></a>
-    <button class="lang-switcher">ENG</button>
+    <div class="contact-bar__wrapper">
+      <a href="https://www.facebook.com/Intermtrans-104479624389862/" target="_blank" rel="noopener"
+         class="contact-bar__icon">
+        <g-image alt="Facebook icon" src="~/assets/img/icon_facebook.svg" width="35" immediate="true"/>
+      </a>
+      <a href="https://www.linkedin.com/company/intermtrans-damian-talar/about/" class="contact-bar__icon"
+         target="_blank" rel="noopener">
+        <g-image alt="Linkedin icon" src="~/assets/img/icon_linkedin.svg" width="35" immediate="true"/>
+      </a>
+      <a href="" class="contact-bar__icon">
+        <g-image alt="Phone icon" src="~/assets/img/icon_phone.svg" width="35" immediate="true"/>
+      </a>
+      <a href="" class="contact-bar__icon-phone"><span>+ 48 507 473 964</span></a>
+      <button class="lang-switcher">ENG</button>
+    </div>
   </section>
 </template>
 
@@ -32,7 +34,6 @@
     margin-top: -20px;
     padding: 10px 12px;
     float: right;
-    position: relative;
     width: 100%;
     min-width: 245px;
     max-width: 400px;
@@ -65,6 +66,14 @@
       font-weight: bolder;
       font-size: large;
       display: block;
+    }
+
+    &__wrapper {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
     }
 
     &__icon-phone {

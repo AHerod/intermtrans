@@ -1,6 +1,6 @@
 <template>
   <section class="section monitoring-section max-container">
-    <h2 class="monitoring-section__title max-container">Monitoring Dostaw 24h</h2>
+    <h1 class="monitoring-section__title max-container section__title">Monitoring Dostaw 24h</h1>
     <div class="monitoring-section__content max-container">
       <div class="monitoring-section__cards">
         <MonitoringCard text="Transport każdego ładunku jest monitorowany 24
@@ -38,15 +38,10 @@ lokalizacji danego pojazdu."/>
   .monitoring-section {
     &__title {
       color: $cRed;
-      font-size: 20px;
-      text-transform: uppercase;
-      text-align: center;
       margin-bottom: 10px;
 
       @media screen and (min-width: 480px) {
-        font-size: 36px;
         margin-bottom: 30px;
-
       }
     }
 

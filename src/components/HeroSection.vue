@@ -54,6 +54,7 @@
         text-transform: uppercase;
         letter-spacing: 2px;
         font-weight: 800;
+        max-width: 100%;
 
         @media screen and (min-width: 992px) {
           margin-top: 5px;

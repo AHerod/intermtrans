@@ -142,6 +142,7 @@
     z-index: 20;
     transform: translateY(100%);
     transition: all .6s ease-in-out;
+    visibility: hidden;
 
     @media screen and (min-width: 769px) {
       flex-direction: row;
@@ -152,6 +153,7 @@
       display: flex;
       opacity: 1;
       transform: none;
+      visibility: visible;
     }
 
     @media screen and (max-width: 769px) {

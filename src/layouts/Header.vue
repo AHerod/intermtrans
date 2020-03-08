@@ -9,7 +9,7 @@
       <TrucksSection/>
       <DocsSection/>
       <ContactSection/>
-      <div class="back-to-top" @click="scrollViewToTop()" id="scrollToTop">
+      <div class="back-to-top" @click="scrollViewToTheTop" id="scrollToTop">
         <g-image class="arrow" alt="arrow icon" src="~/assets/img/arrow_right.svg" width="20" immediate="true"/>
       </div>
     </div>
@@ -45,7 +45,7 @@
 
         methods: {
             //@TODO  fix bug with window on build on production
-            scrollViewToTop() {
+            scrollViewToTheTop() {
                 if (process.isClient) {
                     console.log('IS CLIENT window.scrollTo(0,0)');
                     window.scrollTo(0, 0);
@@ -102,7 +102,7 @@
       justify-content: center;
       transition: .6s ease-in-out;
       opacity: 0;
-      z-index: 100;
+      z-index: 1001;
       background: $cWhite;
       cursor: pointer;
 
