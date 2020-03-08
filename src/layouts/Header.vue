@@ -9,9 +9,7 @@
       <TrucksSection/>
       <DocsSection/>
       <ContactSection/>
-      <div class="back-to-top" @click="scrollViewToTheTop" id="scrollToTop">
-        <g-image class="arrow" alt="arrow icon" src="~/assets/img/arrow_right.svg" width="20" immediate="true"/>
-      </div>
+      <ScrollToTop/>
     </div>
     <!--    <under-construction/>-->
   </div>
@@ -29,6 +27,7 @@
     import DocsSection from "../components/DocsSection";
     import ContactSection from "../components/ContactSection";
     import TrucksSection from "../components/TrucksSection";
+    import ScrollToTop from "../components/ScrollToTop"
 
     export default {
         components: {
@@ -41,11 +40,13 @@
             ContactBar,
             HeroSection,
             UnderConstruction,
+            ScrollToTop,
         },
 
         methods: {
             //@TODO  fix bug with window on build on production
             scrollViewToTheTop: function () {
+                console.log('scrollViewToTheTop is on');
                 if (process.isClient) {
                     console.log('IS CLIENT window.scrollTo(0,0)');
                     window.scrollTo(0, 0);
@@ -88,31 +89,5 @@
   .page-content {
     /*display: none;*/
     overflow: hidden;
-
-    .back-to-top {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      box-shadow: 0px 1px 3px $cRed;
-      position: fixed;
-      bottom: 20px;
-      right: 15px;
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      transition: .6s ease-in-out;
-      opacity: 0;
-      z-index: 1001;
-      background: $cWhite;
-      cursor: pointer;
-
-      &.visible {
-        opacity: 1;
-      }
-
-      img {
-        transform: rotate(-90deg);
-      }
-    }
   }
 </style>
