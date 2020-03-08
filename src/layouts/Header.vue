@@ -45,7 +45,7 @@
 
         methods: {
             //@TODO  fix bug with window on build on production
-            scrollViewToTheTop() {
+            scrollViewToTheTop: function () {
                 if (process.isClient) {
                     console.log('IS CLIENT window.scrollTo(0,0)');
                     window.scrollTo(0, 0);
