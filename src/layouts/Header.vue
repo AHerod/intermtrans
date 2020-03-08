@@ -9,7 +9,7 @@
       <TrucksSection/>
       <DocsSection/>
       <ContactSection/>
-      <ScrollToTop/>
+<!--      <ScrollToTop/>-->
     </div>
     <!--    <under-construction/>-->
   </div>
@@ -43,36 +43,36 @@
             ScrollToTop,
         },
 
-        methods: {
-            //@TODO  fix bug with window on build on production
-            scrollViewToTheTop: function () {
-                console.log('scrollViewToTheTop is on');
-                if (process.isClient) {
-                    console.log('IS CLIENT window.scrollTo(0,0)');
-                    window.scrollTo(0, 0);
-                } else {
-                    console.log('IS server window.scrollTo(0,0)');
-                }
-            }
-        }
+        // methods: {
+        //     //@TODO  fix bug with window on build on production
+        //     scrollViewToTheTop: function () {
+        //         console.log('scrollViewToTheTop is on');
+        //         if (process.isClient) {
+        //             console.log('IS CLIENT window.scrollTo(0,0)');
+        //             window.scrollTo(0, 0);
+        //         } else {
+        //             console.log('IS server window.scrollTo(0,0)');
+        //         }
+        //     }
+        // }
     }
 
-    if (process.isClient) {
-        console.log('IS CLIENT window.scroll');
-        window.onscroll = function () {
-
-            let topSection = document.getElementById('hero-section'),
-                scrollToTop = document.getElementById('scrollToTop');
-            if (topSection.getBoundingClientRect().top <= window.innerHeight * 0.95 && topSection.getBoundingClientRect().top > 0) {
-                scrollToTop.classList.remove('visible');
-            } else {
-                scrollToTop.classList.add('visible');
-            }
-
-        };
-    } else {
-        console.log('IS server window.scroll');
-    }
+    // if (process.isClient) {
+    //     console.log('IS CLIENT window.scroll');
+    //     window.onscroll = function () {
+    //
+    //         let topSection = document.getElementById('hero-section'),
+    //             scrollToTop = document.getElementById('scrollToTop');
+    //         if (topSection.getBoundingClientRect().top <= window.innerHeight * 0.95 && topSection.getBoundingClientRect().top > 0) {
+    //             scrollToTop.classList.remove('visible');
+    //         } else {
+    //             scrollToTop.classList.add('visible');
+    //         }
+    //
+    //     };
+    // } else {
+    //     console.log('IS server window.scroll');
+    // }
 
 
 </script>
