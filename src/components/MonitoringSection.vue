@@ -1,19 +1,11 @@
 <template>
   <section class="section monitoring-section max-container">
-    <h1 class="monitoring-section__title max-container section__title">Monitoring Dostaw 24h</h1>
+    <h1 class="monitoring-section__title max-container section__title">{{section.tile}}</h1>
     <div class="monitoring-section__content max-container">
       <div class="monitoring-section__cards">
-        <MonitoringCard text="Transport każdego ładunku jest monitorowany 24
-godziny na dobę przez zespół doświadczonych
-spedytorów.
-"/>
-        <MonitoringCard text="Nasi klienci mają możliwość sprawdzić o każdej porze
-dnia i nocy status swojego zlecenia.
-"/>
-        <MonitoringCard text="
-Wszystkie nasze samochody posiadają nadajniki GPS
-dzięki czemu klienci na bieżąco informowani są o
-lokalizacji danego pojazdu."/>
+        <MonitoringCard :text="section.monitoringCardFirst"/>
+        <MonitoringCard :text="section.monitoringCardSecond"/>
+        <MonitoringCard :text="section.monitoringCardThird"/>
       </div>
       <g-image class="monitoring-section__hero-image" alt="Phone icon" src="~/assets/img/monitoring_hero.png"
                width="435" immediate="true"/>
@@ -24,11 +16,17 @@ lokalizacji danego pojazdu."/>
 
 <script>
     import MonitoringCard from "../components/MonitoringCard";
+    import section from "~/data/monitoringSection.json";
 
     export default {
         name: 'MonitoringSection',
         components: {
             MonitoringCard,
+        },
+        data() {
+            return {
+                section
+            }
         }
     }
 

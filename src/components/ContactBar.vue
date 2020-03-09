@@ -12,15 +12,21 @@
       <a href="" class="contact-bar__icon">
         <g-image alt="Phone icon" src="~/assets/img/icon_phone.svg" width="35" immediate="true"/>
       </a>
-      <a href="" class="contact-bar__icon-phone"><span>+ 48 507 473 964</span></a>
+      <a href="" class="contact-bar__icon-phone"><span>{{section.phone}}</span></a>
       <button class="lang-switcher">ENG</button>
     </div>
   </section>
 </template>
 
 <script>
+  import section from "~/data/contactSection.json";
     export default {
         name: 'ContactBar',
+        data(){
+            return {
+                section,
+            }
+        }
     }
 
 </script>

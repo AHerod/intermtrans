@@ -4,20 +4,24 @@
       <ContactForm/>
     </div>
     <div class="contact-info">
-     <p>Aby otrzymać zupełnie darmową wycenę transportu wypełnij podany formularz lub skontaktuj się z nami
-       telefonicznie
-       pod numerem <span>+48 5-7 473 964</span> od poniedziałku do piątku w godzinach <span>8:00-16:00</span>.</p>
+     <p>{{section.content}} <span>{{section.phone}}</span> {{section.availability}} <span>{{section.hours}}</span>.</p>
     </div>
   </section>
 </template>
 
 <script>
     import ContactForm from "../templates/ContactForm";
+    import section from "~/data/contactSection.json";
 
     export default {
         name: 'ContactSection',
         components: {
             ContactForm
+        },
+        data() {
+            return {
+                section
+            }
         }
     }
 </script>

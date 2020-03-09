@@ -1,25 +1,31 @@
 <template>
   <section class="trucks-section" id="trucks-section">
     <div class="max-container">
-      <h1 class="section__title">Flota</h1>
-      <p class="center-text-block">Do dyspozycji naszych klientów mamy następujące środki transportu:</p>
+      <h1 class="section__title">{{section.title}}</h1>
+      <p class="center-text-block">{{section.subtitle}}</p>
     </div>
     <div class="max-container-no-padding">
-      <TruckCard message="pojazdy 8 i 10 paletowe o ładowności do 1,5 tony" icon="small"/>
-      <TruckCard message="Auta ciężarowe o ładowności od 1,5 tony do 16 ton" icon="medium"/>
-      <TruckCard message="naczepa typu chłodnia / izoterma" icon="big"/>
-      <TruckCard message="naczepy typu standard i mega (wysokość wewnętrzna 2,7 m / 3 m, długość 13,6 m, ładowność 24 tony)" icon="huge"/>
+      <TruckCard :message="section.cardFirst" icon="small"/>
+      <TruckCard :message="section.cardSecond" icon="medium"/>
+      <TruckCard :message="section.cardThird" icon="big"/>
+      <TruckCard :message="section.cardFourth" icon="huge"/>
     </div>
   </section>
 </template>
 
 <script>
     import TruckCard from "../components/TruckCard";
+    import section from "~/data/trucksSection.json"
 
     export default {
         name: 'TrucksSection',
         components: {
             TruckCard
+        },
+        data() {
+            return {
+                section
+            }
         }
     }
 

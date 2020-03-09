@@ -1,16 +1,22 @@
 <template>
   <section class="hero-section" id="hero-section">
     <div class="hero-section__content max-container">
-      <h1 class="hero-section__content--title">Transport</h1>
-      <h1 class="hero-section__content--title">Spedycja</h1>
-      <h1 class="hero-section__content--title">Logistyka</h1>
+      <h1 class="hero-section__content--title">{{section.titleFirst}}</h1>
+      <h1 class="hero-section__content--title">{{section.titleSecond}}</h1>
+      <h1 class="hero-section__content--title">{{section.titleThird}}</h1>
     </div>
   </section>
 </template>
 
 <script>
+  import section from "~/data/heroSection.json"
     export default {
         name: 'HeroSection',
+        data() {
+            return {
+                section
+            }
+        }
     }
 
 </script>

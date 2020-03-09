@@ -1,22 +1,15 @@
 <template>
   <section class="section offer-section" id="offer-section">
     <div class="max-container">
-      <h1 class="offer-section__title section__title">Oferta</h1>
-      <p class="offer-section__text center-text-block">Głównym obszarem działalności naszej firmy jest transport drogowy
-        na terenie
-        Unii
-        Europejskiej oraz Szwajcarii.
+      <h1 class="offer-section__title section__title">{{section.title}}</h1>
+      <p class="offer-section__text center-text-block">{{section.content}}
       </p>
-      <p class="offer-section__text center-text-block">Dysponując flotą własnych pojazdów ora doświadczonych
-        przewoźników
-        kontraktowych
-        oferujemy szeroki wachlarz
-        rozwiązań, od serwisów drobnicowych po dedykowane rozwiązania logistyczne</p>
+      <p class="offer-section__text center-text-block">{{section.moreContent}}</p>
       <div class="offer-section__cards">
-        <OfferCard message="ładunki całopojazdowe" icon="first"/>
-        <OfferCard message="ładunki cześciowe" icon="second"/>
-        <OfferCard message="dostawy ekspresowe" icon="third"/>
-        <OfferCard message="transport drobnicowy" icon="fourth"/>
+        <OfferCard :message="section.cardFirst" icon="first"/>
+        <OfferCard :message="section.cardSecond" icon="second"/>
+        <OfferCard :message="section.cardThird" icon="third"/>
+        <OfferCard :message="section.cardFourth" icon="fourth"/>
       </div>
       <g-image class="offer-section__cube" alt="Intermtrans cube logo" src="~/assets/img/logo_cube.svg"
                width="150" immediate="true"/>
@@ -28,11 +21,17 @@
 
 <script>
     import OfferCard from '~/components/OfferCard.vue'
+    import section from '~/data/offerSection.json'
 
     export default {
         name: 'OfferSection',
         components: {
             OfferCard,
+        },
+        data() {
+            return {
+                section
+            }
         }
     }
 
