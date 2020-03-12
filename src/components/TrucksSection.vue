@@ -34,18 +34,21 @@
 <style lang="scss">
   .trucks-section {
     padding-top: 30px;
+
+    .section__title {
+      color: $cRed;
+    }
+
     .max-container {
       text-align: center;
       margin-bottom: 50px;
-
-      p {
-        color: $cRed;
-      }
     }
+
     .max-container-no-padding {
       display: flex;
       flex-wrap: wrap;
       padding: 0 15px;
+
       .truck-card {
         width: 50%;
 

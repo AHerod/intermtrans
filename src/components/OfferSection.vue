@@ -13,8 +13,8 @@
       </div>
       <g-image class="offer-section__cube" alt="Intermtrans cube logo" src="../assets/img/logo_cube.svg"
                width="150" immediate="true"/>
-      <g-image class="offer-section__cube" alt="Intermtrans cube logo" src="../assets/img/logo_cube.svg"
-               width="170" immediate="true"/>
+<!--      <g-image class="offer-section__cube" alt="Intermtrans cube logo" src="../assets/img/logo_cube.svg"-->
+<!--               width="170" immediate="true"/>-->
     </div>
   </section>
 </template>
@@ -63,7 +63,6 @@
       padding: 0 10px;
 
       @media screen and (min-width: 420px) {
-        max-width: 390px;
         margin: 0 auto;
       }
 
@@ -96,10 +95,10 @@
         width: 250px;
       }
 
-      &:first-of-type {
-        top: 80%;
-        right: 100%;
-      }
+      /*&:first-of-type {*/
+      /*  top: 80%;*/
+      /*  right: 100%;*/
+      /*}*/
     }
   }
 </style>

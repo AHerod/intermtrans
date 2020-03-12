@@ -11,8 +11,8 @@
     </section>
     <section class="contact-details">
       <div class="contact-details__image">
-<!--        <g-image class="phone" alt="hero image" src="~/assets/img/contact_hero.png"-->
-<!--                 width="1000" immediate="true"/>-->
+        <!--        <g-image class="phone" alt="hero image" src="~/assets/img/contact_hero.png"-->
+        <!--                 width="1000" immediate="true"/>-->
       </div>
       <div class="contact-details__items">
         <span class="contact-details__item">
@@ -101,26 +101,44 @@
   .contact-details {
     display: flex;
     position: relative;
-    padding-bottom: 100px;
-    padding-top: 100px;
+    padding-bottom: 30px;
 
     &__image {
-      width: 100%;
-      max-width: 35%;
-
-      img {
-        max-width: 100%;
-        vertical-align: middle;
+      @media screen and (min-width: 992px) {
+        padding-bottom: 100px;
+        padding-top: 100px;
+        width: 100%;
+        max-width: 15%;
       }
     }
 
     &__items {
-      width: 65%;
+      width: 75%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      flex-wrap: 100%;
+      max-width: 650px;
+      margin: 0 auto;
+
+      @media screen and (max-width: 480px) {
+        background-color: #ffffffd4;
+        box-shadow: 5px 0 20px 0;
+        padding: 20px 25px;
+        min-width: 315px;
+
+        span {
+          font-size: 16px;
+          word-break: break-word;
+          margin: 0 auto;
+          margin-bottom: 20px;
+        }
+      }
+
+      @media screen and (min-width: 1200px) {
+        flex-wrap: wrap;
+        width: 45%;
+      }
     }
 
     &__item {
@@ -133,6 +151,11 @@
 
       img {
         margin-right: 25px;
+
+        @media screen and (max-width: 480px) {
+          width: 35px;
+          margin-right: 15px;
+        }
       }
     }
 
@@ -141,16 +164,13 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin-right: 20px;
-
-      span {
-        margin-right: 15px;
-      }
+      flex-basis: 100%;
 
       .label {
         margin-right: 15px;
         color: $cBlack;
         text-transform: uppercase;
+        margin-bottom: 0;
       }
     }
 
@@ -175,17 +195,28 @@
 
   .sections-wrapper {
     position: relative;
+
     .bottom-bg {
       position: absolute;
       width: 100%;
       z-index: -1;
       bottom: 0;
       left: 0;
-      height: 100%;
+      height: 115%;
       background-image: url('../assets/img/bottom_bg_v2.png');
-      background-position: center bottom;
-      background-size: cover;
+      background-position: center left;
       background-repeat: no-repeat;
+      background-size: cover;
+
+      @media screen and (min-width: 480px)  and (max-width: 991px) {
+       display: none;
+      }
+
+      @media screen and (min-width: 992px) {
+        background-size: cover;
+        background-position: center left;
+        height: 100%;
+      }
     }
   }
 </style>

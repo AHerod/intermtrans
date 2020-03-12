@@ -1,7 +1,7 @@
 <template>
   <section id="docs-section" class="section docs-section">
     <div class="docs-section__hero-img">
-      <g-image alt="Documents section hero image" src="~/assets/img/docs_hero.jpg" width="2000" immediate="true"/>
+      <g-image alt="Documents section hero image" src="~/assets/img/monitoring_hero.png" width="2000" immediate="true"/>
     </div>
     <div class="docs-section__content">
       <div class="docs-section__content-wrapper max-container">
