@@ -6,5 +6,11 @@ import '~/assets/styles.scss'
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
-  Vue.component('Layout', Header)
+  Vue.component('Layout', Header);
+
+  // Add a meta tag
+  head.meta.push({
+    name: 'keywords',
+    content: 'transport,forwarding,logistic'
+  })
 }

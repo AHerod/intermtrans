@@ -11,10 +11,10 @@
         <OfferCard :message="section.cardThird" icon="third"/>
         <OfferCard :message="section.cardFourth" icon="fourth"/>
       </div>
-      <g-image class="offer-section__cube" alt="Intermtrans cube logo" src="~/assets/img/logo_cube.svg"
+      <g-image class="offer-section__cube" alt="Intermtrans cube logo" src="../assets/img/logo_cube.svg"
                width="150" immediate="true"/>
-      <g-image class="offer-section__cube" alt="Intermtrans cube logo" src="~/assets/img/logo_cube.svg"
-               width="150" immediate="true"/>
+      <g-image class="offer-section__cube" alt="Intermtrans cube logo" src="../assets/img/logo_cube.svg"
+               width="170" immediate="true"/>
     </div>
   </section>
 </template>
