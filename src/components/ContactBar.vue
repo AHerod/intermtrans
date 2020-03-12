@@ -9,10 +9,10 @@
          target="_blank" rel="noopener">
         <g-image alt="Linkedin icon" src="~/assets/img/icon_linkedin.svg" width="35" immediate="true"/>
       </a>
-      <a href="" class="contact-bar__icon">
+      <a href="tel:+48-507-473-964" class="contact-bar__icon">
         <g-image alt="Phone icon" src="~/assets/img/icon_phone.svg" width="35" immediate="true"/>
       </a>
-      <a href="" class="contact-bar__icon-phone"><span>{{section.phone}}</span></a>
+      <a href="tel:+48-507-473-964" class="contact-bar__icon-phone"><span>{{section.phone}}</span></a>
       <button class="lang-switcher">ENG</button>
     </div>
   </section>

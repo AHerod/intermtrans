@@ -1,11 +1,11 @@
 <template>
-  <header class="header">
+  <header id="header" class="header">
     <div class="header__content max-container">
       <div class="header__logo">
         <g-image alt="Intermtrans logo" src="~/assets/img/logo.svg" width="135" immediate="true"/>
       </div>
       <div class="header__menu">
-        <nav class="nav" :class="{isMobile: navToggles}">
+        <nav id="nav" class="nav" :class="{isMobile: navToggles}">
           <g-link class="nav__link" to="/#offer-section" @click.native="clickNavLink">Oferta</g-link>
           <g-link class="nav__link" to="/#trucks-section" @click.native="clickNavLink">Flota</g-link>
           <g-link class="nav__link" to="/#docs-section" @click.native="clickNavLink">Dokumenty</g-link>
@@ -32,13 +32,36 @@
             }
         },
 
+        created() {
+            if (process.isClient) {
+                window.addEventListener('scroll', this.handleScroll);
+            }
+        },
+        destroyed() {
+            if (process.isClient) {
+                window.removeEventListener('scroll', this.handleScroll);
+            }
+        },
         methods: {
+            handleScroll(event) {
+                let header = document.getElementById("header"),
+                    sticky = header.offsetTop;
+
+                if (window.pageYOffset > sticky) {
+                    header.classList.add("sticky");
+                } else {
+                    if (header.classList.contains('sticky'))
+                    header.classList.remove("sticky");
+                }
+            },
+
             toggleMobileHeader: function () {
                 this.navToggles = !this.navToggles;
             },
 
             clickNavLink: function () {
                 this.isMobileActive = !this.isMobileActive;
+                this.navToggles = !this.navToggles;
                 console.log('clicked nav')
             }
         }
@@ -57,6 +80,16 @@
     position: relative;
     background: $cWhite;
     z-index: 999;
+
+    &.sticky {
+      position: fixed;
+      width: 100%;
+      top: 0;
+
+      + .hero-section {
+        padding-top: 90px;
+      }
+    }
 
     &::before {
       @media screen and (max-width: 769px) {
@@ -162,6 +195,7 @@
         transform: translateY(0);
         margin: 0;
         padding-top: 60px;
+        visibility: visible;
       }
     }
 
@@ -176,6 +210,17 @@
       display: flex;
       flex-direction: row-reverse;
       justify-content: center;
+      transition: all .4s ease-in-out;
+
+      &:hover {
+        color: $cRed;
+        transition: all .4s ease-in-out;
+
+        &::after {
+          background: $cBlack;
+          transition: all .4s ease-in-out;
+        }
+      }
 
       @media screen and (min-width: 769px) {
         text-transform: initial;
@@ -198,6 +243,7 @@
         right: 100%;
         transform: skew(-25deg);
         margin-right: 20px;
+        transition: all .4s ease-in-out;
 
         @media screen and (min-width: 769px) {
           width: 10px;

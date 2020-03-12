@@ -62,6 +62,7 @@
       p {
         text-align: center;
         padding: 0 0 20px;
+        margin-bottom: 40px;
       }
     }
 

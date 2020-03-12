@@ -37,10 +37,11 @@
 
     &__content {
       transform: translateY(20%);
+      display: flex;
+      flex-direction: column;
 
       @media screen and (min-width: 769px) {
         transform: translateY(50%);
-        display: flex;
         justify-content: space-between;
         width: 90%;
         margin: 0 auto;
