@@ -51,7 +51,7 @@
                     header.classList.add("sticky");
                 } else {
                     if (header.classList.contains('sticky'))
-                    header.classList.remove("sticky");
+                        header.classList.remove("sticky");
                 }
             },
 
@@ -81,15 +81,15 @@
     background: $cWhite;
     z-index: 999;
 
-    &.sticky {
-      position: fixed;
-      width: 100%;
-      top: 0;
+      &.sticky {
+        position: fixed;
+        width: 100%;
+        top: 0;
 
-      + .hero-section {
-        padding-top: 90px;
+        + .hero-section {
+          padding-top: 90px;
+        }
       }
-    }
 
     &::before {
       @media screen and (max-width: 769px) {
