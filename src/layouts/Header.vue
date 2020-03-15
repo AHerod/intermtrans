@@ -28,7 +28,7 @@
       <TrucksSection :lang="isEng"/>
       <DocsSection :lang="isEng"/>
       <ContactSection :lang="isEng"/>
-      <ScrollToTop/>
+<!--      <ScrollToTop/>-->
     </div>
     <!--    <under-construction/>-->
   </div>
@@ -64,7 +64,6 @@
             Header,
             HeroSection,
             UnderConstruction,
-            ScrollToTop,
         },
         // created() {
         //     if (process.isClient) {
@@ -194,7 +193,7 @@
         position: fixed;
         right: 20px;
         bottom: 0;
-        top: -84%;
+        top: -89%;
       }
 
       @media screen and (min-width: 769px) {

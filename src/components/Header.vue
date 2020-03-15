@@ -191,6 +191,11 @@
       opacity: 1;
       transform: none;
       visibility: visible;
+      margin-right: 60px;
+    }
+
+    @media screen and (min-width: 1350px) {
+      margin-right: 0;
     }
 
     @media screen and (max-width: 769px) {
