@@ -28,7 +28,6 @@
       <TrucksSection :lang="isEng"/>
       <DocsSection :lang="isEng"/>
       <ContactSection :lang="isEng"/>
-<!--      <ScrollToTop/>-->
     </div>
     <!--    <under-construction/>-->
   </div>
@@ -46,7 +45,6 @@
     import DocsSection from "../components/DocsSection";
     import ContactSection from "../components/ContactSection";
     import TrucksSection from "../components/TrucksSection";
-    import ScrollToTop from "../components/ScrollToTop"
 
     export default {
         data: function () {

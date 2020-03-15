@@ -6,7 +6,7 @@
     <div class="docs-section__content">
       <div class="docs-section__content-wrapper max-container">
         <h1 class="section__title">{{this.lang ? section.eng.title : section.title}}</h1>
-        <p class="center-text-block">{{this.lang ? section.eng.subtitle : section.subtitle}}</p>
+<!--        <p class="center-text-block">{{this.lang ? section.eng.subtitle : section.subtitle}}</p>-->
         <div class="docs-section__docs-wrapper">
           <DocumentCard :lang="lang" :title="this.lang ? section.eng.docCardFirst.title : section.docCardFirst.title"
                         :file-path="section.docCardFirst.filePath"/>
