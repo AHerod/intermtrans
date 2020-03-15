@@ -1,14 +1,14 @@
 <template>
   <section class="trucks-section" id="trucks-section">
     <div class="max-container">
-      <h1 class="section__title">{{section.title}}</h1>
-      <p class="center-text-block">{{section.subtitle}}</p>
+      <h1 class="section__title">{{this.lang ? section.eng.title : section.title}}</h1>
+      <p class="center-text-block">{{this.lang ? section.eng.subtitle : section.subtitle}}</p>
     </div>
     <div class="max-container-no-padding">
-      <TruckCard :message="section.cardFirst" icon="small"/>
-      <TruckCard :message="section.cardSecond" icon="medium"/>
-      <TruckCard :message="section.cardThird" icon="big"/>
-      <TruckCard :message="section.cardFourth" icon="huge"/>
+      <TruckCard :message="this.lang ? section.eng.cardFirst : section.cardFirst" icon="small"/>
+      <TruckCard :message="this.lang ? section.eng.cardSecond : section.cardSecond" icon="medium"/>
+      <TruckCard :message="this.lang ? section.eng.cardThird : section.cardThird" icon="big"/>
+      <TruckCard :message="this.lang ? section.eng.cardFourth : section.cardFourth" icon="huge"/>
     </div>
   </section>
 </template>
@@ -26,7 +26,8 @@
             return {
                 section
             }
-        }
+        },
+        props: ['lang'],
     }
 
 </script>
@@ -50,7 +51,11 @@
       padding: 0 15px;
 
       .truck-card {
-        width: 50%;
+        width: 100%;
+
+        @media screen and (min-width: 480px) {
+          width: 50%;
+        }
 
         img {
           width: 60%;

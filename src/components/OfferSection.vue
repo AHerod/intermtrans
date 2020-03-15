@@ -1,20 +1,18 @@
 <template>
   <section class="section offer-section" id="offer-section">
     <div class="max-container">
-      <h1 class="offer-section__title section__title">{{section.title}}</h1>
-      <p class="offer-section__text center-text-block">{{section.content}}
+      <h1 class="offer-section__title section__title">{{this.lang ? section.eng.title : section.title}}</h1>
+      <p class="offer-section__text center-text-block">{{this.lang ? section.eng.content : section.content}}
       </p>
-      <p class="offer-section__text center-text-block">{{section.moreContent}}</p>
+      <p class="offer-section__text center-text-block">{{this.lang ? section.eng.moreContent : section.moreContent}}</p>
       <div class="offer-section__cards">
-        <OfferCard :message="section.cardFirst" icon="first"/>
-        <OfferCard :message="section.cardSecond" icon="second"/>
-        <OfferCard :message="section.cardThird" icon="third"/>
-        <OfferCard :message="section.cardFourth" icon="fourth"/>
+        <OfferCard :message="this.lang ? section.eng.cardFirst : section.cardFirst" icon="first"/>
+        <OfferCard :message="this.lang ? section.eng.cardSecond : section.cardSecond" icon="second"/>
+        <OfferCard :message="this.lang ? section.eng.cardThird : section.cardThird" icon="third"/>
+        <OfferCard :message="this.lang ? section.eng.cardFourth : section.cardFourth" icon="fourth"/>
       </div>
       <g-image class="offer-section__cube" alt="Intermtrans cube logo" src="../assets/img/logo_cube.svg"
                width="150" immediate="true"/>
-<!--      <g-image class="offer-section__cube" alt="Intermtrans cube logo" src="../assets/img/logo_cube.svg"-->
-<!--               width="170" immediate="true"/>-->
     </div>
   </section>
 </template>
@@ -32,7 +30,8 @@
             return {
                 section
             }
-        }
+        },
+        props: ['lang'],
     }
 
 </script>

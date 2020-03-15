@@ -5,14 +5,14 @@
     </div>
     <div class="docs-section__content">
       <div class="docs-section__content-wrapper max-container">
-        <h1 class="section__title">{{section.title}}</h1>
-        <p class="center-text-block">{{section.subtitle}}</p>
+        <h1 class="section__title">{{this.lang ? section.eng.title : section.title}}</h1>
+        <p class="center-text-block">{{this.lang ? section.eng.subtitle : section.subtitle}}</p>
         <div class="docs-section__docs-wrapper">
-          <DocumentCard :title="section.docCardFirst.title"
+          <DocumentCard :lang="lang" :title="this.lang ? section.eng.docCardFirst.title : section.docCardFirst.title"
                         :file-path="section.docCardFirst.filePath"/>
-          <DocumentCard :title="section.docCardSecond.title"
+          <DocumentCard :lang="lang" :title="this.lang ? section.eng.docCardSecond.title : section.docCardSecond.title"
                         :file-path="section.docCardSecond.filePath"/>
-          <DocumentCard :title="section.docCardThird.title"
+          <DocumentCard :lang="lang" :title="this.lang ? section.eng.docCardThird.title : section.docCardThird.title"
                         :file-path="section.docCardThird.filePath"/>
         </div>
       </div>
@@ -33,7 +33,8 @@
             return {
                 section
             }
-        }
+        },
+        props: ['lang']
     }
 
 </script>

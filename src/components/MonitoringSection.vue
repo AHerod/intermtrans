@@ -1,11 +1,11 @@
 <template>
   <section class="section monitoring-section">
     <div class="monitoring-section__content max-container">
-      <h1 class="monitoring-section__title max-container section__title">{{section.title}}</h1>
+      <h1 class="monitoring-section__title max-container section__title">{{this.lang ? section.eng.title : section.title}}</h1>
       <div class="monitoring-section__cards">
-        <MonitoringCard :text="section.monitoringCardFirst"/>
-        <MonitoringCard :text="section.monitoringCardSecond"/>
-        <MonitoringCard :text="section.monitoringCardThird"/>
+        <MonitoringCard :text="this.lang ? section.eng.monitoringCardFirst : section.monitoringCardFirst"/>
+        <MonitoringCard :text="this.lang ? section.eng.monitoringCardSecond : section.monitoringCardSecond"/>
+        <MonitoringCard :text="this.lang ? section.eng.monitoringCardThird : section.monitoringCardThird"/>
       </div>
     </div>
     <g-image class="monitoring-section__hero-image" alt="Phone icon" src="~/assets/img/docs_hero.jpg"
@@ -27,7 +27,8 @@
             return {
                 section
             }
-        }
+        },
+        props: ['lang'],
     }
 
 </script>

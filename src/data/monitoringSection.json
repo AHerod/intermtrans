@@ -2,5 +2,11 @@
   "title": "Monitoring Dostaw 24h",
   "monitoringCardFirst": "Transport każdego ładunku jest monitorowany 24 godziny na dobę przez zespół doświadczonych spedytorów.",
   "monitoringCardSecond": "Nasi klienci mają możliwość sprawdzić o każdej porze dnia i nocy status Twojego zlecenia.",
-  "monitoringCardThird": "Wszystkie nasze samochody posiadają nadajniki GPS dzięki czemu klienci na bieżąco informowani są o lokalizacji danego pojazdu."
+  "monitoringCardThird": "Wszystkie nasze samochody posiadają nadajniki GPS dzięki czemu klienci na bieżąco informowani są o lokalizacji danego pojazdu.",
+  "eng": {
+    "title": "24-hour monitoring",
+    "monitoringCardFirst": "The transport of each load is monitored 24/7 by a team of experienced freight forwarders.",
+    "monitoringCardSecond": "Our costumers can check the status of their orders at any time of day.",
+    "monitoringCardThird": "All our cars are equipped with GPS transmitters, which keeps our customers informed about the location of a given vehicle."
+  }
 }

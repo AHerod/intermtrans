@@ -21,4 +21,7 @@ module.exports = {
             }
         }
     ],
+    siteUrl: 'www.intermtrans.com',
+    icon: './src/assets/img/favicon.png'
+
 };

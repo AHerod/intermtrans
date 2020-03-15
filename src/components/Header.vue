@@ -6,11 +6,11 @@
       </div>
       <div class="header__menu">
         <nav id="nav" class="nav" :class="{isMobile: navToggles}">
-          <g-link class="nav__link" to="/#offer-section" @click.native="clickNavLink">Oferta</g-link>
-          <g-link class="nav__link" to="/#trucks-section" @click.native="clickNavLink">Flota</g-link>
-          <g-link class="nav__link" to="/#docs-section" @click.native="clickNavLink">Dokumenty</g-link>
-          <g-link class="nav__link" to="/#quotation-form" @click.native="clickNavLink">Wycena</g-link>
-          <g-link class="nav__link" to="/#contact-section" @click.native="clickNavLink">Kontakt</g-link>
+          <g-link class="nav__link" to="/#offer-section" @click.native="clickNavLink">{{this.lang ? section.eng.navLink1 : section.navLink1}}</g-link>
+          <g-link class="nav__link" to="/#trucks-section" @click.native="clickNavLink">{{this.lang ? section.eng.navLink2 : section.navLink2}}</g-link>
+          <g-link class="nav__link" to="/#docs-section" @click.native="clickNavLink">{{this.lang ? section.eng.navLink3 : section.navLink3}}</g-link>
+          <g-link class="nav__link" to="/#quotation-form" @click.native="clickNavLink">{{this.lang ? section.eng.navLink4 : section.navLink4}}</g-link>
+          <g-link class="nav__link" to="/#contact-section" @click.native="clickNavLink">{{this.lang ? section.eng.navLink5 : section.navLink5}}</g-link>
         </nav>
         <div class="header__nav-toggle" @click="toggleMobileHeader">
           <span :class="{active: navToggles}"></span>
@@ -23,14 +23,18 @@
 </template>
 
 <script>
+    import section from "~/data/navSection.json"
     export default {
         name: 'Header',
         data: function () {
             return {
                 isMobileActive: false,
                 navToggles: false,
+                section
             }
         },
+
+        props: ['lang'],
 
         created() {
             if (process.isClient) {
@@ -194,14 +198,13 @@
         opacity: 1;
         transform: translateY(0);
         margin: 0;
-        padding-top: 60px;
+        padding-top: 100px;
         visibility: visible;
       }
     }
 
 
     &__link {
-      margin-left: 40px;
       position: relative;
       font-weight: bold;
       text-transform: uppercase;
@@ -227,6 +230,7 @@
         font-size: initial;
         padding: initial;
         display: block;
+        margin-left: 40px;
       }
 
       @media screen and (min-width: 992px) {
@@ -263,47 +267,4 @@
     }
   }
 
-  .contact-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: $cRed;
-    margin-top: -20px;
-    padding: 10px 12px;
-    width: 100%;
-    float: right;
-    position: relative;
-    z-index: 10;
-    @include clearfix;
-
-    @media screen and (min-width: 769px) {
-      max-width: 400px;
-
-      &::before {
-        content: " ";
-        position: absolute;
-        display: block;
-        width: 120%;
-        height: 100%;
-        top: 0;
-        right: -20%;
-        z-index: -1;
-        background: $cRed;
-        transform-origin: bottom left;
-        transform: skew(45deg, 0deg);
-        box-shadow: 0px 3px 6px #00000029;
-      }
-    }
-
-    span {
-      color: $cWhite;
-      font-weight: bolder;
-      font-size: large;
-      display: none;
-
-      @media screen and (min-width: 769px) {
-        display: block;
-      }
-    }
-  }
 </style>

@@ -1,5 +1,10 @@
 {
   "titleFirst": "Transport",
   "titleSecond": "Spedycja",
-  "titleThird": "Logistyka"
+  "titleThird": "Logistyka",
+  "eng": {
+    "titleFirst": "Transport",
+    "titleSecond": "Forwarding",
+    "titleThird": "Logistic"
+  }
 }

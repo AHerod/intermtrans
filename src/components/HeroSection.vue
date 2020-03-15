@@ -1,9 +1,9 @@
 <template>
   <section class="hero-section" id="hero-section">
     <div class="hero-section__content max-container">
-      <h1 class="hero-section__content--title">{{section.titleFirst}}</h1>
-      <h1 class="hero-section__content--title">{{section.titleSecond}}</h1>
-      <h1 class="hero-section__content--title">{{section.titleThird}}</h1>
+      <h1 class="hero-section__content--title">{{this.lang ? section.eng.titleFirst : section.titleFirst}}</h1>
+      <h1 class="hero-section__content--title">{{this.lang ? section.eng.titleSecond : section.titleSecond}}</h1>
+      <h1 class="hero-section__content--title">{{this.lang ? section.eng.titleThird : section.titleThird}}</h1>
     </div>
   </section>
 </template>
@@ -16,7 +16,8 @@
             return {
                 section
             }
-        }
+        },
+        props: ['lang'],
     }
 
 </script>

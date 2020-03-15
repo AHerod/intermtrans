@@ -8,7 +8,7 @@
                immediate="true"/>
     </div>
     <a v-bind:href="filePath" class="document-card__open-btn" target="_blank">
-      Otwórz
+      {{this.lang ? 'Open' : 'Otwórz'}}
     </a>
   </div>
 </template>
@@ -16,7 +16,7 @@
 <script>
     export default {
         name: 'documentCard',
-        props: ['title', 'filePath'],
+        props: ['title', 'filePath', 'lang'],
     }
 
 </script>
@@ -59,6 +59,7 @@
       padding: 20px 0;
       transform: translateY(45px);
       transition: .4s ease-in-out all;
+      text-transform: capitalize;
 
       @media screen and (min-width: 1200px) {
         font-size: 18px;
@@ -91,6 +92,7 @@
       opacity: 0;
       transition: .4s ease-in-out all;
       transform: translateY(100px);
+      letter-spacing: 2px;
     }
 
     &:hover {

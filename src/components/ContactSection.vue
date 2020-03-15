@@ -2,10 +2,12 @@
   <div class="sections-wrapper">
     <section class="contact-section max-container-no-padding fly-in" id="contact-section">
       <div class="contact-form" id="quotation-form">
-        <ContactForm/>
+        <ContactForm :lang="lang"/>
       </div>
       <div class="contact-info">
-        <p>{{section.content}} <span>{{section.phone}}</span> {{section.availability}} <span>{{section.hours}}</span>.
+        <p>{{this.lang ? section.eng.content : section.content}} <span>{{section.phone}}</span>{{this.lang ?
+          section.eng.availability :
+          section.availability}}<span>{{this.lang ? section.eng.hours : section.hours}}</span>.
         </p>
       </div>
     </section>
@@ -31,14 +33,9 @@
         <g-image class="contact-details__cube" alt="Intermtrans cube logo" src="../assets/img/logo_cube.svg"
                  width="170" immediate="true"/>
       </div>
-
     </section>
-    <div class="bottom-bg">
-
-    </div>
-
+    <div class="bottom-bg"></div>
   </div>
-
 </template>
 
 <script>
@@ -54,7 +51,8 @@
             return {
                 section
             }
-        }
+        },
+        props: ['lang']
     }
 </script>
 
@@ -122,7 +120,7 @@
       margin: 0 auto;
 
       @media screen and (max-width: 480px) {
-        background-color: #ffffffd4;
+        background-color: #ffffffbd;
         box-shadow: 5px 0 20px 0;
         padding: 20px 25px;
         min-width: 315px;
@@ -208,8 +206,8 @@
       background-repeat: no-repeat;
       background-size: cover;
 
-      @media screen and (min-width: 480px)  and (max-width: 991px) {
-       display: none;
+      @media screen and (min-width: 480px) and (max-width: 991px) {
+        display: none;
       }
 
       @media screen and (min-width: 992px) {

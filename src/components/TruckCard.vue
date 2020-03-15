@@ -36,7 +36,11 @@
   &__message {
     font-weight: 500;
     text-transform: capitalize;
-    font-size: .75rem;
+    font-size: 1rem;
+
+    @media screen and (max-width: 480px) {
+      font-size: .75rem;
+    }
   }
 
   img {

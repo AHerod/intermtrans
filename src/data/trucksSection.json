@@ -4,5 +4,13 @@
   "cardFirst": "pojazdy 8 i 10 paletowe o ładowności do 1,5 tony",
   "cardSecond": "Auta ciężarowe o ładowności od 1,5 tony do 16 ton",
   "cardThird": "naczepy typu chłodnia / izoterma",
-  "cardFourth": "naczepy typu standard i mega (wysokość wewnętrzna 2,7 m / 3 m, długość 13,6 m, ładowność 24 tony)"
+  "cardFourth": "naczepy typu standard i mega (wysokość wewnętrzna 2,7 m / 3 m, długość 13,6 m, ładowność 24 tony)",
+  "eng": {
+    "title": "Vehicle fleet",
+    "subtitle": "We have the following means of transport at disposal:",
+    "cardFirst": "vehicles with max loading capacity of 1.5 tons and space capacity for 8 or 10 Euro pallets",
+    "cardSecond": "trucks with up to 16 tons max loading capacity",
+    "cardThird": "Freezer / refrigerator semi-trailer",
+    "cardFourth": "Standard / mega curtain semi-trailers (dimensions: 13.6 m x 2,7 m / 3 m, carrying capacity: 24 tons)"
+  }
 }

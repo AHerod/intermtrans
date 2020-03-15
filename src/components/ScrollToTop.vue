@@ -25,7 +25,6 @@
           setScrollToTop: function () {
 
               if (process.isClient) {
-                  console.log('IS CLIENT window.scroll');
                   window.onscroll = function () {
 
                       let topSection = document.getElementById('hero-section'),
@@ -37,19 +36,12 @@
                       }
 
                   };
-              } else {
-                  console.log('IS server window.scroll');
               }
           },
           scrollViewToTheTop: function () {
-              console.log('scrollViewToTheTop is on');
               if (process.isClient) {
-                  console.log('IS CLIENT window.scrollTo(0,0)');
                   window.scrollTo(0, 0);
-              } else {
-                  console.log('IS server window.scrollTo(0,0)');
               }
-
           }
       }
   }
