@@ -1,7 +1,7 @@
 <template>
   <div class="contact-form-wrapper">
     <div class="heading">
-      <g-image alt="Intermtrans cube logo" src="../assets/img/logo_cube.svg" width="40" immediate="true"/>
+<!--      <g-image alt="Intermtrans cube logo" src="../assets/img/logo_cube.svg" width="40" immediate="true"/>-->
       <h2>{{this.lang ? section.eng.title : section.title}}</h2>
     </div>
     <form

@@ -4,8 +4,8 @@
       {{ title }}
     </p>
     <div class="document-card__img">
-      <g-image class="document-card__cube" alt="cube icon" src="../assets/img/logo_cube.svg" width="35"
-               immediate="true"/>
+<!--      <g-image class="document-card__cube" alt="cube icon" src="../assets/img/logo_cube.svg" width="35"-->
+<!--               immediate="true"/>-->
     </div>
     <a v-bind:href="filePath" class="document-card__open-btn" target="_blank">
       {{this.lang ? 'Open' : 'Otwórz'}}

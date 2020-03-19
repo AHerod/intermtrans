@@ -4,19 +4,19 @@
       <h1>Strona w przebudowie</h1>
       <h3 class="eng">Page under construction</h3>
     </div>
-    <g-image class="logo" alt="Intermtrans logo" src="~/assets/img/logo.svg" width="235" immediate="true"/>
+    <g-image class="logo" alt="Intermtrans logo" src="~/assets/img/logo.svg" width="235"/>
     <div class="informations">
       <div class="contact">
         <div>
-          <g-image class="logo" alt="Intermtrans logo" src="~/assets/img/contact_phone.svg" width="50" immediate="true"/>
+          <g-image class="logo" alt="Intermtrans logo" src="~/assets/img/contact_phone.svg" width="50"/>
           +48 507 473 964
         </div>
         <div>
-          <g-image class="logo" alt="Intermtrans logo" src="~/assets/img/contact_worldwide.svg" width="50" immediate="true"/>
+          <g-image class="logo" alt="Intermtrans logo" src="~/assets/img/contact_worldwide.svg" width="50" />
           51-128 Wrocław
         </div>
         <div>
-          <g-image class="logo" alt="Intermtrans logo" src="~/assets/img/contact_mail.svg" width="50" immediate="true"/>
+          <g-image class="logo" alt="Intermtrans logo" src="~/assets/img/contact_mail.svg" width="50"/>
           dtalar@intermtrans.com
         </div>
       </div>
