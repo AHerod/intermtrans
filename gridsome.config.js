@@ -22,6 +22,8 @@ module.exports = {
         }
     ],
     siteUrl: 'www.intermtrans.com',
-    icon: './src/assets/img/favicon.png'
-
+    icon: './src/assets/img/favicon.png',
+    chainWebpack(config) {
+        config.mode('development')
+    }
 };
