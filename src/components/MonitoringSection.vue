@@ -9,7 +9,7 @@
       </div>
     </div>
     <g-image class="monitoring-section__hero-image" alt="Phone icon" src="~/assets/img/docs_hero.jpg"
-             width="1200" />
+             width="1200" immediate="true"/>
   </section>
 
 </template>
