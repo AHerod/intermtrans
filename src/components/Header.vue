@@ -36,29 +36,7 @@
 
         props: ['lang'],
 
-        created() {
-            if (process.isClient) {
-                window.addEventListener('scroll', this.handleScroll);
-            }
-        },
-        destroyed() {
-            if (process.isClient) {
-                window.removeEventListener('scroll', this.handleScroll);
-            }
-        },
         methods: {
-            handleScroll(event) {
-                let header = document.getElementById("header"),
-                    sticky = header.offsetTop;
-
-                if (window.pageYOffset > sticky) {
-                    header.classList.add("sticky");
-                } else {
-                    if (header.classList.contains('sticky'))
-                        header.classList.remove("sticky");
-                }
-            },
-
             toggleMobileHeader: function () {
                 this.navToggles = !this.navToggles;
             },
