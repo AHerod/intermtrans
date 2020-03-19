@@ -3,7 +3,7 @@
     <div class="hero-section__content max-container">
       <h1 class="hero-section__content--title">{{this.lang ? section.eng.titleFirst : section.titleFirst}}</h1>
       <h1 class="hero-section__content--title">{{this.lang ? section.eng.titleSecond : section.titleSecond}}</h1>
-      <h1 class="hero-section__content--title">{{this.lang ? section.eng.titleThird : section.titleThird}}</h1>
+      <h1 :class="[ lang ? 'hero-section__content--title english' : 'hero-section__content--title' ]">{{this.lang ? section.eng.titleThird : section.titleThird}}</h1>
     </div>
   </section>
 </template>
@@ -14,7 +14,8 @@
         name: 'HeroSection',
         data() {
             return {
-                section
+                section,
+                isEng: this.lang,
             }
         },
         props: ['lang'],
@@ -81,6 +82,10 @@
         &:nth-child(2) {
           color: $cRed;
         }
+      }
+
+      .english {
+        margin-left: 240px;
       }
     }
   }
