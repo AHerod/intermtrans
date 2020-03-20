@@ -77,11 +77,30 @@
       text-align: center;
       font-size: 20px;
       width: 70%;
+      position: relative;
 
       @media screen and (min-width: 992px) {
         margin-left: 30px;
         margin-bottom: 50px;
       }
+
+      @media screen and (min-width: 1300px) {
+        &::before {
+          content: '';
+          width: 250px;
+          height: 400px;
+          display: block;
+          position: absolute;
+          border-left: 40px solid $cRed;
+          border-top: 40px solid $cRed;
+          transform: skew(15deg) rotate(-20deg);
+          right: -60%;
+          top: -250%;
+          z-index: -1;
+          box-shadow: 3px 2px 13px 0px;
+        }
+      }
+
 
       span {
         font-weight: 700;

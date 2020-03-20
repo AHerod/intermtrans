@@ -44,6 +44,24 @@
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
+    position: relative;
+
+    @media screen and (min-width: 1300px) {
+      &::before {
+        content: '';
+        width: 350px;
+        height: 400px;
+        display: block;
+        position: absolute;
+        border-left: 40px solid $cBlack;
+        border-top: 40px solid $cBlack;
+        transform: skew(15deg) rotate(-15deg);
+        right: -18%;
+        top: -40%;
+        z-index: -1;
+        box-shadow: 3px 2px 13px 0px;
+      }
+    }
 
     @media screen and (min-width: 992px) {
       flex-direction: row;
@@ -57,7 +75,10 @@
       }
 
       h1 {
-        margin-top: 0;
+        margin: 20px 0;
+        @media screen and (min-width: 992px) {
+          margin: 50px 0;
+        }
       }
 
       p {

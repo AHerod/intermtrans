@@ -40,6 +40,23 @@
   .offer-section {
     position: relative;
 
+    @media screen and (min-width: 1300px) {
+      &::before {
+        content: '';
+        width: 350px;
+        height: 300px;
+        display: block;
+        position: absolute;
+        border-left: 40px solid $cBlack;
+        border-top: 40px solid $cBlack;
+        transform: skew(12deg) rotate(-400deg);
+        right: -12%;
+        top: -15%;
+        z-index: -1;
+        box-shadow: 3px 2px 13px 0px;
+      }
+    }
+
     &__title {
       text-align: center;
       color: $cRed;
@@ -79,9 +96,9 @@
     &__cube {
       width: 90px;
       position: absolute;
-      right: 0;
-      transform: translateX(50%);
-      top: 0;
+      left: 0;
+      transform: translateX(-50%);
+      top: 10%;
       z-index: -10;
 
       @media screen and (min-width: 420px) {
