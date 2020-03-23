@@ -1,0 +1,18 @@
+{
+  "title": "Oferta",
+  "content": "Głównym obszarem działalności naszej firmy jest transport drogowy na terenie Unii Europejskiej oraz Szwajcarii.",
+  "moreContent": "Dysponując flotą własnych pojazdów oraz doświadczonych przewoźników kontraktowych oferujemy szeroki wachlarz rozwiązań, od serwisów drobnicowych po dedykowane rozwiązania logistyczne",
+  "cardFirst": "ładunki całopojazdowe",
+  "cardSecond": "ładunki cześciowe",
+  "cardThird": "dostawy ekspresowe",
+  "cardFourth": "transport drobnicowy",
+  "eng": {
+    "title": "Offer",
+    "content": "The main area of our company's activity is road transport within the European Union and Switzerland.",
+    "moreContent": "With our own fleet of vehicles and experienced subcontractors, we offer a wide range of solutions including general cargo services and dedicated logistics solutions.",
+    "cardFirst": "Full Truck Load",
+    "cardSecond": "Less Than Truck Load",
+    "cardThird": "Express Delivery",
+    "cardFourth": "Less Than Container Load"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "navLink1": "Oferta",
+  "navLink2": "Flota",
+  "navLink3": "Dokumenty",
+  "navLink4": "Wycena",
+  "navLink5": "Kontakt",
+  "eng": {
+    "navLink1": "Offer",
+    "navLink2": "Vehicle fleet",
+    "navLink3": "Documents",
+    "navLink4": "Quotation",
+    "navLink5": "Contact"
+  }
+}

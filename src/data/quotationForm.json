@@ -1,0 +1,25 @@
+{
+  "title": "Wycena transportu",
+  "button": "Wyślij",
+  "placeOfLoading": "Miejsce załadunku",
+  "dateOfLoading": "Data załadunku",
+  "placeOfUnloading": "Miejsce rozładunku",
+  "dateOfUnloading": "Data dostawy",
+  "firstName": "Imię",
+  "lastName": "Nazwisko",
+  "email": "E-mail",
+  "phone": "Telefon",
+  "notes": "Uwagi",
+  "eng": {
+    "title": "Transport Quotation",
+    "button": "Submit",
+    "placeOfLoading": "place of loading",
+    "dateOfLoading": "loading date",
+    "placeOfUnloading": "place of unloading",
+    "dateOfUnloading": "date of unloading",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "phone": "Phone number",
+    "notes": "Notes"
+  }
+}

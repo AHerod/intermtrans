@@ -1,16 +1,24 @@
 <template>
   <section class="hero-section" id="hero-section">
     <div class="hero-section__content max-container">
-      <h1 class="hero-section__content--title">Transport</h1>
-      <h1 class="hero-section__content--title">Spedycja</h1>
-      <h1 class="hero-section__content--title">Logistyka</h1>
+      <h1 class="hero-section__content--title">{{this.lang ? section.eng.titleFirst : section.titleFirst}}</h1>
+      <h1 class="hero-section__content--title">{{this.lang ? section.eng.titleSecond : section.titleSecond}}</h1>
+      <h1 :class="[ lang ? 'hero-section__content--title english' : 'hero-section__content--title' ]">{{this.lang ? section.eng.titleThird : section.titleThird}}</h1>
     </div>
   </section>
 </template>
 
 <script>
+  import section from "~/data/heroSection.json"
     export default {
         name: 'HeroSection',
+        data() {
+            return {
+                section,
+                isEng: this.lang,
+            }
+        },
+        props: ['lang'],
     }
 
 </script>
@@ -31,10 +39,11 @@
 
     &__content {
       transform: translateY(20%);
+      display: flex;
+      flex-direction: column;
 
       @media screen and (min-width: 769px) {
         transform: translateY(50%);
-        display: flex;
         justify-content: space-between;
         width: 90%;
         margin: 0 auto;
@@ -54,6 +63,7 @@
         text-transform: uppercase;
         letter-spacing: 2px;
         font-weight: 800;
+        max-width: 100%;
 
         @media screen and (min-width: 992px) {
           margin-top: 5px;
@@ -72,6 +82,10 @@
         &:nth-child(2) {
           color: $cRed;
         }
+      }
+
+      .english {
+        margin-left: 240px;
       }
     }
   }

@@ -1,0 +1,28 @@
+{
+  "title": "Dokumenty",
+  "subtitle": "Lorem ipsum ipsum ipsum lorem lorem ipsum ipsum lorem",
+  "docCardFirst": {
+    "title": "Polisa Ubezpieczeniowa",
+    "filePath": "https://pdfhost.io/v/vWGZrKs0i_polisapdf.pdf"
+  },
+  "docCardSecond": {
+    "title": "Licencja",
+    "filePath": "https://pdfhost.io/v/ZvQBR90Oi_licencjapdf.pdf"
+  },
+  "docCardThird": {
+    "title": "Certyfikat Kompetencji Zawodowych",
+    "filePath": "https://pdfhost.io/v/I0gDfKmNP_certyfikatpdf.pdf"
+  },
+  "eng": {
+    "title": "Documents",
+    "docCardFirst": {
+      "title": "insurance policy"
+    },
+    "docCardSecond": {
+      "title": "licence"
+    },
+    "docCardThird": {
+      "title": "the certificate of professional competence"
+    }
+  }
+}

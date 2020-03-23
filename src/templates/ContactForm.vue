@@ -1,8 +1,8 @@
 <template>
   <div class="contact-form-wrapper">
     <div class="heading">
-      <g-image alt="Intermtrans cube logo" src="~/assets/img/logo_cube.svg" width="40" immediate="true"/>
-      <h2>Wycena transportu</h2>
+      <g-image alt="Intermtrans cube logo" src="../assets/img/logo_cube.svg" width="40" immediate="true"/>
+      <h2>{{this.lang ? section.eng.title : section.title}}</h2>
     </div>
     <form
             name="contact"
@@ -19,65 +19,68 @@
       </p>
       <div class="form__fields-wrapper">
         <div class="form__field">
-          <input type="text" name="placeOfLoading" v-model="formData.placeOfLoading" placeholder="Miejsce załadunku"
+          <input type="text" name="placeOfLoading" v-model="formData.placeOfLoading" :placeholder="this.lang ? section.eng.placeOfLoading : section.placeOfLoading"
                  @blur="positionLabel"/>
-          <label for="placeOfLoading">Miejsce załadunku</label>
+          <label for="placeOfLoading">{{this.lang ? section.eng.placeOfLoading : section.placeOfLoading}}</label>
         </div>
         <div class="form__field">
 
           <input type="text" name="placeOfUnloading" v-model="formData.placeOfUnloading"
-                 placeholder="Miejsce rozładunku" @blur="positionLabel"/>
-          <label for="placeOfUnloading">Miejsce rozładunku</label>
+                 :placeholder="this.lang ? section.eng.placeOfUnloading : section.placeOfUnloading" @blur="positionLabel"/>
+          <label for="placeOfUnloading">{{this.lang ? section.eng.placeOfUnloading : section.placeOfUnloading}}</label>
         </div>
         <div class="form__field">
-          <input type="text" name="dateOfLoading" v-model="formData.dateOfLoading" placeholder="Data załadunku"
-                 @blur="positionLabel" :type="this.isDate ? 'date' : 'text'" @click="isTypeADate">
-          <label for="dateOfLoading">Data załadunku</label>
+          <input type="text" name="dateOfLoading" v-model="formData.dateOfLoading" :placeholder="this.lang ? section.eng.dateOfLoading : section.dateOfLoading"
+                 @blur="positionLabel"  @click="isTypeADate">
+          <label for="dateOfLoading">{{this.lang ? section.eng.dateOfLoading : section.dateOfLoading}}</label>
         </div>
         <div class="form__field">
-          <input type="date" name="dateOfUnloading" v-model="formData.dateOfUnloading" placeholder="Data rozładunku"
-                 @blur="positionLabel" :type="this.isDate ? 'date' : 'text'" @click="isTypeADate"/>
-          <label for="dateOfUnloading">Data rozładunku</label>
+          <input type="text" name="dateOfUnloading" v-model="formData.dateOfUnloading" :placeholder="this.lang ? section.eng.dateOfUnloading : section.dateOfUnloading"
+                 @blur="positionLabel"  @click="isTypeADate"/>
+          <label for="dateOfUnloading">{{this.lang ? section.eng.dateOfUnloading : section.dateOfUnloading}}</label>
         </div>
         <div class="form__field">
-          <input type="text" name="name" v-model="formData.name" placeholder="Imię" @blur="positionLabel"/>
-          <label for="name" class="label">Imię</label>
+          <input type="text" name="name" v-model="formData.name" :placeholder="this.lang ? section.eng.firstName : section.firstName" @blur="positionLabel"/>
+          <label for="name" class="label">{{this.lang ? section.eng.firstName : section.firstName}}</label>
         </div>
         <div class="form__field">
-          <input type="text" name="lastName" v-model="formData.lastName" placeholder="Nazwisko" @blur="positionLabel"/>
-          <label for="lastName" class="label">Nazwisko</label>
+          <input type="text" name="lastName" v-model="formData.lastName" :placeholder="this.lang ? section.eng.lastName : section.lastName" @blur="positionLabel"/>
+          <label for="lastName" class="label">{{this.lang ? section.eng.lastName : section.lastName}}</label>
         </div>
         <div class="form__field">
-          <input type="text" name="phoneNumber" v-model="formData.phoneNumber" placeholder="Telefon"
+          <input type="text" name="phoneNumber" v-model="formData.phoneNumber" :placeholder="this.lang ? section.eng.phone : section.phone"
                  @blur="positionLabel"/>
-          <label for="phoneNumber">Telefon</label>
+          <label for="phoneNumber">{{this.lang ? section.eng.phone : section.phone}}</label>
         </div>
         <div class="form__field">
-          <input type="email" name="email" v-model="formData.email" placeholder="Email" @blur="positionLabel"/>
-          <label for="email">Email</label>
+          <input type="email" name="email" v-model="formData.email" placeholder="E-mail" @blur="positionLabel"/>
+          <label for="email">{{section.email}}</label>
         </div>
         <div class="form__field">
-          <textarea type="text" name="notes" v-model="formData.notes" placeholder="Uwagi"
+          <textarea type="text" name="notes" v-model="formData.notes" :placeholder="this.lang ? section.eng.notes : section.notes"
                     @blur="positionLabel"></textarea>
-          <label for="notes">Uwagi</label>
+          <label for="notes">{{this.lang ? section.eng.notes : section.notes}}</label>
         </div>
       </div>
       <div class="submit-btn-wrapper">
-        <button type="submit">Wyślij</button>
+        <button type="submit">{{this.lang ? section.eng.button : section.button}}</button>
       </div>
     </form>
   </div>
 </template>
 
 <script>
+    import section from '~/data/quotationForm.json'
     export default {
         name: 'ContactForm',
         data() {
             return {
                 formData: {},
                 isDate: false,
+                section,
             }
         },
+        props: ['lang'],
 
         methods: {
             encode(data) {
@@ -115,7 +118,7 @@
 <style lang="scss">
   .contact-form-wrapper {
     background: $cWhite;
-    box-shadow: 0px 3px 6px #00000029;
+    box-shadow: 0px 3px 15px #00000029;
     padding: 30px;
     max-width: 500px;
 
@@ -159,14 +162,10 @@
       textarea {
         width: 100%;
         background: #E7E7E7;
-        height: 30px;
+        height: 40px;
         border: none;
         padding: 8px;
         color: #666;
-
-        @media screen and (min-width: 768px) {
-          height: 40px;
-        }
 
         &:focus + label {
           transform: translateY(-130%);
@@ -184,6 +183,7 @@
         }
 
         &::placeholder {
+          text-transform: capitalize;
           transition: .2s ease-in all;
           color: #666;
         }
@@ -199,6 +199,7 @@
       }
 
       label {
+        text-transform: capitalize;
         width: 100%;
         left: 0;
         position: absolute;

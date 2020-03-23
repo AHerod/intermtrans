@@ -1,0 +1,15 @@
+{
+  "content": "Aby otrzymać zupełnie darmową wycenę transportu wypełnij podany formularz lub skontaktuj się z nami telefonicznie pod numerem",
+  "availability": "od poniedziałku do piątku w godzinach",
+  "phone": "+48 507 473 964 ",
+  "hours": " 8:00-16:00",
+  "address": "51-128 Wrocław",
+  "email": "dtalar@intermtrans.com",
+  "trans": "994116-1",
+  "timo": "376141",
+  "eng": {
+    "content": "In order to receive a fully free quotation of our transport services, please fill in the provided form or contact us by phone",
+    "availability": "from Monday to Friday",
+    "hours": " between 8 am and 4 pm"
+  }
+}
