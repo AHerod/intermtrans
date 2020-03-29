@@ -2,7 +2,7 @@
   <div class="sections-wrapper">
     <section class="contact-section max-container-no-padding fly-in" id="contact-section">
       <div class="contact-form" id="quotation-form">
-        <ContactForm :lang="this.lang"/>
+<!--        <ContactForm :lang="this.lang"/>-->
       </div>
       <div class="contact-info">
         <p>{{this.lang ? section.eng.content : section.content}} <span>{{section.phone}}</span>{{this.lang ?
