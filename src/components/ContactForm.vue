@@ -101,12 +101,13 @@
                     .catch(error => alert(error))
             },
             positionLabel(e) {
-                let inputHasValue = e.target.value.length !== 0,
-                    inputLabel = e.target.nextElementSibling;
-
-                e.target.tagName === 'TEXTAREA'
-                    ? inputHasValue ? inputLabel.classList.add('textareaLabel') : inputLabel.classList.remove('textareaLabel')
-                    : inputHasValue ? inputLabel.classList.add('show') : inputLabel.classList.remove('show');
+                // let inputHasValue = e.target.value.length !== 0,
+                //     inputLabel = e.target.nextElementSibling;
+                //
+                // e.target.tagName === 'TEXTAREA'
+                //     ? inputHasValue ? inputLabel.classList.add('textareaLabel') : inputLabel.classList.remove('textareaLabel')
+                //     : inputHasValue ? inputLabel.classList.add('show') : inputLabel.classList.remove('show');
+                console.log('dada')
             },
             isTypeADate(e) {
                 return this.isDate = true;
