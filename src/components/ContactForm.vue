@@ -2,7 +2,7 @@
   <div class="contact-form-wrapper">
     <div class="heading">
       <g-image alt="Intermtrans cube logo" src="../assets/img/logo_cube.svg" width="40" immediate="true"/>
-      <h2>{{this.lang ? section.eng.title : section.title}}</h2>
+      <h2>mjhu</h2>
     </div>
     <form
             name="contact"
@@ -19,50 +19,47 @@
       </p>
       <div class="form__fields-wrapper">
         <div class="form__field">
-          <input type="text" name="placeOfLoading" v-model="formData.placeOfLoading" :placeholder="this.lang ? section.eng.placeOfLoading : section.placeOfLoading"/>
-          <label for="placeOfLoading">{{this.lang ? section.eng.placeOfLoading : section.placeOfLoading}}</label>
+          <input type="text" name="placeOfLoading" v-model="formData.placeOfLoading" />
+          <label for="placeOfLoading">test</label>
         </div>
         <div class="form__field">
 
-          <input type="text" name="placeOfUnloading" v-model="formData.placeOfUnloading"
-                 :placeholder="this.lang ? section.eng.placeOfUnloading : section.placeOfUnloading"/>
-          <label for="placeOfUnloading">{{this.lang ? section.eng.placeOfUnloading : section.placeOfUnloading}}</label>
+          <input type="text" name="placeOfUnloading" v-model="formData.placeOfUnloading"/>
+          <label for="placeOfUnloading">llkmm</label>
         </div>
         <div class="form__field">
-          <input type="text" name="dateOfLoading" v-model="formData.dateOfLoading" :placeholder="this.lang ? section.eng.dateOfLoading : section.dateOfLoading"
-                >
-          <label for="dateOfLoading">{{this.lang ? section.eng.dateOfLoading : section.dateOfLoading}}</label>
+          <input type="text" name="dateOfLoading" v-model="formData.dateOfLoading" />
+          <label for="dateOfLoading">mnjnk</label>
         </div>
         <div class="form__field">
-          <input type="text" name="dateOfUnloading" v-model="formData.dateOfUnloading" :placeholder="this.lang ? section.eng.dateOfUnloading : section.dateOfUnloading"
-                "/>
-          <label for="dateOfUnloading">{{this.lang ? section.eng.dateOfUnloading : section.dateOfUnloading}}</label>
+          <input type="text" name="dateOfUnloading" v-model="formData.dateOfUnloading" />
+          <label for="dateOfUnloading">jkmk</label>
         </div>
         <div class="form__field">
-          <input type="text" name="name" v-model="formData.name" :placeholder="this.lang ? section.eng.firstName : section.firstName"/>
-          <label for="name" class="label">{{this.lang ? section.eng.firstName : section.firstName}}</label>
+          <input type="text" name="name" v-model="formData.name"/>
+          <label for="name" class="label">lokll</label>
         </div>
         <div class="form__field">
-          <input type="text" name="lastName" v-model="formData.lastName" :placeholder="this.lang ? section.eng.lastName : section.lastName"/>
-          <label for="lastName" class="label">{{this.lang ? section.eng.lastName : section.lastName}}</label>
+          <input type="text" name="lastName" v-model="formData.lastName"/>
+          <label for="lastName" class="label">jnj</label>
         </div>
         <div class="form__field">
-          <input type="text" name="phoneNumber" v-model="formData.phoneNumber" :placeholder="this.lang ? section.eng.phone : section.phone"
+          <input type="text" name="phoneNumber" v-model="formData.phoneNumber"
                 />
-          <label for="phoneNumber">{{this.lang ? section.eng.phone : section.phone}}</label>
+          <label for="phoneNumber">mgfxc</label>
         </div>
         <div class="form__field">
           <input type="email" name="email" v-model="formData.email" placeholder="E-mail" />
-          <label for="email">{{section.email}}</label>
+          <label for="email">mkl</label>
         </div>
         <div class="form__field">
-          <textarea type="text" name="notes" v-model="formData.notes" :placeholder="this.lang ? section.eng.notes : section.notes"
+          <textarea type="text" name="notes" v-model="formData.notes"
                    ></textarea>
-          <label for="notes">{{this.lang ? section.eng.notes : section.notes}}</label>
+          <label for="notes">mbhnj</label>
         </div>
       </div>
       <div class="submit-btn-wrapper">
-        <button type="submit">{{this.lang ? section.eng.button : section.button}}</button>
+        <button type="submit">jnuhyhn</button>
       </div>
     </form>
   </div>
