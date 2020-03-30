@@ -30,12 +30,12 @@
         </div>
         <div class="form__field">
           <input type="text" name="dateOfLoading" v-model="formData.dateOfLoading" :placeholder="this.lang ? section.eng.dateOfLoading : section.dateOfLoading"
-                 @click="isTypeADate">
+                >
           <label for="dateOfLoading">{{this.lang ? section.eng.dateOfLoading : section.dateOfLoading}}</label>
         </div>
         <div class="form__field">
           <input type="text" name="dateOfUnloading" v-model="formData.dateOfUnloading" :placeholder="this.lang ? section.eng.dateOfUnloading : section.dateOfUnloading"
-                @click="isTypeADate"/>
+                "/>
           <label for="dateOfUnloading">{{this.lang ? section.eng.dateOfUnloading : section.dateOfUnloading}}</label>
         </div>
         <div class="form__field">
