@@ -66,7 +66,6 @@
             clickNavLink: function () {
                 this.isMobileActive = !this.isMobileActive;
                 this.navToggles = !this.navToggles;
-                console.log('clicked nav')
             }
         }
     }
