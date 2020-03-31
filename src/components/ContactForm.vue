@@ -76,7 +76,6 @@
                 section,
             }
         },
-        props: ['lang'],
 
         methods: {
             encode(data) {
