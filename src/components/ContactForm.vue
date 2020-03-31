@@ -7,7 +7,6 @@
     <form
             name="contact"
             method="post"
-            v-on:submit.prevent="handleSubmit"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
     >
@@ -72,42 +71,9 @@
         data() {
             return {
                 formData: {},
-                isDate: false,
                 section,
             }
         },
-
-        methods: {
-            encode(data) {
-                return Object.keys(data)
-                    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-                    .join('&')
-            },
-            handleSubmit(e) {
-                fetch('/', {
-                    method: 'POST',
-                    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-                    body: this.encode({
-                        'contact-form': e.target.getAttribute('name'),
-                        ...this.formData,
-                    }),
-                })
-                    .then(() => console.log('LOOOL sukces'))
-                    .catch(error => alert(error))
-            },
-            positionLabel(e) {
-                // let inputHasValue = e.target.value.length !== 0,
-                //     inputLabel = e.target.nextElementSibling;
-                //
-                // e.target.tagName === 'TEXTAREA'
-                //     ? inputHasValue ? inputLabel.classList.add('textareaLabel') : inputLabel.classList.remove('textareaLabel')
-                //     : inputHasValue ? inputLabel.classList.add('show') : inputLabel.classList.remove('show');
-                console.log('dada')
-            },
-            isTypeADate(e) {
-                return this.isDate = true;
-            }
-        }
     }
 
 </script>
