@@ -75,7 +75,15 @@
         name: 'ContactForm',
         data() {
             return {
-                formData: {},
+                formData: {
+                    placeOfLoading: '',
+                    placeOfUnloading: '',
+                    name: '',
+                    lastName: '',
+                    phoneNumber: '',
+                    email: '',
+                    notes:''
+                },
                 isDate: false,
                 section,
             }
