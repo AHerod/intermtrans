@@ -3,13 +3,15 @@
     <div class="hero-section__content max-container">
       <h1 class="hero-section__content--title">{{this.lang ? section.eng.titleFirst : section.titleFirst}}</h1>
       <h1 class="hero-section__content--title">{{this.lang ? section.eng.titleSecond : section.titleSecond}}</h1>
-      <h1 :class="[ lang ? 'hero-section__content--title english' : 'hero-section__content--title' ]">{{this.lang ? section.eng.titleThird : section.titleThird}}</h1>
+      <h1 :class="[ lang ? 'hero-section__content--title english' : 'hero-section__content--title' ]">{{this.lang ?
+        section.eng.titleThird : section.titleThird}}</h1>
     </div>
   </section>
 </template>
 
 <script>
-  import section from "~/data/heroSection.json"
+    import section from "~/data/heroSection.json"
+
     export default {
         name: 'HeroSection',
         data() {
@@ -85,7 +87,9 @@
       }
 
       .english {
-        margin-left: 240px;
+        @media screen and (min-width: 992px) {
+          margin-left: 240px;
+        }
       }
     }
   }
