@@ -25,44 +25,44 @@
                 <div class="form__field">
                   <label for="placeOfLoading">{{this.lang ? formSection.eng.placeOfLoading :
                     formSection.placeOfLoading}}</label>
-                  <input type="text" name="placeOfLoading" v-model="formData.placeOfLoading"/>
+                  <input type="text" id="placeOfLoading" name="placeOfLoading" v-model="formData.placeOfLoading"/>
                 </div>
                 <div class="form__field">
                   <label for="placeOfUnloading">{{this.lang ? formSection.eng.placeOfUnloading :
                     formSection.placeOfUnloading}}</label>
-                  <input type="text" name="placeOfUnloading" v-model="formData.placeOfUnloading"/>
+                  <input type="text" id="placeOfUnloading" name="placeOfUnloading" v-model="formData.placeOfUnloading"/>
                 </div>
                 <div class="form__field">
                   <label for="dateOfLoading">{{this.lang ? formSection.eng.dateOfLoading :
                     formSection.dateOfLoading}}</label>
-                  <input type="text" name="dateOfLoading" v-model="formData.dateOfLoading">
+                  <input type="text" id="dateOfLoading" name="dateOfLoading" v-model="formData.dateOfLoading">
                 </div>
                 <div class="form__field">
                   <label for="dateOfUnloading">{{this.lang ? formSection.eng.dateOfUnloading :
                     formSection.dateOfUnloading}}</label>
-                  <input type="text" name="dateOfUnloading" v-model="formData.dateOfUnloading"/>
+                  <input type="text" id="dateOfUnloading" name="dateOfUnloading" v-model="formData.dateOfUnloading"/>
                 </div>
                 <div class="form__field">
                   <label for="name" class="label">{{this.lang ? formSection.eng.firstName :
                     formSection.firstName}}</label>
-                  <input type="text" name="name" v-model="formData.name"/>
+                  <input type="text" id="name" name="name" v-model="formData.name"/>
                 </div>
                 <div class="form__field">
                   <label for="lastName" class="label">{{this.lang ? formSection.eng.lastName :
                     formSection.lastName}}</label>
-                  <input type="text" name="lastName" v-model="formData.lastName"/>
+                  <input type="text" id="lastName" name="lastName" v-model="formData.lastName"/>
                 </div>
                 <div class="form__field">
                   <label for="phoneNumber">{{this.lang ? formSection.eng.phone : formSection.phone}}</label>
-                  <input type="text" name="phoneNumber" v-model="formData.phoneNumber"/>
+                  <input type="text" id="phoneNumber" name="phoneNumber" v-model="formData.phoneNumber"/>
                 </div>
                 <div class="form__field">
                   <label for="email">{{formSection.email}}</label>
-                  <input type="email" name="email" v-model="formData.email"/>
+                  <input type="email" id="email" name="email" v-model="formData.email"/>
                 </div>
                 <div class="form__field">
                   <label for="notes">{{this.lang ? formSection.eng.notes : formSection.notes}}</label>
-                  <textarea type="text" name="notes" v-model="formData.notes"></textarea>
+                  <textarea type="text" id="notes" name="notes" v-model="formData.notes"></textarea>
                 </div>
               </div>
               <div class="submit-btn-wrapper">
@@ -80,10 +80,6 @@
       </div>
     </section>
     <section class="contact-details">
-      <div class="contact-details__image">
-        <!--        <g-image class="phone" alt="hero image" src="~/assets/img/contact_hero.png"-->
-        <!--                 width="1000" immediate="true"/>-->
-      </div>
       <div class="contact-details__items">
         <span class="contact-details__item">
           <g-image class="phone" alt="phone icon" src="~/assets/img/icon_phone_2.png"
