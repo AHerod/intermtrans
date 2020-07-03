@@ -8,7 +8,9 @@ const resolve = require('path').resolve;
 
 
 module.exports = {
-    chainWebpack: config => config.mode('development'),
+    chainWebpack (config) {
+        config.mode('development')
+    },
     siteName: 'Intermtrans',
     plugins: [
         {
