@@ -31,6 +31,10 @@
                   <label for="email">Your email</label>
                   <input type="email" name="email" v-model="formData.email" />
                 </div>
+                <div>
+                  <label for="phone">Your phone number</label>
+                  <input type="text" name="phone" v-model="formData.phone" />
+                </div>
               </div>
 
               <div class="message-wrapper">
