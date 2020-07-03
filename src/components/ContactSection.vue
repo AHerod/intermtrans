@@ -12,13 +12,14 @@
                     name="contact-form"
                     method="post"
                     v-on:submit.prevent="handleSubmit"
+                    action="/success/"
                     data-netlify="true"
                     data-netlify-honeypot="bot-field"
             >
-              <input type="hidden" name="contact-form" value="contact"/>
+              <input type="hidden" name="form-name" value="contact" />
               <p hidden>
                 <label>
-                  Don’t fill this out: <input name="bot-field"/>
+                  Don’t fill this out: <input name="bot-field" />
                 </label>
               </p>
               <div class="sender-info">
@@ -36,9 +37,8 @@
                 <label for="message">Message</label>
                 <textarea name="message" v-model="formData.message"></textarea>
               </div>
-              <div class="submit-btn-wrapper">
-                <button type="submit">Submit</button>
-              </div>
+
+              <button type="submit">Submit form</button>
             </form>
           </div>
         </template>
