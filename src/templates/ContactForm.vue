@@ -14,45 +14,45 @@
       <input type="hidden" name="contact-form" value="contact"/>
       <p hidden>
         <label>
-          Don’t fill this out: <input name="bot-field"/>
+          Don’t fill this out: <input name="bot-field" />
         </label>
       </p>
       <div class="form__fields-wrapper">
         <div class="form__field">
           <label for="placeOfLoading">{{this.lang ? contactSection.eng.placeOfLoading : contactSection.placeOfLoading}}</label>
-          <input type="text" name="placeOfLoading" v-model="formData.placeOfLoading"/>
+          <input type="text" id="placeOfLoading" name="placeOfLoading" v-model="formData.placeOfLoading"/>
         </div>
         <div class="form__field">
           <label for="placeOfUnloading">{{this.lang ? contactSection.eng.placeOfUnloading : contactSection.placeOfUnloading}}</label>
-          <input type="text" name="placeOfUnloading" v-model="formData.placeOfUnloading"/>
+          <input type="text" id="placeOfUnloading" name="placeOfUnloading" v-model="formData.placeOfUnloading"/>
         </div>
         <div class="form__field">
           <label for="dateOfLoading">{{this.lang ? contactSection.eng.dateOfLoading : contactSection.dateOfLoading}}</label>
-          <input type="text" name="dateOfLoading" v-model="formData.dateOfLoading">
+          <input type="text" id="dateOfLoading" name="dateOfLoading" v-model="formData.dateOfLoading">
         </div>
         <div class="form__field">
           <label for="dateOfUnloading">{{this.lang ? contactSection.eng.dateOfUnloading : contactSection.dateOfUnloading}}</label>
-          <input type="text" name="dateOfUnloading" v-model="formData.dateOfUnloading"/>
+          <input type="text" id="dateOfUnloading" name="dateOfUnloading" v-model="formData.dateOfUnloading"/>
         </div>
         <div class="form__field">
           <label for="name" class="label">{{this.lang ? contactSection.eng.firstName : contactSection.firstName}}</label>
-          <input type="text" name="name" v-model="formData.name"/>
+          <input type="text" id="name" name="name" v-model="formData.name"/>
         </div>
         <div class="form__field">
           <label for="lastName" class="label">{{this.lang ? contactSection.eng.lastName : contactSection.lastName}}</label>
-          <input type="text" name="lastName" v-model="formData.lastName"/>
+          <input type="text" id="lastName" name="lastName" v-model="formData.lastName"/>
         </div>
         <div class="form__field">
           <label for="phoneNumber">{{this.lang ? contactSection.eng.phone : contactSection.phone}}</label>
-          <input type="text" name="phoneNumber" v-model="formData.phoneNumber"/>
+          <input type="text" id="phoneNumber" name="phoneNumber" v-model="formData.phoneNumber"/>
         </div>
         <div class="form__field">
           <label for="email">{{contactSection.email}}</label>
-          <input type="email" name="email" v-model="formData.email"/>
+          <input type="email" id="email" name="email" v-model="formData.email"/>
         </div>
         <div class="form__field">
           <label for="notes">{{this.lang ? contactSection.eng.notes : contactSection.notes}}</label>
-          <textarea type="text" name="notes" v-model="formData.notes"></textarea>
+          <textarea name="notes" id="notes" v-model="formData.notes"></textarea>
         </div>
       </div>
       <div class="submit-btn-wrapper">
