@@ -5,7 +5,6 @@
         <template>
           <div class="contact-form-wrapper">
             <div class="heading">
-              <g-image alt="Intermtrans cube logo" src="../assets/img/logo_cube.png" width="40"/>
               <h2>{{this.lang ? formSection.eng.title : formSection.title}}</h2>
             </div>
             <form
