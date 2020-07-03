@@ -19,47 +19,40 @@
       </p>
       <div class="form__fields-wrapper">
         <div class="form__field">
-          <input type="text" name="placeOfLoading" v-model="formData.placeOfLoading" :placeholder="this.lang ? section.eng.placeOfLoading : section.placeOfLoading"
-                 @blur="positionLabel"/>
           <label for="placeOfLoading">{{this.lang ? section.eng.placeOfLoading : section.placeOfLoading}}</label>
+          <input type="text" name="placeOfLoading" v-model="formData.placeOfLoading"/>
         </div>
         <div class="form__field">
-
-          <input type="text" name="placeOfUnloading" v-model="formData.placeOfUnloading"
-                 :placeholder="this.lang ? section.eng.placeOfUnloading : section.placeOfUnloading" @blur="positionLabel"/>
           <label for="placeOfUnloading">{{this.lang ? section.eng.placeOfUnloading : section.placeOfUnloading}}</label>
+          <input type="text" name="placeOfUnloading" v-model="formData.placeOfUnloading"/>
         </div>
         <div class="form__field">
-          <input type="text" name="dateOfLoading" v-model="formData.dateOfLoading" :placeholder="this.lang ? section.eng.dateOfLoading : section.dateOfLoading"
-                 @blur="positionLabel"  @click="isTypeADate">
           <label for="dateOfLoading">{{this.lang ? section.eng.dateOfLoading : section.dateOfLoading}}</label>
+          <input type="text" name="dateOfLoading" v-model="formData.dateOfLoading">
         </div>
         <div class="form__field">
-          <input type="text" name="dateOfUnloading" v-model="formData.dateOfUnloading" :placeholder="this.lang ? section.eng.dateOfUnloading : section.dateOfUnloading"
-                 @blur="positionLabel"  @click="isTypeADate"/>
           <label for="dateOfUnloading">{{this.lang ? section.eng.dateOfUnloading : section.dateOfUnloading}}</label>
+          <input type="text" name="dateOfUnloading" v-model="formData.dateOfUnloading"/>
         </div>
         <div class="form__field">
-          <input type="text" name="name" v-model="formData.name" :placeholder="this.lang ? section.eng.firstName : section.firstName" @blur="positionLabel"/>
           <label for="name" class="label">{{this.lang ? section.eng.firstName : section.firstName}}</label>
+          <input type="text" name="name" v-model="formData.name"/>
         </div>
         <div class="form__field">
-          <input type="text" name="lastName" v-model="formData.lastName" :placeholder="this.lang ? section.eng.lastName : section.lastName" @blur="positionLabel"/>
           <label for="lastName" class="label">{{this.lang ? section.eng.lastName : section.lastName}}</label>
+          <input type="text" name="lastName" v-model="formData.lastName"/>
         </div>
         <div class="form__field">
-          <input type="text" name="phoneNumber" v-model="formData.phoneNumber" :placeholder="this.lang ? section.eng.phone : section.phone"
-                 @blur="positionLabel"/>
           <label for="phoneNumber">{{this.lang ? section.eng.phone : section.phone}}</label>
+          <input type="text" name="phoneNumber" v-model="formData.phoneNumber"/>
         </div>
         <div class="form__field">
-          <input type="email" name="email" v-model="formData.email" placeholder="E-mail" @blur="positionLabel"/>
           <label for="email">{{section.email}}</label>
+          <input type="email" name="email" v-model="formData.email"/>
         </div>
         <div class="form__field">
-          <textarea type="text" name="notes" v-model="formData.notes" :placeholder="this.lang ? section.eng.notes : section.notes"
-                    @blur="positionLabel"></textarea>
           <label for="notes">{{this.lang ? section.eng.notes : section.notes}}</label>
+          <textarea type="text" name="notes" v-model="formData.notes"></textarea>
         </div>
       </div>
       <div class="submit-btn-wrapper">
@@ -70,49 +63,39 @@
 </template>
 
 <script>
-    import section from '~/data/quotationForm.json'
-    export default {
-        name: 'ContactForm',
-        data() {
-            return {
-                formData: {},
-                isDate: false,
-                section,
-            }
-        },
-        props: ['lang'],
+  import section from '~/data/quotationForm.json'
 
-        methods: {
-            encode(data) {
-                return Object.keys(data)
-                    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-                    .join('&')
-            },
-            handleSubmit(e) {
-                fetch('/', {
-                    method: 'POST',
-                    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-                    body: this.encode({
-                        'contact-form': e.target.getAttribute('name'),
-                        ...this.formData,
-                    }),
-                })
-                    .then(() => console.log('LOOOL sukces'))
-                    .catch(error => alert(error))
-            },
-            positionLabel(e) {
-                let inputHasValue = e.target.value.length !== 0,
-                    inputLabel = e.target.nextElementSibling;
+  export default {
+    name: 'ContactForm',
+    data() {
+      return {
+        formData: {},
+        isDate: false,
+        section,
+      }
+    },
+    props: ['lang'],
 
-                e.target.tagName === 'TEXTAREA'
-                    ? inputHasValue ? inputLabel.classList.add('textareaLabel') : inputLabel.classList.remove('textareaLabel')
-                    : inputHasValue ? inputLabel.classList.add('show') : inputLabel.classList.remove('show');
-            },
-            isTypeADate(e) {
-                return this.isDate = true;
-            }
-        }
+    methods: {
+      encode(data) {
+        return Object.keys(data)
+          .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+          .join('&')
+      },
+      handleSubmit(e) {
+        fetch('/', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+          body: this.encode({
+            'contact-form': e.target.getAttribute('name'),
+            ...this.formData,
+          }),
+        })
+          .then(() => console.log('form sent'))
+          .catch(error => alert(error))
+      },
     }
+  }
 
 </script>
 <style lang="scss">
@@ -167,24 +150,8 @@
         padding: 8px;
         color: #666;
 
-        &:focus + label {
-          transform: translateY(-130%);
-          opacity: 1;
-          transition: .2s ease-in all;
-          font-size: smaller;
-          color: $cBlack;
-          left: -8px;
-        }
-
-        &:focus::placeholder {
-          color: transparent;
-          font-size: smaller;
-          transition: .2s ease-in all;
-        }
-
         &::placeholder {
           text-transform: capitalize;
-          transition: .2s ease-in all;
           color: #666;
         }
       }
@@ -201,26 +168,10 @@
       label {
         text-transform: capitalize;
         width: 100%;
-        left: 0;
-        position: absolute;
-        top: 50%;
         transform: translateY(-50%);
         color: #A5A5A5;
         font-family: $fRaleway;
         font-size: 14px;
-        padding: 8px;
-        opacity: 0;
-        transition: .2s ease-in all;
-        pointer-events: none;
-
-        &.show {
-          transform: translateY(-130%);
-          opacity: 1;
-          transition: .2s ease-in all;
-          font-size: smaller;
-          color: $cBlack;
-          left: -8px;
-        }
 
         &.textareaLabel {
           transform: translateY(-260%);
