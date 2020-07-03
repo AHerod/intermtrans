@@ -21,7 +21,7 @@
                   Don’t fill this out: <input name="bot-field"/>
                 </label>
               </p>
-              <div class="form__fields-wrapper">
+              <div class="sender-info">
                 <div>
                   <label for="name" class="label" >Your name</label>
                   <input type="text" name="name" v-model="formData.name" />
@@ -30,7 +30,11 @@
                   <label for="email">Your email</label>
                   <input type="email" name="email" v-model="formData.email" />
                 </div>
+              </div>
 
+              <div class="message-wrapper">
+                <label for="message">Message</label>
+                <textarea name="message" v-model="formData.message"></textarea>
               </div>
               <div class="submit-btn-wrapper">
                 <button type="submit">{{this.lang ? formSection.eng.button : formSection.button}}</button>
