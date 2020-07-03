@@ -22,33 +22,15 @@
                 </label>
               </p>
               <div class="form__fields-wrapper">
-                <div class="form__field">
-                  <input type="text" id="placeOfLoading" name="placeOfLoading" v-model="formData.placeOfLoading"/>
+                <div>
+                  <label for="name" class="label" >Your name</label>
+                  <input type="text" name="name" v-model="formData.name" />
                 </div>
-                <div class="form__field">
-                  <input type="text" id="placeOfUnloading" name="placeOfUnloading" v-model="formData.placeOfUnloading"/>
+                <div>
+                  <label for="email">Your email</label>
+                  <input type="email" name="email" v-model="formData.email" />
                 </div>
-                <div class="form__field">
-                  <input type="text" id="dateOfLoading" name="dateOfLoading" v-model="formData.dateOfLoading">
-                </div>
-                <div class="form__field">
-                  <input type="text" id="dateOfUnloading" name="dateOfUnloading" v-model="formData.dateOfUnloading"/>
-                </div>
-                <div class="form__field">
-                  <input type="text" id="name" name="name" v-model="formData.name"/>
-                </div>
-                <div class="form__field">
-                  <input type="text" id="lastName" name="lastName" v-model="formData.lastName"/>
-                </div>
-                <div class="form__field">
-                  <input type="text" id="phoneNumber" name="phoneNumber" v-model="formData.phoneNumber"/>
-                </div>
-                <div class="form__field">
-                  <input type="email" id="email" name="email" v-model="formData.email"/>
-                </div>
-                <div class="form__field">
-                  <textarea type="text" id="notes" name="notes" v-model="formData.notes"></textarea>
-                </div>
+
               </div>
               <div class="submit-btn-wrapper">
                 <button type="submit">{{this.lang ? formSection.eng.button : formSection.button}}</button>
