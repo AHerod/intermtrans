@@ -11,47 +11,33 @@
                     name="contact"
                     method="post"
                     v-on:submit.prevent="handleSubmit"
+                    action="/success/"
                     data-netlify="true"
                     data-netlify-honeypot="bot-field"
             >
-              <input type="hidden" name="contact-form" value="contact"/>
+              <input type="hidden" name="form-name" value="contact" />
               <p hidden>
                 <label>
-                  Don’t fill this out: <input name="bot-field"/>
+                  Don’t fill this out: <input name="bot-field" />
                 </label>
               </p>
-              <div class="form__fields-wrapper">
-                <div class="form__field">
-                  <input type="text" id="placeOfLoading" name="placeOfLoading" v-model="formData.placeOfLoading"/>
+              <div class="sender-info">
+                <div>
+                  <label for="name" class="label" >Your name</label>
+                  <input type="text" name="name" v-model="formData.name" />
                 </div>
-                <div class="form__field">
-                  <input type="text" id="placeOfUnloading" name="placeOfUnloading" v-model="formData.placeOfUnloading"/>
-                </div>
-                <div class="form__field">
-                  <input type="text" id="dateOfLoading" name="dateOfLoading" v-model="formData.dateOfLoading">
-                </div>
-                <div class="form__field">
-                  <input type="text" id="dateOfUnloading" name="dateOfUnloading" v-model="formData.dateOfUnloading"/>
-                </div>
-                <div class="form__field">
-                  <input type="text" id="name" name="name" v-model="formData.name"/>
-                </div>
-                <div class="form__field">
-                  <input type="text" id="lastName" name="lastName" v-model="formData.lastName"/>
-                </div>
-                <div class="form__field">
-                  <input type="text" id="phoneNumber" name="phoneNumber" v-model="formData.phoneNumber"/>
-                </div>
-                <div class="form__field">
-                  <input type="email" id="email" name="email" v-model="formData.email"/>
-                </div>
-                <div class="form__field">
-                  <textarea type="text" id="notes" name="notes" v-model="formData.notes"></textarea>
+                <div>
+                  <label for="email">Your email</label>
+                  <input type="email" name="email" v-model="formData.email" />
                 </div>
               </div>
-              <div class="submit-btn-wrapper">
-                <button type="submit"></button>
+
+              <div class="message-wrapper">
+                <label for="message">Message</label>
+                <textarea name="message" v-model="formData.message"></textarea>
               </div>
+
+              <button type="submit">Submit form</button>
             </form>
           </div>
         </template>
