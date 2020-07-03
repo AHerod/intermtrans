@@ -2,7 +2,7 @@
   <div class="contact-form-wrapper">
     <div class="heading">
       <g-image alt="Intermtrans cube logo" src="../assets/img/logo_cube.png" width="40"/>
-      <h2>{{this.lang ? section.eng.title : section.title}}</h2>
+      <h2>{{this.lang ? contactSection.eng.title : contactSection.title}}</h2>
     </div>
     <form
             name="contact"
@@ -19,51 +19,51 @@
       </p>
       <div class="form__fields-wrapper">
         <div class="form__field">
-          <label for="placeOfLoading">{{this.lang ? section.eng.placeOfLoading : section.placeOfLoading}}</label>
+          <label for="placeOfLoading">{{this.lang ? contactSection.eng.placeOfLoading : contactSection.placeOfLoading}}</label>
           <input type="text" name="placeOfLoading" v-model="formData.placeOfLoading"/>
         </div>
         <div class="form__field">
-          <label for="placeOfUnloading">{{this.lang ? section.eng.placeOfUnloading : section.placeOfUnloading}}</label>
+          <label for="placeOfUnloading">{{this.lang ? contactSection.eng.placeOfUnloading : contactSection.placeOfUnloading}}</label>
           <input type="text" name="placeOfUnloading" v-model="formData.placeOfUnloading"/>
         </div>
         <div class="form__field">
-          <label for="dateOfLoading">{{this.lang ? section.eng.dateOfLoading : section.dateOfLoading}}</label>
+          <label for="dateOfLoading">{{this.lang ? contactSection.eng.dateOfLoading : contactSection.dateOfLoading}}</label>
           <input type="text" name="dateOfLoading" v-model="formData.dateOfLoading">
         </div>
         <div class="form__field">
-          <label for="dateOfUnloading">{{this.lang ? section.eng.dateOfUnloading : section.dateOfUnloading}}</label>
+          <label for="dateOfUnloading">{{this.lang ? contactSection.eng.dateOfUnloading : contactSection.dateOfUnloading}}</label>
           <input type="text" name="dateOfUnloading" v-model="formData.dateOfUnloading"/>
         </div>
         <div class="form__field">
-          <label for="name" class="label">{{this.lang ? section.eng.firstName : section.firstName}}</label>
+          <label for="name" class="label">{{this.lang ? contactSection.eng.firstName : contactSection.firstName}}</label>
           <input type="text" name="name" v-model="formData.name"/>
         </div>
         <div class="form__field">
-          <label for="lastName" class="label">{{this.lang ? section.eng.lastName : section.lastName}}</label>
+          <label for="lastName" class="label">{{this.lang ? contactSection.eng.lastName : contactSection.lastName}}</label>
           <input type="text" name="lastName" v-model="formData.lastName"/>
         </div>
         <div class="form__field">
-          <label for="phoneNumber">{{this.lang ? section.eng.phone : section.phone}}</label>
+          <label for="phoneNumber">{{this.lang ? contactSection.eng.phone : contactSection.phone}}</label>
           <input type="text" name="phoneNumber" v-model="formData.phoneNumber"/>
         </div>
         <div class="form__field">
-          <label for="email">{{section.email}}</label>
+          <label for="email">{{contactSection.email}}</label>
           <input type="email" name="email" v-model="formData.email"/>
         </div>
         <div class="form__field">
-          <label for="notes">{{this.lang ? section.eng.notes : section.notes}}</label>
+          <label for="notes">{{this.lang ? contactSection.eng.notes : contactSection.notes}}</label>
           <textarea type="text" name="notes" v-model="formData.notes"></textarea>
         </div>
       </div>
       <div class="submit-btn-wrapper">
-        <button type="submit">{{this.lang ? section.eng.button : section.button}}</button>
+        <button type="submit">{{this.lang ? contactSection.eng.button : contactSection.button}}</button>
       </div>
     </form>
   </div>
 </template>
 
 <script>
-  import section from '~/data/quotationForm.json'
+  import contactSection from '~/data/quotationForm.json'
 
   export default {
     name: 'ContactForm',
@@ -71,7 +71,7 @@
       return {
         formData: {},
         isDate: false,
-        section,
+        contactSection,
       }
     },
     props: ['lang'],
