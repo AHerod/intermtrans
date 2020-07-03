@@ -2,74 +2,75 @@
   <div class="sections-wrapper">
     <section class="contact-section max-container-no-padding fly-in" id="contact-section">
       <div class="contact-form" id="quotation-form">
-
-        <div class="contact-form-wrapper">
-          <div class="heading">
-            <g-image alt="Intermtrans cube logo" src="../assets/img/logo_cube.png" width="40"/>
-            <h2>{{this.lang ? formSection.eng.title : formSection.title}}</h2>
+        <template>
+          <div class="contact-form-wrapper">
+            <div class="heading">
+              <g-image alt="Intermtrans cube logo" src="../assets/img/logo_cube.png" width="40"/>
+              <h2>{{this.lang ? formSection.eng.title : formSection.title}}</h2>
+            </div>
+            <form
+                    name="contact"
+                    method="post"
+                    v-on:submit.prevent="handleSubmit"
+                    data-netlify="true"
+                    data-netlify-honeypot="bot-field"
+            >
+              <input type="hidden" name="contact-form" value="contact"/>
+              <p hidden>
+                <label>
+                  Don’t fill this out: <input name="bot-field"/>
+                </label>
+              </p>
+              <div class="form__fields-wrapper">
+                <div class="form__field">
+                  <label for="placeOfLoading">{{this.lang ? formSection.eng.placeOfLoading :
+                    formSection.placeOfLoading}}</label>
+                  <input type="text" name="placeOfLoading" v-model="formData.placeOfLoading"/>
+                </div>
+                <div class="form__field">
+                  <label for="placeOfUnloading">{{this.lang ? formSection.eng.placeOfUnloading :
+                    formSection.placeOfUnloading}}</label>
+                  <input type="text" name="placeOfUnloading" v-model="formData.placeOfUnloading"/>
+                </div>
+                <div class="form__field">
+                  <label for="dateOfLoading">{{this.lang ? formSection.eng.dateOfLoading :
+                    formSection.dateOfLoading}}</label>
+                  <input type="text" name="dateOfLoading" v-model="formData.dateOfLoading">
+                </div>
+                <div class="form__field">
+                  <label for="dateOfUnloading">{{this.lang ? formSection.eng.dateOfUnloading :
+                    formSection.dateOfUnloading}}</label>
+                  <input type="text" name="dateOfUnloading" v-model="formData.dateOfUnloading"/>
+                </div>
+                <div class="form__field">
+                  <label for="name" class="label">{{this.lang ? formSection.eng.firstName :
+                    formSection.firstName}}</label>
+                  <input type="text" name="name" v-model="formData.name"/>
+                </div>
+                <div class="form__field">
+                  <label for="lastName" class="label">{{this.lang ? formSection.eng.lastName :
+                    formSection.lastName}}</label>
+                  <input type="text" name="lastName" v-model="formData.lastName"/>
+                </div>
+                <div class="form__field">
+                  <label for="phoneNumber">{{this.lang ? formSection.eng.phone : formSection.phone}}</label>
+                  <input type="text" name="phoneNumber" v-model="formData.phoneNumber"/>
+                </div>
+                <div class="form__field">
+                  <label for="email">{{formSection.email}}</label>
+                  <input type="email" name="email" v-model="formData.email"/>
+                </div>
+                <div class="form__field">
+                  <label for="notes">{{this.lang ? formSection.eng.notes : formSection.notes}}</label>
+                  <textarea type="text" name="notes" v-model="formData.notes"></textarea>
+                </div>
+              </div>
+              <div class="submit-btn-wrapper">
+                <button type="submit">{{this.lang ? formSection.eng.button : formSection.button}}</button>
+              </div>
+            </form>
           </div>
-          <form
-                  name="contact"
-                  method="post"
-                  v-on:submit.prevent="handleSubmit"
-                  data-netlify="true"
-                  data-netlify-honeypot="bot-field"
-          >
-            <input type="hidden" name="contact-form" value="contact"/>
-            <p hidden>
-              <label>
-                Don’t fill this out: <input name="bot-field"/>
-              </label>
-            </p>
-            <div class="form__fields-wrapper">
-              <div class="form__field">
-                <label for="placeOfLoading">{{this.lang ? formSection.eng.placeOfLoading :
-                  formSection.placeOfLoading}}</label>
-                <input type="text" name="placeOfLoading" v-model="formData.placeOfLoading"/>
-              </div>
-              <div class="form__field">
-                <label for="placeOfUnloading">{{this.lang ? formSection.eng.placeOfUnloading :
-                  formSection.placeOfUnloading}}</label>
-                <input type="text" name="placeOfUnloading" v-model="formData.placeOfUnloading"/>
-              </div>
-              <div class="form__field">
-                <label for="dateOfLoading">{{this.lang ? formSection.eng.dateOfLoading :
-                  formSection.dateOfLoading}}</label>
-                <input type="text" name="dateOfLoading" v-model="formData.dateOfLoading">
-              </div>
-              <div class="form__field">
-                <label for="dateOfUnloading">{{this.lang ? formSection.eng.dateOfUnloading :
-                  formSection.dateOfUnloading}}</label>
-                <input type="text" name="dateOfUnloading" v-model="formData.dateOfUnloading"/>
-              </div>
-              <div class="form__field">
-                <label for="name" class="label">{{this.lang ? formSection.eng.firstName :
-                  formSection.firstName}}</label>
-                <input type="text" name="name" v-model="formData.name"/>
-              </div>
-              <div class="form__field">
-                <label for="lastName" class="label">{{this.lang ? formSection.eng.lastName :
-                  formSection.lastName}}</label>
-                <input type="text" name="lastName" v-model="formData.lastName"/>
-              </div>
-              <div class="form__field">
-                <label for="phoneNumber">{{this.lang ? formSection.eng.phone : formSection.phone}}</label>
-                <input type="text" name="phoneNumber" v-model="formData.phoneNumber"/>
-              </div>
-              <div class="form__field">
-                <label for="email">{{formSection.email}}</label>
-                <input type="email" name="email" v-model="formData.email"/>
-              </div>
-              <div class="form__field">
-                <label for="notes">{{this.lang ? formSection.eng.notes : formSection.notes}}</label>
-                <textarea type="text" name="notes" v-model="formData.notes"></textarea>
-              </div>
-            </div>
-            <div class="submit-btn-wrapper">
-              <button type="submit">{{this.lang ? formSection.eng.button : formSection.button}}</button>
-            </div>
-          </form>
-        </div>
+        </template>
       </div>
       <div class="contact-info">
         <p>{{this.lang ? section.eng.content : section.content}} <span>{{section.phone}}</span>{{this.lang ?
