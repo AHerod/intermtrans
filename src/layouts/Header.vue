@@ -7,14 +7,14 @@
           <div class="contact-bar__wrapper">
             <a href="https://www.facebook.com/Intermtrans-104479624389862/" target="_blank" rel="noopener"
                class="contact-bar__icon">
-              <g-image alt="Facebook icon" src="~/assets/img/icon_facebook.svg" width="35" immediate="true"/>
+              <g-image alt="Facebook icon" src="~/assets/img/icon_facebook.png" width="35"/>
             </a>
             <a href="https://www.linkedin.com/company/intermtrans-damian-talar/about/" class="contact-bar__icon"
                target="_blank" rel="noopener">
-              <g-image alt="Linkedin icon" src="~/assets/img/icon_linkedin.svg" width="35" immediate="true"/>
+              <g-image alt="Linkedin icon" src="~/assets/img/icon_linkedin.png" width="35"/>
             </a>
             <a href="tel:+48-507-473-964" class="contact-bar__icon">
-              <g-image alt="Phone icon" src="~/assets/img/icon_phone.svg" width="35" immediate="true"/>
+              <g-image alt="Phone icon" src="~/assets/img/icon_phone.png" width="35"/>
             </a>
             <a href="tel:+48-507-473-964" class="contact-bar__icon-phone"><span>{{section.phone}}</span></a>
             <button class="lang-switcher mobile" @click="isEng = !isEng">{{this.isEng ? 'PL' : 'ENG'}}</button>

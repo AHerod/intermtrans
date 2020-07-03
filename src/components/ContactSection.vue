@@ -18,20 +18,20 @@
       </div>
       <div class="contact-details__items">
         <span class="contact-details__item">
-          <g-image class="phone" alt="phone icon" src="~/assets/img/icon_phone_2.svg"
-                   width="40" immediate="true"/>{{section.phone}}</span>
+          <g-image class="phone" alt="phone icon" src="~/assets/img/icon_phone_2.png"
+                   width="40"/>{{section.phone}}</span>
         <span class="contact-details__item">
-          <g-image class="email" alt="email icon" src="~/assets/img/icon_email.svg"
-                   width="40" immediate="true"/>{{section.email}}</span>
+          <g-image class="email" alt="email icon" src="~/assets/img/icon_email.png"
+                   width="40"/>{{section.email}}</span>
         <span class="contact-details__item">
-          <g-image class="email" alt="world icon" src="~/assets/img/icon_worldwide.svg"
-                   width="40" immediate="true"/>{{section.address}}</span>
+          <g-image class="email" alt="world icon" src="~/assets/img/icon_worldwide.png"
+                   width="40"/>{{section.address}}</span>
         <div class="contact-details__trans">
           <span class="contact-details__item"><span class="label">TRANS:</span>{{section.trans}}</span>
           <span class="contact-details__item"><span class="label">TIMO:</span>{{section.timo}}</span>
         </div>
-        <g-image class="contact-details__cube" alt="Intermtrans cube logo" src="../assets/img/logo_cube.svg"
-                 width="170" immediate="true"/>
+        <g-image class="contact-details__cube" alt="Intermtrans cube logo" src="../assets/img/logo_cube.png"
+                 width="170"/>
       </div>
     </section>
     <div class="bottom-bg"></div>

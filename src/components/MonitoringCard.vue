@@ -1,6 +1,6 @@
 <template>
   <div class="monitoring-card">
-    <g-image class="monitoring-card__arrow"alt="arrow icon" src="~/assets/img/arrow_right.svg" width="100" immediate="true"/>
+    <g-image class="monitoring-card__arrow"alt="arrow icon" src="~/assets/img/arrow_right.png" width="100"/>
     <p class="monitoring-card__text">
       {{ text }}
     </p>

@@ -16,7 +16,7 @@
         computed: {
             iconPath() {
 
-                return require(`@/assets/img/truck_${this.icon}.svg`)
+                return require(`@/assets/img/truck_${this.icon}.png`)
             }
         }
     }
