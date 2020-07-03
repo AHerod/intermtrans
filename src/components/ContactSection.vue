@@ -37,7 +37,7 @@
                 <textarea name="message" v-model="formData.message"></textarea>
               </div>
               <div class="submit-btn-wrapper">
-                <button type="submit">{{this.lang ? formSection.eng.button : formSection.button}}</button>
+                <button type="submit">Submit</button>
               </div>
             </form>
           </div>
