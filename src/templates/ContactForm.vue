@@ -8,7 +8,7 @@
             name="contact"
             method="post"
             v-on:submit.prevent="handleSubmit"
-            action="/"
+            action="/success/"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
     >
