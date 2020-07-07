@@ -8,7 +8,7 @@
             name="contact"
             method="post"
             v-on:submit.prevent="handleSubmit"
-            action="/success/"
+            action="/"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
     >
@@ -64,7 +64,7 @@
           method: 'POST',
           headers: {'Content-Type': 'application/x-www-form-urlencoded'},
           body: this.encode({
-            'contact': e.target.getAttribute('name'),
+            'form-name': e.target.getAttribute('name'),
             ...this.formData,
           }),
         })
