@@ -18,20 +18,43 @@
           Don’t fill this out: <input name="bot-field" />
         </label>
       </p>
-      <div class="sender-info">
-        <div>
-          <label for="name" class="label" >Your name</label>
-          <input type="text" name="name" v-model="formData.name" />
+      <div class="form__fields-wrapper">
+        <div class="form__field">
+          <label for="placeOfLoading">Miejsce załadunku</label>
+          <input type="text" name="placeOfLoading" v-model="formData.placeOfLoading"/>
         </div>
-        <div>
+        <div class="form__field">
+          <label for="placeOfUnloading">Miejsce rozładunku</label>
+          <input type="text" name="placeOfUnloading" v-model="formData.placeOfUnloading"/>
+        </div>
+        <div class="form__field">
+          <label for="dateOfLoading">Data rozładunku</label>
+          <input type="text" name="dateOfLoading" v-model="formData.dateOfLoading"/>
+        </div>
+        <div class="form__field">
+          <label for="dateOfUnloading">Data rozładunku</label>
+          <input type="text" name="dateOfUnloading" v-model="formData.dateOfUnloading"/>
+        </div>
+        <div class="form__field">
+          <label for="name" class="label">Imię</label>
+          <input type="text" name="name" v-model="formData.name"/>
+        </div>
+        <div class="form__field">
+          <label for="lastName" class="label">Nazwisko</label>
+          <input type="text" name="lastName" v-model="formData.lastName"/>
+        </div>
+        <div class="form__field">
+          <label for="phoneNumber">Telefon</label>
+          <input type="text" name="phoneNumber" v-model="formData.phoneNumber"/>
+        </div>
+        <div class="form__field">
           <label for="email">Your email</label>
-          <input type="email" name="email" v-model="formData.email" />
+          <input type="email" name="email" v-model="formData.email"/>
         </div>
-      </div>
-
-      <div class="message-wrapper">
-        <label for="message">Message</label>
-        <textarea name="message" v-model="formData.message"></textarea>
+        <div class="form__field">
+          <label for="notes">Uwagi</label>
+          <textarea type="text" name="notes" v-model="formData.notes"></textarea>
+        </div>
       </div>
 
       <button type="submit">Submit form</button>
