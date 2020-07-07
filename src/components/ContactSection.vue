@@ -9,7 +9,7 @@
               <h2>{{this.lang ? formSection.eng.title : formSection.title}}</h2>
             </div>
             <form
-                    name="contact-form"
+                    name="contact"
                     method="post"
                     v-on:submit.prevent="handleSubmit"
                     action="/success/"
@@ -106,7 +106,7 @@
           method: 'POST',
           headers: {'Content-Type': 'application/x-www-form-urlencoded'},
           body: this.encode({
-            'contact-form': e.target.getAttribute('name'),
+            'contact': e.target.getAttribute('name'),
             ...this.formData,
           }),
         })
