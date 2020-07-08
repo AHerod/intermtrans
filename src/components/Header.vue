@@ -242,6 +242,10 @@
         margin-left: 45px;
       }
 
+      @media screen and (min-width: 768px) and (max-width: 900px) {
+        font-size: 12px;
+      }
+
       &::after {
         content: '';
         width: 10px;

@@ -14,21 +14,21 @@
 </template>
 
 <script>
-    import TruckCard from "../components/TruckCard";
-    import section from "~/data/trucksSection.json"
+  import TruckCard from "../components/TruckCard";
+  import section from "~/data/trucksSection.json"
 
-    export default {
-        name: 'TrucksSection',
-        components: {
-            TruckCard
-        },
-        data() {
-            return {
-                section
-            }
-        },
-        props: ['lang'],
-    }
+  export default {
+    name: 'TrucksSection',
+    components: {
+      TruckCard
+    },
+    data() {
+      return {
+        section
+      }
+    },
+    props: ['lang'],
+  }
 
 </script>
 
@@ -36,6 +36,10 @@
   .trucks-section {
     padding-top: 30px;
     position: relative;
+
+    @media screen and (max-width: 480px) {
+      padding-top: 0;
+    }
 
     @media screen and (min-width: 1300px) {
       &::before {

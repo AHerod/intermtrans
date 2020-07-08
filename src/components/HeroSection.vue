@@ -39,6 +39,10 @@
       background-position: center;
     }
 
+    @media screen and (max-width: 480px) {
+      height: 60vh;
+    }
+
     &__content {
       transform: translateY(20%);
       display: flex;

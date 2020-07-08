@@ -65,9 +65,10 @@
       max-width: 50px;
       padding-bottom: 10px;
 
-      @media screen and (min-width: 420px) {
+      @media screen and (max-width: 420px) {
         max-width: 70px;
         padding-bottom: 20px;
+        max-height: 50px;
       }
     }
   }
