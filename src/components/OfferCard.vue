@@ -1,6 +1,6 @@
 <template>
   <div class="offer-card">
-    <img class="offer-card__icon" alt="transport type icon" :src="iconPath" width="90"/>
+    <g-image class="offer-card__icon" alt="transport type icon" :src="iconPath" width="90" quality="50"/>
     <p class="offer-card__message">
       {{ message }}
     </p>

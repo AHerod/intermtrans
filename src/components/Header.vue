@@ -2,7 +2,7 @@
   <header id="header" class="header">
     <div class="header__content max-container">
       <div class="header__logo">
-        <g-image alt="Intermtrans logo" src="~/assets/img/logo.png" width="135"/>
+        <g-image alt="Intermtrans logo" src="~/assets/img/logo.png" width="155" quality="100"/>
       </div>
       <div class="header__menu">
         <nav id="nav" class="nav" :class="{isMobile: navToggles}">

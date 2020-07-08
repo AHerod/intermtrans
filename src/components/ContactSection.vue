@@ -15,13 +15,13 @@
       <div class="contact-details__items">
         <span class="contact-details__item">
           <g-image class="phone" alt="phone icon" src="~/assets/img/icon_phone_2.png"
-                   width="40"/>{{section.phone}}</span>
+                   width="40" quality="50"/>{{section.phone}}</span>
         <span class="contact-details__item">
           <g-image class="email" alt="email icon" src="~/assets/img/icon_email.png"
-                   width="40"/>{{section.email}}</span>
+                   width="40" quality="50"/>{{section.email}}</span>
         <span class="contact-details__item">
           <g-image class="email" alt="world icon" src="~/assets/img/icon_worldwide.png"
-                   width="40"/>{{section.address}}</span>
+                   width="40" quality="50"/>{{section.address}}</span>
         <div class="contact-details__trans">
           <span class="contact-details__item"><span class="label">TRANS:</span>{{section.trans}}</span>
           <span class="contact-details__item"><span class="label">TIMO:</span>{{section.timo}}</span>
@@ -139,7 +139,7 @@
         background-color: #ffffffbd;
         box-shadow: 5px 0 20px 0;
         padding: 20px 25px;
-        min-width: 315px;
+        width: 100%;
 
         span {
           font-size: 16px;

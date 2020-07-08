@@ -40,6 +40,7 @@
 
     @media screen and (max-width: 480px) {
       font-size: .75rem;
+      margin-bottom: 20px;
     }
   }
 

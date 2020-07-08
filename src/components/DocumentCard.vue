@@ -4,7 +4,7 @@
       {{ title }}
     </p>
     <div class="document-card__img">
-      <g-image class="document-card__cube" alt="cube icon" src="../assets/img/logo_cube.png" width="35"/>
+      <g-image class="document-card__cube" alt="cube icon" src="../assets/img/logo_cube.png" width="35" quality="40"/>
     </div>
     <a v-bind:href="filePath" class="document-card__open-btn" target="_blank">
       {{this.lang ? 'Open' : 'Otwórz'}}
@@ -13,10 +13,10 @@
 </template>
 
 <script>
-    export default {
-        name: 'documentCard',
-        props: ['title', 'filePath', 'lang'],
-    }
+  export default {
+    name: 'documentCard',
+    props: ['title', 'filePath', 'lang'],
+  }
 
 </script>
 
@@ -27,7 +27,7 @@
     flex-direction: column;
     width: 170px;
     height: 240px;
-    box-shadow: 2px 10px 18px #2c2c2c66;
+    box-shadow: 1px 6px 6px 1px #2c2c2c9e;
     position: relative;
     transition: .4s ease-in-out all;
 
@@ -98,6 +98,7 @@
       box-shadow: 2px 20px 18px 3px #00000040;
       transition: .4s ease-in-out all;
       cursor: pointer;
+      z-index: 9;
 
       &:before {
         height: 10%;
