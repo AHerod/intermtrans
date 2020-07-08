@@ -203,7 +203,7 @@
         opacity: 1;
         transform: translateY(0);
         margin: 0;
-        padding-top: 100px;
+        padding-top: 30px;
         visibility: visible;
       }
     }

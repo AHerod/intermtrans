@@ -15,22 +15,25 @@
       <g-image class="contact-details__background" alt="footer background" src="../assets/img/contact_hero.png"
                width="350" fit="inside"/>
       <div class="contact-details__items">
-        <span class="contact-details__item">
+        <div>
+          <span class="contact-details__item">
           <g-image class="phone" alt="phone icon" src="~/assets/img/icon_phone_2.png"
                    width="40" quality="50"/>{{section.phone}}</span>
-        <span class="contact-details__item">
+          <span class="contact-details__item">
           <g-image class="email" alt="email icon" src="~/assets/img/icon_email.png"
                    width="40" quality="50"/>{{section.email}}</span>
-        <span class="contact-details__item">
+          <span class="contact-details__item">
           <g-image class="email" alt="world icon" src="~/assets/img/icon_worldwide.png"
                    width="40" quality="50"/>{{section.address}}</span>
+        </div>
+
         <div class="contact-details__trans">
           <span class="contact-details__item"><span class="label">TRANS:</span>{{section.trans}}</span>
           <span class="contact-details__item"><span class="label">TIMO:</span>{{section.timo}}</span>
         </div>
       </div>
       <g-image class="contact-details__cube" alt="Intermtrans cube logo" src="../assets/img/logo_cube.png"
-               width="170"/>
+               width="250" quality="50"/>
     </section>
   </div>
 </template>
@@ -74,12 +77,17 @@
       }
     }
 
+
     .contact-info {
       font-family: $fRaleway;
       text-align: center;
       font-size: 20px;
       width: 70%;
       position: relative;
+
+      p {
+        margin: 0 20px;
+      }
 
       @media screen and (min-width: 992px) {
         margin-left: 30px;
@@ -139,9 +147,23 @@
       max-width: 800px;
       width: 100%;
 
+      > div {
+        flex: 1;
+        max-width: 350px;
+        width: 100%;
+
+        @media screen and (max-width: 768px) {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          flex-basis: 100%;
+        }
+      }
+
       @media screen and (max-width: 480px) {
         background-color: #ffffffbd;
-        box-shadow: 5px 0 20px 0;
+        box-shadow: 0 3px 15px rgba(0, 0, 0, .16);
         padding: 20px 25px;
         width: 100%;
 
@@ -153,8 +175,10 @@
         }
       }
 
-      @media screen and (min-width: 1200px) {
+      @media screen and (min-width: 900px) {
         flex-wrap: wrap;
+        flex-direction: row;
+        margin: 0 auto;
       }
     }
 
@@ -179,9 +203,6 @@
     &__trans {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      flex-basis: 100%;
 
       .label {
         margin-right: 15px;

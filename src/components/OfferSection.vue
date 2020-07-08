@@ -12,7 +12,7 @@
         <OfferCard :message="this.lang ? section.eng.cardFourth : section.cardFourth" icon="fourth"/>
       </div>
       <g-image class="offer-section__cube" alt="Intermtrans cube logo" src="../assets/img/logo_cube.png"
-               width="150"/>
+               width="250" quality="50"/>
     </div>
   </section>
 </template>

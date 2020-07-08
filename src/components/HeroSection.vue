@@ -35,7 +35,7 @@
     background-size: cover;
 
     @media screen and (min-width: 1200px) {
-      height: 100vh;
+      height: 75vh;
       background-position: center;
     }
 
