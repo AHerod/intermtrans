@@ -7,4 +7,6 @@ deploy status: [![Netlify Status](https://api.netlify.com/api/v1/badges/1d5f9eda
 
 run `gridsome develop` to start a local dev server at http://localhost:8080
 
+see [live](https://intermtrans.com/) :eyes:
+
 
