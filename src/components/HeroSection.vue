@@ -28,19 +28,17 @@
 <style lang="scss">
   .hero-section {
     width: 100%;
-    height: 80vh;
+    height: 50vh;
     margin-top: -25px;
     background: url("../assets/img/hero_image.jpg");
     background-position: right;
     background-size: cover;
+    display: flex;
+    align-items: center;
 
     @media screen and (min-width: 1200px) {
       height: 75vh;
       background-position: center;
-    }
-
-    @media screen and (max-width: 480px) {
-      height: 60vh;
     }
 
     &__content {
@@ -55,7 +53,7 @@
         margin: 0 auto;
       }
 
-      @media screen and (min-width: 992px) {
+      @media screen and (min-width: 769px) {
         height: 100%;
         transform: translateY(10%);
         flex-direction: column;
@@ -71,7 +69,7 @@
         font-weight: 800;
         max-width: 100%;
 
-        @media screen and (min-width: 992px) {
+        @media screen and (min-width: 769px) {
           margin-top: 5px;
           margin-bottom: 5px;
           font-size: 45px;

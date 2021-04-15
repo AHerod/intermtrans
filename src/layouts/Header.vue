@@ -86,7 +86,6 @@
       align-items: center;
       justify-content: space-between;
       background: $cRed;
-      margin-top: -20px;
       padding: 10px 12px;
       float: right;
       width: 100%;
@@ -94,7 +93,9 @@
       max-width: 435px;
       box-shadow: 2px 3px 9px 0 #00000085;
       z-index: 1;
-      position: relative;
+      position: fixed;
+      top: 80px;
+      right: 0;
       @include clearfix;
 
       @media screen and (max-width: 768px) {
@@ -145,14 +146,18 @@
       font-weight: 600;
       letter-spacing: 1px;
       color: $cRed;
+      width: 40px;
+      font-size: 12px;
 
       &.desktop {
         display: none;
+        height: 80px;
         z-index: 999;
         position: fixed;
         right: 20px;
         bottom: 0;
-        top: -89%;
+        top: 0;
+        font-size: initial;
       }
 
       @media screen and (min-width: 769px) {
